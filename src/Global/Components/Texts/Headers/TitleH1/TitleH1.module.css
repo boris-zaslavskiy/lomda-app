@@ -1,0 +1,32 @@
+h1{
+    font-size: 3vw;
+    font-weight: 900;
+}
+.titleH1Block{
+    margin-bottom: 10%;
+}
+
+.titleH1Green{
+    color: #009DB3;
+}
+
+.titleH1Black{
+    color: black;
+}
+
+
+/*-------------- Tablet --------------*/
+@media only screen and (max-width: 768px) {
+    h1{
+        font-size: 4vw;
+    }
+}
+
+
+
+/*-------------- Phone --------------*/
+@media only screen and (max-width: 420px) {
+    h1{
+        font-size: 8vw;
+    }
+}

@@ -1,0 +1,1084 @@
+.title h1{
+    font-weight: 900;
+    font-size: 40px;
+}
+.title span {
+    color: #F77D48;
+}
+
+.howItWorks p{
+    color: #007BA4;
+    font-weight: 800;
+}
+.readyToStart p{
+    color: #007BA4;
+    font-weight: 800;
+}
+.readyToStart .signIn .signBtn:hover{
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 576px){
+    .aboutUsContent{
+        width: 100%;
+    }
+    .aboutUs{
+        margin-top: 5vh;
+        padding: 1vh 4vw;
+    }
+    .aboutUs .p1{
+        margin-top: 3vh;
+        color: #818A8D;
+    }
+    .aboutUs .p2{
+        margin-top: 3vh;
+        color: #007BA4;
+        font-weight: 800;
+    }
+    .aboutUsLogo{
+        background: url("../../Assets/Ellipse64.png") no-repeat right center;
+        background-size: 60% 140%;
+        padding: 5vh 0 12vh 5vw;
+        margin-right: -4vw;
+    }
+    .ourFeatures{
+        padding: 0 4vw;
+    }
+    .ourFeatures .title{
+        margin-bottom: 4vh;
+    }
+    .ourFeatures .cards > *{
+        border: 1px solid #757FA8;
+        border-radius: 25px;
+        height: 40vh;
+        min-height: 250px;
+        max-height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 3vh;
+    }
+    .ourFeatures .card1 img{
+        width: 45%;
+        max-width: 150px;
+    }
+    .ourFeatures .card2 img{
+        width: 65%;
+        max-width: 200px;
+    }
+    .ourFeatures .card3 img{
+        max-width: 150px;
+        width: 50%;
+    }
+    .ourFeatures .cards p{
+        margin: 0;
+        font-weight: 800;
+        color: #007BA4;
+        width: 80%;
+        max-width: 250px;
+    }
+    .howItWorks{
+        margin: 5vh 0;
+        padding: 1vh 4vw;
+    }
+    .howItWorks .title{
+        margin-bottom: 3vh;
+    }
+    .howItWorks .cards > *{
+        box-shadow: -3px -3px 10px rgba(0, 0, 0, 0.17), 7px 7px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 7px;
+        margin-bottom: 30px;
+    }
+    .howItWorks .card1{
+        color: #007BA4;
+        background: url("../../Assets/itWorks1Cardnum.png") left top no-repeat, url("../../Assets/itWorksCardsBG.png") bottom center no-repeat;
+        background-size: 60px 55px, 110% 90%;
+        position: relative;
+    }
+    .howItWorks .card1 p{
+        width: 55%;
+        margin-left: 60px;
+        padding: 6vh 6vw 15vh 2vw;
+    }
+    .howItWorks .card1 img{
+        width: 50%;
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+    }
+    .howItWorks .card2 {
+        background: url("../../Assets/itWorks2Cardnum.png") left top no-repeat, url("../../Assets/itWorksCardsBG.png") bottom center no-repeat;
+        background-size: 60px 55px, 110% 40%;
+        position: relative;
+        padding-bottom: 25vh;
+    }
+    .howItWorks .card2 p{
+        width: 70%;
+        margin-left: 60px;
+        padding: 6vh 0 2vh 2vw;
+    }
+    .howItWorks .card2 ul{
+        color: #F77D48;
+        width: 80%;
+        margin-left: 40px;
+    }
+    .howItWorks .card2 ul li{
+        margin: 15px 0;
+    }
+    .howItWorks .card2 ul li span{
+        color: #677D85;
+    }
+    .howItWorks .card2 img{
+        width: 60%;
+        min-width: 250px;
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+    }
+    .howItWorks .card3 {
+        background: url("../../Assets/itWorks3Cardnum.png") left top no-repeat, url("../../Assets/itWorksCardsBG.png") bottom center no-repeat;
+        background-size: 60px 55px, 110% 60%;
+        position: relative;
+        min-height: 350px;
+        max-height: 400px;
+    }
+    .howItWorks .card3 p{
+        width: 70%;
+        margin-left: 60px;
+        padding: 6vh 0 2vh 2vw;
+    }
+    .howItWorks .card3 img{
+        width: 60%;
+        min-width: 200px;
+        max-width: 250px;
+        position: absolute;
+        right: 5%;
+        bottom: 10%;
+    }
+    .howItWorks .card4{
+        background: url("../../Assets/itWorks4Cardnum.png") left top no-repeat, url("../../Assets/itWorksCardsBG.png") bottom center no-repeat;
+        background-size: 60px 55px, 110% 60%;
+        position: relative;
+        min-height: 350px;
+        max-height: 400px;
+    }
+    .howItWorks .card4 p{
+        width: 70%;
+        margin-left: 60px;
+        padding: 6vh 0 6vh 2vw;
+    }
+    .howItWorks .card4 img{
+        position: absolute;
+        width: 40%;
+        right: 7%;
+        bottom: 5%;
+        min-width: 150px;
+        max-width: 200px;
+    }
+    .readyToStart{
+        margin: 5vh 0;
+    }
+    .readyToStart .title{
+        padding: 0 4vw;
+    }
+    .readyToStart p{
+        margin: 5vh 6vw 12vh;
+    }
+    .readyToStart .signIn{
+        background:rgba(220, 220, 220, 0.69);
+        width:100vw;
+    }
+    .readyToStart .signIn{
+        padding-top: 30px;
+        font-weight: 800;
+        color: #39393B;
+    }
+    .readyToStart .signIn .signBtn{
+        background: #F77D48;
+        text-align: center;
+        width: 70%;
+        padding: 20px 10px;
+        margin: 30px auto 5px;
+        border-radius: 7px;
+    }
+    .readyToStart img{
+        width: 100%;
+    }
+}
+@media (min-width: 577px) and (max-width: 768px){
+    .title{
+        margin: 5vh 0;
+    }
+    .aboutUsContent{
+        width: 100%;
+    }
+    .aboutUs{
+        margin-top: 5vh;
+        padding: 1vh 4vw;
+    }
+    .aboutUs .p1{
+        margin-top: 3vh;
+        color: #818A8D;
+    }
+    .aboutUs .p2{
+        margin-top: 3vh;
+        color: #007BA4;
+        font-weight: 800;
+    }
+    .aboutUsLogo{
+        background: url("../../Assets/Ellipse64.png") no-repeat right center;
+        background-size: 60% 140%;
+        padding: 10vh 0 15vh 10vw;
+        margin-right: -4vw;
+    }
+    .ourFeatures{
+        padding: 0 4vw;
+    }
+    .ourFeatures .title{
+
+    }
+
+    .ourFeatures .cards > *{
+        border: 1px solid #757FA8;
+        border-radius: 25px;
+        height: 45vh;
+        min-height: 300px;
+        max-height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 3vh;
+    }
+    .ourFeatures .card3{
+        min-height: 320px;
+    }
+    .ourFeatures .card1 img{
+        width: 50%;
+        max-width: 200px;
+    }
+    .ourFeatures .card2 img{
+        width: 75%;
+        max-width: 250px;
+    }
+    .ourFeatures .card3 img{
+        max-width: 200px;
+        width: 60%;
+    }
+    .ourFeatures .cards p{
+        margin: 0;
+        font-weight: 800;
+        color: #007BA4;
+        width: 100%;
+        max-width: 300px;
+        font-size: 22px;
+    }
+    .howItWorks{
+        margin: 5vh 0;
+        padding: 1vh 4vw;
+    }
+    .howItWorks .title{
+
+    }
+    .howItWorks .cards > *{
+        box-shadow: -3px -3px 10px rgba(0, 0, 0, 0.17), 7px 7px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 7px;
+        margin-bottom: 30px;
+    }
+    .howItWorks .card1{
+        color: #007BA4;
+        min-height: 200px;
+        background: url("../../Assets/itWorks1Cardnum.png") left top no-repeat, url("../../Assets/itWorksCardsBG.png") bottom center no-repeat;
+        background-size: 75px 65px, 110% 95%;
+        position: relative;
+    }
+    .howItWorks .card1 p{
+        width: 55%;
+        margin-left: 75px;
+        padding: 8vh 6vw 15vh 2vw;
+    }
+    .howItWorks .card1 img{
+        width: 45%;
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+    }
+    .howItWorks .card2 {
+        background: url("../../Assets/itWorks2Cardnum.png") left top no-repeat, url("../../Assets/itWorksCardsBG.png") bottom center no-repeat;
+        background-size: 75px 65px, 110% 55%;
+        position: relative;
+        min-height: 350px;
+        max-height: 450px;
+        padding-bottom: 20vh;
+    }
+    .howItWorks .card2 p{
+        width: 70%;
+        margin-left: 75px;
+        padding: 8vh 0 2vh 2vw;
+    }
+    .howItWorks .card2 ul{
+        color: #F77D48;
+        width: 80%;
+        margin-left: 50px;
+    }
+    .howItWorks .card2 ul li{
+        margin: 20px 0;
+    }
+    .howItWorks .card2 ul li span{
+        color: #677D85;
+    }
+    .howItWorks .card2 img{
+        width: 50%;
+        min-width: 200px;
+        max-width: 300px;
+        position: absolute;
+        bottom: 16px;
+        right: 25px;
+    }
+    .howItWorks .card3 {
+        background: url("../../Assets/itWorks3Cardnum.png") left top no-repeat, url("../../Assets/itWorksCardsBG.png") bottom center no-repeat;
+        background-size: 75px 65px, 110% 60%;
+        position: relative;
+        min-height: 280px;
+        max-height: 300px;
+    }
+    .howItWorks .card3 p{
+        width: 70%;
+        margin-left: 75px;
+        padding: 8vh 0 2vh 2vw;
+    }
+    .howItWorks .card3 img{
+        width: 60%;
+        min-width: 200px;
+        max-width: 250px;
+        position: absolute;
+        right: 5%;
+        bottom: 5%;
+    }
+    .howItWorks .card4{
+        background: url("../../Assets/itWorks4Cardnum.png") left top no-repeat, url("../../Assets/itWorksCardsBG.png") bottom center no-repeat;
+        background-size: 75px 65px, 110% 60%;
+        position: relative;
+        min-height: 300px;
+        max-height: 350px;
+    }
+    .howItWorks .card4 p{
+        width: 70%;
+        margin-left: 75px;
+        padding: 8vh 0 6vh 2vw;
+    }
+    .howItWorks .card4 img{
+        position: absolute;
+        width: 40%;
+        right: 7%;
+        bottom: 5%;
+        min-width: 150px;
+        max-width: 200px;
+    }
+    .readyToStart{
+        margin: 5vh 0;
+    }
+    .readyToStart .title{
+        padding: 0 4vw;
+    }
+    .readyToStart p{
+        margin: 5vh 6vw 15vh;
+    }
+    .readyToStart .signIn{
+        background:rgba(220, 220, 220, 0.69);
+        width:100vw;
+    }
+    .readyToStart .signIn{
+        padding-top: 30px;
+        font-weight: 800;
+        color: #39393B;
+    }
+    .readyToStart .signIn .signBtn{
+        background: #F77D48;
+        text-align: center;
+        width: 70%;
+        padding: 20px 10px;
+        margin: 30px auto 5px;
+        border-radius: 7px;
+        font-size: 20px;
+    }
+    .readyToStart img{
+        width: 100%;
+    }
+}
+@media (min-width: 769px) and (max-width: 992px){
+    .title{
+        margin: 0 0 5vh;
+    }
+    .aboutUsContent{
+        width: 100%;
+    }
+    .aboutUs{
+        margin-top: 5vh;
+        padding: 1vh 4vw;
+        position: relative;
+        font-size: 18px;
+    }
+    .aboutUs .p1{
+        margin-top: 3vh;
+        width: 50%;
+        color: #818A8D;
+    }
+    .aboutUs .p2{
+        margin-top: 3vh;
+        color: #007BA4;
+        width: 50%;
+        font-weight: 800;
+    }
+    .aboutUsLogo{
+        background: url("../../Assets/Ellipse64.png") no-repeat right center;
+        background-size: 60% 140%;
+        padding: 10vh 0 15vh 10vw;
+        width: 60%;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+    }
+    .ourFeatures{
+        padding: 0 4vw;
+        margin-top: 20px;
+    }
+    .ourFeatures .title{
+
+    }
+    .ourFeatures .cards{
+        display: flex;
+        justify-content: space-around;
+    }
+    .ourFeatures .cards > *{
+        height: 35vh;
+        min-height: 180px;
+        max-height: 200px;
+        text-align: center;
+    }
+    .ourFeatures .card3{
+
+    }
+    .ourFeatures .card1 img{
+        height: 135px;
+        max-width: 200px;
+    }
+    .ourFeatures .card2 img{
+        height: 135px;
+        max-width: 250px;
+    }
+    .ourFeatures .card3 img{
+        max-width: 200px;
+        height: 135px;
+    }
+    .ourFeatures .cards p{
+        font-weight: 800;
+        margin-top: 5vh;
+        color: #007BA4;
+        width: 90%;
+    }
+    .howItWorks{
+        padding: 1vh 4vw;
+        margin-top: 30px;
+    }
+    .howItWorks .title{
+        margin-top: 20px;
+    }
+    .howItWorks .cards > *{
+        box-shadow: -3px -3px 10px rgba(0, 0, 0, 0.17), 7px 7px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 7px;
+        margin-bottom: 30px;
+    }
+    .howItWorks .card1{
+        color: #007BA4;
+        min-height: 200px;
+        background: url("../../Assets/itWorks1Cardnum.png") left top no-repeat, url("../../Assets/HIW1cardBg.png") top right no-repeat;
+        background-size: 95px 85px, 44% 100%;
+        position: relative;
+    }
+    .howItWorks .card1 p{
+        width: 55%;
+        margin-left: 90px;
+        padding: 5vh 6vw 5vh 2vw;
+        font-size: 20px;
+    }
+    .howItWorks .card1 img{
+        width: 35%;
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+    }
+    .howItWorks .card2 {
+        background: url("../../Assets/itWorks2Cardnum.png") left top no-repeat, url("../../Assets/HIW2cardBg.png") bottom right no-repeat;
+        background-size: 95px 85px, 35% 105%;
+        position: relative;
+        min-height: 220px;
+        padding-bottom: 80px;
+    }
+    .howItWorks .card2 p{
+        width: 70%;
+        margin-left: 90px;
+        padding: 5vh 6vw 5vh 2vw;
+        font-size: 20px;
+    }
+    .howItWorks .card2 ul{
+        color: #F77D48;
+        width: 80%;
+        margin-left: 70px;
+    }
+    .howItWorks .card2 ul li{
+        margin: 10px 0;
+        font-size: 20px;
+    }
+    .howItWorks .card2 ul li span{
+        color: #677D85;
+    }
+    .howItWorks .card2 img{
+        width: 50%;
+        min-width: 250px;
+        max-width: 320px;
+        position: absolute;
+        bottom: 16px;
+        right: 25px;
+    }
+    .howItWorks .card3 {
+        background: url("../../Assets/itWorks3Cardnum.png") left top no-repeat, url("../../Assets/HIW3cardBg.png") top right no-repeat;
+        background-size: 95px 85px, 33% 145%;
+        position: relative;
+        min-height: 200px;
+        max-height: 300px;
+    }
+    .howItWorks .card3 p{
+        width: 60%;
+        margin-left: 90px;
+        padding: 5vh 6vw 5vh 2vw;
+        font-size: 20px;
+    }
+    .howItWorks .card3 img{
+        width: 30%;
+        min-width: 200px;
+        max-width: 300px;
+        position: absolute;
+        right: 5%;
+        bottom: 5%;
+    }
+    .howItWorks .card4{
+        background: url("../../Assets/itWorks4Cardnum.png") left top no-repeat, url("../../Assets/HIW4cardBg.png") right bottom no-repeat;
+        background-size: 95px 85px, 40% 110%;
+        position: relative;
+        min-height: 200px;
+        max-height: 300px;
+    }
+    .howItWorks .card4 p{
+        width: 55%;
+        margin-left: 90px;
+        padding: 5vh 6vw 5vh 2vw;
+        font-size: 20px;
+    }
+    .howItWorks .card4 img{
+        position: absolute;
+        width: 40%;
+        right: 5%;
+        bottom: 5%;
+        min-width: 200px;
+        max-width: 250px;
+    }
+    .readyToStart{
+        margin: 5vh 0;
+    }
+    .readyToStart .title{
+        padding: 0 4vw;
+    }
+    .readyToStart p{
+        margin: 5vh 6vw 15vh;
+        font-size: 20px;
+    }
+    .readyToStart .signIn{
+        background:rgba(220, 220, 220, 0.69);
+        width:100vw;
+    }
+    .readyToStart .signIn{
+        padding-top: 30px;
+        font-weight: 800;
+        color: #39393B;
+        text-align: center;
+    }
+    .readyToStart .signIn .signBtn{
+        display: inline-block;
+        background: #F77D48;
+        text-align: center;
+        width: 40%;
+        padding: 20px 10px;
+        margin: 30px 20px 5px;
+        border-radius: 7px;
+        font-size: 20px;
+    }
+    .readyToStart img{
+        width: 100%;
+    }
+}
+@media (min-width: 993px) and (max-width: 1200px){
+    .title{
+        margin: 0 0 7vh;
+    }
+    .aboutUsContent{
+        width: 100%;
+        background: url("../../Assets/Vector51.png") top right no-repeat,url("../../Assets/Vector50.png")top right no-repeat;
+        background-size: 60vw 100vh,58vw 100vh;
+    }
+    .aboutUs{
+        margin-top: 5vh;
+        padding: 1vh 4vw 15vh;
+        position: relative;
+        font-size: 18px;
+
+    }
+    .aboutUs .p1{
+        margin-top: 3vh;
+        width: 50%;
+        color: #818A8D;
+    }
+    .aboutUs .p2{
+        margin-top: 3vh;
+        color: #007BA4;
+        width: 45%;
+        font-weight: 800;
+    }
+    .aboutUsLogo{
+        padding: 10vh 0 10vh 10vw;
+        width: 60%;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+    }
+    .ourFeatures{
+        padding: 0 4vw;
+        margin-top: 40px;
+    }
+    .ourFeatures .title{
+        margin-bottom: 50px;
+    }
+    .ourFeatures .cards{
+        display: flex;
+        justify-content: space-around;
+    }
+    .ourFeatures .cards > *{
+        height: 35vh;
+        min-height: 200px;
+        max-height: 250px;
+        text-align: center;
+        font-size: 18px;
+    }
+    .ourFeatures .card3{
+
+    }
+    .ourFeatures .card1 img{
+        height: 135px;
+        max-width: 200px;
+    }
+    .ourFeatures .card2 img{
+        height: 135px;
+        max-width: 250px;
+    }
+    .ourFeatures .card3 img{
+        max-width: 200px;
+        height: 135px;
+    }
+    .ourFeatures .cards p{
+        font-weight: 800;
+        margin: 5vh auto;
+        color: #007BA4;
+        width: 90%;
+    }
+    .howItWorks{
+        margin-top: 40px;
+        padding: 1vh 4vw;
+    }
+    .howItWorks .title{
+
+    }
+    .howItWorks .cards > *{
+        box-shadow: -3px -3px 10px rgba(0, 0, 0, 0.17), 7px 7px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 7px;
+        margin-bottom: 35px;
+    }
+    .howItWorks .card1{
+        color: #007BA4;
+        min-height: 200px;
+        background: url("../../Assets/itWorks1Cardnum.png") left top no-repeat, url("../../Assets/HIW1cardBg.png") top right no-repeat;
+        background-size: 95px 85px, 44% 100%;
+        position: relative;
+    }
+    .howItWorks .card1 p{
+        width: 65%;
+        margin-left: 90px;
+        padding: 5vh 6vw 5vh 2vw;
+        font-size: 20px;
+    }
+    .howItWorks .card1 img{
+        width: 25%;
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+    }
+    .howItWorks .card2 {
+        background: url("../../Assets/itWorks2Cardnum.png") left top no-repeat, url("../../Assets/HIW2cardBg.png") bottom right no-repeat;
+        background-size: 95px 85px, 35% 105%;
+        position: relative;
+        min-height: 250px;
+        padding-bottom: 40px;
+    }
+    .howItWorks .card2 p{
+        width: 65%;
+        margin-left: 90px;
+        padding: 5vh 6vw 3vh 2vw;
+        font-size: 20px;
+    }
+    .howItWorks .card2 ul{
+        color: #F77D48;
+        width: 60%;
+        margin-left: 70px;
+    }
+    .howItWorks .card2 ul li{
+        margin: 10px 0;
+        font-size: 20px;
+        width: 85%;
+    }
+    .howItWorks .card2 ul li span{
+        color: #677D85;
+    }
+    .howItWorks .card2 img{
+        width: 55%;
+        min-width: 280px;
+        max-width: 370px;
+        position: absolute;
+        bottom: 30%;
+        right: 25px;
+    }
+    .howItWorks .card3 {
+        background: url("../../Assets/itWorks3Cardnum.png") left top no-repeat, url("../../Assets/HIW3cardBg.png") top right no-repeat;
+        background-size: 95px 85px, 33% 145%;
+        position: relative;
+        min-height: 200px;
+        max-height: 300px;
+    }
+    .howItWorks .card3 p{
+        width: 60%;
+        margin-left: 90px;
+        padding: 5vh 6vw 5vh 2vw;
+        font-size: 20px;
+    }
+    .howItWorks .card3 img{
+        width: 35%;
+        min-width: 250px;
+        max-width: 340px;
+        position: absolute;
+        right: 5%;
+        bottom: 5%;
+    }
+    .howItWorks .card4{
+        background: url("../../Assets/itWorks4Cardnum.png") left top no-repeat, url("../../Assets/HIW4cardBg.png") right bottom no-repeat;
+        background-size: 95px 85px, 40% 110%;
+        position: relative;
+        min-height: 200px;
+        max-height: 300px;
+    }
+    .howItWorks .card4 p{
+        width: 60%;
+        margin-left: 90px;
+        padding: 5vh 6vw 5vh 2vw;
+        font-size: 20px;
+    }
+    .howItWorks .card4 img{
+        position: absolute;
+        width: 50%;
+        right: 7%;
+        bottom: 2%;
+        min-width: 250px;
+        max-width: 280px;
+    }
+    .readyToStart{
+        margin: 5vh 0;
+    }
+    .readyToStart .title{
+        padding: 0 4vw;
+    }
+    .readyToStart p{
+        margin: 5vh 6vw 15vh;
+        font-size: 20px;
+    }
+    .readyToStart .signIn{
+        background:rgba(220, 220, 220, 0.69);
+        width:100vw;
+    }
+    .readyToStart .signIn{
+        padding-top: 30px;
+        font-weight: 800;
+        color: #39393B;
+        text-align: center;
+    }
+    .readyToStart .signIn .signBtn{
+        display: inline-block;
+        background: #F77D48;
+        text-align: center;
+        width: 40%;
+        padding: 20px 10px;
+        margin: 30px 20px 5px;
+        border-radius: 7px;
+        font-size: 20px;
+    }
+    .readyToStart img{
+        width: 100%;
+    }
+}
+@media (min-width: 1201px){
+    .title{
+        margin: 0 0 7vh -4vw;
+        display: flex;
+    }
+    .title h1{
+        margin-left: 1vw;
+        font-size: 72px;
+    }
+    .rectangles{
+        width: 8%;
+    }
+    .rectangles > div{
+        background-color: #E0E3EF;
+        margin-top: 15%;
+    }
+    .rect1{
+        height: 20%;
+        width: 95%;
+    }
+    .rect2{
+        height: 20%;
+        width: 75%;
+    }
+    .rect3{
+        height: 20%;
+        width: 55%;
+    }
+    .aboutUsContent{
+        width: 100%;
+        background: url("../../Assets/Vector51.png") top right no-repeat,url("../../Assets/Vector50.png")top right no-repeat;
+        background-size: 60vw 100vh,58vw 100vh;
+    }
+    .aboutUs{
+        margin-top: 5vh;
+        padding: 1vh 4vw 5vh;
+        position: relative;
+        font-size: 24px;
+        height: 80vh;
+    }
+    .aboutUs .p1{
+        margin-top: 3vh;
+        width: 40%;
+        color: #818A8D;
+        margin-left: 5vw;
+    }
+    .aboutUs .p2{
+        margin-top: 3vh;
+        color: #007BA4;
+        width: 40%;
+        font-weight: 800;
+        margin-left: 5vw;
+    }
+    .aboutUsLogo{
+        padding: 10vh 0 10vh 10vw;
+        width: 60%;
+        max-width: 1200px;
+        right: 0;
+        bottom: 5vh;
+        position: absolute;
+    }
+    .ourFeatures{
+        padding: 0 4vw;
+        margin-top: 40px;
+    }
+    .ourFeatures .title{
+        margin-bottom: 50px;
+    }
+    .ourFeatures .cards{
+        display: flex;
+        justify-content: space-around;
+    }
+    .ourFeatures .cards > *{
+        height: 40vh;
+        text-align: center;
+        font-size: 24px;
+    }
+    .ourFeatures .card3{
+
+    }
+    .ourFeatures .card1 img{
+        height: 200px;
+        max-width: 300px;
+    }
+    .ourFeatures .card2 img{
+        height: 200px;
+        max-width: 400px;
+    }
+    .ourFeatures .card3 img{
+        max-width: 300px;
+        height: 200px;
+    }
+    .ourFeatures .cards p{
+        font-weight: 800;
+        margin: 5vh auto;
+        color: #007BA4;
+        width: 80%;
+        text-align: center;
+    }
+    .howItWorks{
+        margin-top: 50px;
+        padding: 1vh 4vw;
+    }
+    .howItWorks .title{
+        margin-bottom: 10vh;
+    }
+    .howItWorks .cards > *{
+        box-shadow: -3px -3px 10px rgba(0, 0, 0, 0.17), 7px 7px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 7px;
+        margin: 0 auto 35px;
+    }
+    .howItWorks .card1{
+        color: #007BA4;
+        max-width: 1470px;
+        min-height: 200px;
+        background: url("../../Assets/itWorks1Cardnum.png") left top no-repeat, url("../../Assets/HIW1cardBg.png") top right no-repeat;
+        background-size: 120px 110px, 40% 100%;
+        position: relative;
+    }
+    .howItWorks .card1 p{
+        width: 65%;
+        margin-left: 110px;
+        padding: 5vh 6vw 5vh 2vw;
+        font-size: 28px;
+    }
+    .howItWorks .card1 img{
+        width: 25%;
+        max-height: 200px;
+        max-width: 320px;
+        position: absolute;
+        bottom: 0;
+        right: 7%;
+    }
+    .howItWorks .card2 {
+        background: url("../../Assets/itWorks2Cardnum.png") left top no-repeat, url("../../Assets/HIW2cardBg.png") bottom right no-repeat;
+        background-size: 120px 110px, 31% 105%;
+        max-width: 1470px;
+        min-height: 320px;
+        position: relative;
+        padding-bottom: 5vh;
+    }
+    .howItWorks .card2 p{
+        width: 70%;
+        margin-left: 110px;
+        padding: 5vh 6vw 5vh 2vw;
+        font-size: 28px;
+    }
+    .howItWorks .card2 ul{
+        color: #F77D48;
+        width: 65%;
+        margin-left: 70px;
+    }
+    .howItWorks .card2 ul li{
+        margin: 10px 0;
+        font-size: 20px;
+        width: 100%;
+    }
+    .howItWorks .card2 ul li span{
+        color: #677D85;
+    }
+    .howItWorks .card2 img{
+        width: 55%;
+        min-width: 300px;
+        max-width: 450px;
+        position: absolute;
+        bottom: 25%;
+        right: 30px;
+    }
+    .howItWorks .card3 {
+        background: url("../../Assets/itWorks3Cardnum.png") left top no-repeat, url("../../Assets/HIW3cardBg.png") top right no-repeat;
+        background-size: 120px 110px, 30% 145%;
+        position: relative;
+        max-width: 1470px;
+        min-height: 200px;
+        max-height: 300px;
+    }
+    .howItWorks .card3 p{
+        width: 65%;
+        margin-left: 110px;
+        padding: 5vh 6vw 5vh 2vw;
+        font-size: 28px;
+    }
+    .howItWorks .card3 img{
+        width: 35%;
+        min-width: 250px;
+        max-width: 400px;
+        position: absolute;
+        right: 5%;
+        bottom: 5%;
+    }
+    .howItWorks .card4{
+        background: url("../../Assets/itWorks4Cardnum.png") left top no-repeat, url("../../Assets/HIW4cardBg.png") right bottom no-repeat;
+        background-size: 120px 110px, 36.5% 110%;
+        position: relative;
+        max-width: 1470px;
+        min-height: 200px;
+        max-height: 300px;
+    }
+    .howItWorks .card4 p{
+        width: 65%;
+        margin-left: 110px;
+        padding: 5vh 6vw 5vh 2vw;
+        font-size: 28px;
+    }
+    .howItWorks .card4 img{
+        position: absolute;
+        width: 50%;
+        right: 5%;
+        bottom: 2%;
+        min-width: 250px;
+        max-width: 300px;
+    }
+    .readyToStart{
+        margin: 5vh 0;
+    }
+    .readyToStart .title{
+        padding: 0 4vw;
+    }
+    .readyToStart p{
+        margin: 5vh 10vw 15vh;
+        font-size: 28px;
+    }
+    .readyToStart .signIn{
+        background:rgba(220, 220, 220, 0.69);
+        width:100vw;
+    }
+    .readyToStart .signIn{
+        padding-top: 60px;
+        font-weight: 800;
+        color: #39393B;
+        text-align: center;
+    }
+    .readyToStart .signIn .signBtn{
+        display: inline-block;
+        background: #F77D48;
+        text-align: center;
+        width: 30%;
+        padding: 20px 10px;
+        margin: 30px 40px 5px;
+        border-radius: 7px;
+        font-size: 30px;
+    }
+    .readyToStart img{
+        width: 100%;
+    }
+}
+
