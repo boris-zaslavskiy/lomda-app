@@ -1,0 +1,14 @@
+.greenBtn{
+    width: 150px;
+    background-color: #F77D48;
+    border: 1px solid #F77D48;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.greenBtn:hover{
+    background-color: transparent;
+    box-shadow: none;
+    border: 1px solid #F77D48;
+    color: #F77D48;
+}

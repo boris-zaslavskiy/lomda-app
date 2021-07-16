@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './Login.module.css';
 import {Form,Button,Row,Col} from "react-bootstrap";
+import {GreenBtn} from "../../Components/Button/GreenBtn/GreenBtn";
+import {OrangeBtn} from "../../Components/Button/OrangeBtn/OrangeBtn";
 
 
 const Login = () => {
@@ -25,9 +27,7 @@ const Login = () => {
                     <Col md> <p className={styles.authFormTxt}>Forgot your password?</p></Col>
                 </Row>
             </Form.Group>
-            <Button variant="primary" type="submit">
-               Login
-            </Button>
+            <GreenBtn type="submit" title='Login'/>
         </Form>
     );
 };

@@ -1,0 +1,18 @@
+.txtAdditional{
+    font-size: 1.3vw;
+    color: #878A8B;
+}
+
+/*-------------- Tablet --------------*/
+@media only screen and (max-width: 770px) {
+    .txtAdditional{
+        font-size: 3vw;
+    }
+}
+
+/*-------------- Phone --------------*/
+@media only screen and (max-width: 420px) {
+    .txtAdditional{
+        font-size: 4vw;
+    }
+}

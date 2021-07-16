@@ -4,7 +4,20 @@
     padding: 0;
 }
 
-h1{
-    font-size: 3vw;
-    font-weight: 900;
+
+/*-------------- Tablet --------------*/
+@media only screen and (max-width: 768px) {
+
+    /*-------------- Add Css --------------*/
+}
+
+
+
+/*-------------- Phone --------------*/
+@media only screen and (max-width: 420px) {
+    .Wrapper{
+        width: 90%;
+    }
+
+    /*-------------- Add Css --------------*/
 }
