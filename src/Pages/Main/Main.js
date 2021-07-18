@@ -12,6 +12,8 @@ const Main = () => {
         <Container fluid className={global.Wrapper}>
             <Header/>
             <WelcomeSection pageName='main' addBlock='form'/>
+
+            <CourseCard/>
         </Container>
     );
 };
