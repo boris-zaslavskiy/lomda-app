@@ -1,0 +1,19 @@
+.aboutUsSection{
+
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.content .leftBlock{
+    width: 40%;
+    align-self: flex-start;
+}
+.content .rightBlock{
+    width: 50%;
+}
+.content .rightBlock img{
+    width: 100%;
+}
