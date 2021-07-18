@@ -28,4 +28,4 @@ const HeaderTables = (props) => {
     );
 };
 
-export {CourseCard};
+// export {CourseCard};
