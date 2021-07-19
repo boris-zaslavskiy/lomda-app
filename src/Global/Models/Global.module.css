@@ -1,0 +1,23 @@
+.Wrapper{
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+/*-------------- Tablet --------------*/
+@media only screen and (max-width: 768px) {
+
+    /*-------------- Add Css --------------*/
+}
+
+
+
+/*-------------- Phone --------------*/
+@media only screen and (max-width: 420px) {
+    .Wrapper{
+        width: 90%;
+    }
+
+    /*-------------- Add Css --------------*/
+}
