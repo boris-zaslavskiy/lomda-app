@@ -1,55 +1,54 @@
-import React, {useState} from 'react';
-import styles from './Header.module.css';
-import {Nav, Navbar} from "react-bootstrap";
-import logo from '../../../Assets/logo.png';
-import burgerF from '../../../Assets/burger-false.png';
-import burgerT from '../../../Assets/burger-true.png';
-import avatar from '../../../Assets/avatar.png';
-import {Link} from "react-router-dom";
+import React, {useEffect, useState} from 'react';
+import {context} from '../../../Utils/Context';
+import Menu from '../Header/Menu/Menu';
+import MenuBurger from '../Header/MenuBurger/MenuBurger';
+// import styles from '../Header/Header.module.css';
+
 
 const Header = () => {
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);//current size of the browser window -- Lera
+    const [openBurger, setOpenBurger] = useState(false);
 
-    const [burgerBtn, setBurgerBtn] = useState(burgerF);
-
-    const burgerClick = () => {
-        if(burgerBtn === burgerF){
-            setBurgerBtn(burgerT)
-        }else{
-            setBurgerBtn(burgerF);
+    const burgerMenu = () => {
+        openBurger ? closeBurgerMenu() : openBurgerMenu()
+    }
+    const closeBurgerMenu = () => {
+        setOpenBurger(false)
+        if (document.body.style.overflow === "hidden") {
+            document.body.style.overflow = "auto"
         }
     }
-    const loginClick = () =>{
-
+    const openBurgerMenu = () => {
+        setOpenBurger(true)
+        if (document.body.style.overflow !== "hidden") {
+            document.body.style.overflow = "hidden";
+        }
     }
+    //set the current window width
+    const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+    };
+    useEffect(() => {
+        //add an event to the global Window object to track window size changes --Lera
+        window.addEventListener("resize", handleResize)
+
+        return () => {
+            window.removeEventListener("resize", handleResize)
+        }
+    }, [])
 
     return (
-        <div className={`container-fluid ${styles.header}`}>
-            <Navbar collapseOnSelect expand={`md`} className={`${styles.navBar}`}>
-                <Navbar.Brand className={`col-3 col-md-2 ${styles.navBrand}`}>
-                    <img src={logo} alt="logo"/>
-                    <p>
-                        <span>Online</span>
-                        <span>Educational</span>
-                        <span>System</span>
-                    </p>
-                </Navbar.Brand>
-                <Navbar.Toggle aria-controls={'responsive-navbar-nav'} className={`col-2 ${styles.navBarToggle}`}>
-                    <img src={burgerBtn} onClick={burgerClick} alt="Burger button"/>
-                </Navbar.Toggle>
-                <Navbar.Collapse id={'responsive-navbar-nav'} className={` ${styles.navCollapse}`}>
-                    <Nav className={``}>
-                        <Link to={`/`}>Home</Link>
-                        <Link to={`/courses`}>Courses</Link>
-                        <Link to={`/about-us`}>About us</Link>
-                        <Link to={`/contacts`}>Contacts</Link>
-                    </Nav>
-                </Navbar.Collapse>
-                <div className={`col-2 ${styles.loginBtn}`} onClick={loginClick}>
-                    <img src={avatar} alt="Avatar"/>
-                    <h4>Login</h4>
-                </div>
-            </Navbar>
-        </div>
+        <context.Provider value = {
+            {
+                windowWidth,burgerMenu, openBurger,
+            }
+        }>
+
+            {/* render the menu component depending on the window size  -- Lera*/ }
+            {windowWidth<768?<MenuBurger/>:<Menu/>
+
+            }
+        </context.Provider>
     );
 };
 

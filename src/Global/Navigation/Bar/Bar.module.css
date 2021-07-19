@@ -34,16 +34,17 @@
     margin-top: 3rem;
     padding-bottom: 1rem;
 }
-.linkActive{
-    color:#F77D48;
-}
-.link{
-    color:#007BA4;
-}
+/*.linkActive{*/
+/*    color:#F77D48;*/
+/*}*/
+/*.link{*/
+/*    color:#007BA4;*/
+/*}*/
 
 
 .navHeader>a{
     text-decoration: underline;
+    color:black;
     font-family: 'M PLUS', sans-serif;
     font-size: 1.5vw;
     font-weight: 800;
@@ -52,14 +53,22 @@
     padding-right: 1rem;
 
 }
+@media (max-width: 320px) {
+    .navBurger{
+        margin: 7rem 0 0 0;
+    }
+}
 
 
-@media only screen and (max-width: 576px) {
+@media (min-width: 320px) and (max-width: 576px) {
     .navFooter{
         height: 50%;
     }
     .navFooter>a{
         font-size: 3vw;
+    }
+    .navBurger{
+        margin: 8rem 0 0 0;
     }
 }
 @media (min-width: 577px) and (max-width: 767px) {
@@ -68,6 +77,9 @@
     }
     .navFooter>a{
         font-size: 2.5vw;
+    }
+    .navBurger{
+        margin: 9rem 0 0 0;
     }
 }
 @media (min-width: 768px) and (max-width: 991px) {

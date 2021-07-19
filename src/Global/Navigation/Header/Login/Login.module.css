@@ -1,0 +1,29 @@
+.positionMenu>h4 {
+    font-weight: 900;
+    padding-top: 0.5rem;
+    font-family: 'M PLUS 2p', sans-serif;
+    font-size: 2vw;
+}
+.imageBurger{
+    height: 3rem;
+}
+@media (min-width: 768px) {
+    .positionMenu{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+
+    }
+
+}
+@media (max-width: 767px) {
+    .positionMenu>h4 {
+        font-size: 2.5vw;
+    }
+    .imageBurger{
+        height: 2.5rem;
+    }
+}
+
+

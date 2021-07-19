@@ -15,7 +15,7 @@
     font-weight: 800;
 }
 .imageBurger{
-    height: 40rem;
+    height: 7rem;
 }
 
 @media only screen and (max-width: 576px) {
@@ -29,6 +29,9 @@
     .blackText {
         font-size: 3vw;
     }
+    .imageBurger{
+        height: 4rem;
+    }
 }
 @media (min-width: 577px) and (max-width: 767px) {
     .whiteText{
@@ -37,7 +40,9 @@
     .blackText {
         font-size: 2vw;
     }
-
+    .imageBurger{
+        height: 5rem;
+    }
 }
 @media (min-width: 768px) {
     .whiteText{
