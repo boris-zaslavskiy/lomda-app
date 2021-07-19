@@ -17,7 +17,7 @@ const CourseCard = (props) => {
                 </div>
                 <div>
                     <LineBar currentCount='17' maxCount='34'/>
-                    <TextBar flag='UserCard' currentCount='17' text={`${17} of ${34} students completed the task`}/>
+                    <TextBar flag='DescriptionCard' currentCount='17' text={`${17} of ${34} students completed the task`}/>
                 </div>
                 <div className={styles.header}>
                     <TitleH6 title='Odyssey of Homer'/>
