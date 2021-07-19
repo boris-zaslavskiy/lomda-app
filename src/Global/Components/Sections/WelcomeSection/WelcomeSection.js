@@ -5,6 +5,7 @@ import Login from "../../../Authorization/Login/Login";
 import imgMain from '../../../../Assets/background/main.png';
 import {LineBar} from "../../ProgressBar/LineBar/LineBar";
 import {TextBar} from "../../ProgressBar/TextBar/TextBar";
+//import Registration from "../../../Authorization/Registration/registration"; //only example
 
 const WelcomeSection = (props) => {
 
@@ -27,7 +28,7 @@ const WelcomeSection = (props) => {
                         <Login/>
                     ) : (
                         <div>
-                            <TextBar flag='HeaderTables' currentCount='17' text={`Loading progress ${50}%`}/>
+                            <TextBar flag='UserCart' currentCount='17' text={`Loading progress ${50}%`}/>
                             <LineBar currentCount='50' maxCount='100'/>
                         </div>
                     )}

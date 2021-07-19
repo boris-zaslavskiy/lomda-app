@@ -1,5 +1,4 @@
 import './App.css';
-import Header from "./Global/Navigation/Header/Header";
 import Main from "./Pages/Main/Main";
 import {Route, Switch} from "react-router";
 import Contacts from "./Pages/Contacts/Contacts";

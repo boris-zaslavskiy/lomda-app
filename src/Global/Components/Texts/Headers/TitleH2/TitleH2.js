@@ -24,8 +24,8 @@ const TitleH2 = (props) => {
     return (
         <div className={styles.titleH2Block}>
             <h1>
-                <span className={styles.titleH2Orange}>{firstWord}</span>&ensp;
-                <span className={styles.titleH2Black}>{nextWord}</span>
+                <span className={styles.titleH2Black}>{firstWord}</span>&ensp;
+                <span className={styles.titleH2Orange}>{nextWord}</span>
             </h1>
         </div>
     );
