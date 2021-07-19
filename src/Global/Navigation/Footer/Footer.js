@@ -1,40 +1,41 @@
 import React from 'react';
+import { Container, Row } from 'react-bootstrap';
+import Logo from '../Logo/Logo';
+import Bar from '../Bar/Bar';
 import styles from './Footer.module.css';
-import mobLogo from '../../../Assets/mobileLogo.png';
-import {Link} from "react-router-dom";
-import whatsappImg from '../../../Assets/whatsapp.png';
-import telegramImg from '../../../Assets/telegram.png';
+import global from '../../../Global/Models/Global.module.css';
+import { FaTelegramPlane,FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <div className={styles.footer}>
-            <div className={styles.logo}>
-                <div className={styles.logoImg}>
+        <Container fluid className={`${styles.footer} py-5 ${styles.whiteText}`}>
+            <Row className={`${global.Wrapper} ${styles.fontStyle}`}>
+                <div className='col-7 col-md-4 p-0 h-100'>
+                    <Logo position='footer'/>
                 </div>
-                <p>LOMDA@all rights reserved (2021)</p>
-                <div className={`d-md-none ${styles.address}`}>
-                    <p>Yad Harutsim 10, Jerusalem, Israel,  PO Box 100003, Zip 9110001</p>
+                <div className='col-5 col-md-2'>
+                    <Bar position='footer'/>
                 </div>
-            </div>
-            <div className={styles.navigation}>
-                <nav className={styles.nav}>
-                <Link>Home</Link>
-                <Link>Courses</Link>
-                <Link>About us</Link>
-                <Link>Contacts</Link>
-                </nav>
-                <div className={styles.contacts}>
-                    <p className={styles.phoneNum}>P: +972 2 502 11 59 <br/> F: +972 2 502 11 65</p>
-                    <div className={styles.messengers}>
+                <div className='col-7  col-md-4 m-0 px-0 pt-3 pt-md-0'>
+                    <div className='d-flex flex-column justify-content-between h-100'>
+                        <p>Yad Harutsim 10,Jerusalem, Israel<br/>PO Box 100003, Zip 9110001</p>
+                        <p>
+                            P: +972 2 502 11 59 <br/>
+                            F: +972 2 502 11 65
+                        </p>
                         <p>yours@alpiltd.com</p>
-                    <p><span>Messengers:</span> <img src={whatsappImg} alt="Whatsapp"/><img src={telegramImg} alt="Telegram"/></p>
+                    </div>
                 </div>
+                <div className='col-5 col-md-2 pt-3 pt-md-0'>
+                    <div className={`d-flex flex-column ${styles.messengers}`}>
+                        <p className='mb-2'>Messengers:</p>
+                        <span className='mb-1'><FaTelegramPlane style={{ fontSize: 20 }}/> Telegram</span>
+                        <span><FaWhatsapp style={{ fontSize: 20 }}/> WhatsApp</span>
+                    </div>
                 </div>
-            </div>
-            <div className={`d-none d-md-block ${styles.address}`}>
-                <p>Yad Harutsim 10, Jerusalem, Israel,  PO Box 100003, Zip 9110001</p>
-            </div>
-        </div>
+                <p className={`${styles.textUnderLogo} d-flex justify-content-center align-items-center mt-5`}>LOMDA@all rights reserved (2021)</p>
+            </Row>
+        </Container>
     );
 };
 

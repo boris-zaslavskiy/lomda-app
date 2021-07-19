@@ -1,0 +1,78 @@
+
+.navFooter{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.navBurger{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10rem 0 0 0;
+    position: fixed;
+    top: 0;
+    width: 80%;
+    z-index: 100;
+    background-color: rgba(255,255,255,0.8);
+
+}
+
+.navFooter>a {
+    text-decoration: none;
+    color: white;
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 1vw;
+    margin: 0;
+}
+.navBurger>a {
+    text-decoration: none;
+    color:#007BA4;
+    font-family: 'M PLUS', sans-serif;
+    font-size: 5vw;
+    font-weight: 800;
+    margin-top: 3rem;
+    padding-bottom: 1rem;
+}
+.linkActive{
+    color:#F77D48;
+}
+.link{
+    color:#007BA4;
+}
+
+
+.navHeader>a{
+    text-decoration: underline;
+    font-family: 'M PLUS', sans-serif;
+    font-size: 1.5vw;
+    font-weight: 800;
+    margin: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+}
+
+
+@media only screen and (max-width: 576px) {
+    .navFooter{
+        height: 50%;
+    }
+    .navFooter>a{
+        font-size: 3vw;
+    }
+}
+@media (min-width: 577px) and (max-width: 767px) {
+    .navFooter{
+        height: 50%;
+    }
+    .navFooter>a{
+        font-size: 2.5vw;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .navFooter>a{
+        font-size: 2vw;
+    }
+}
+

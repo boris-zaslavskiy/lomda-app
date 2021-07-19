@@ -15,6 +15,9 @@ tbody tr td {
     padding-bottom: 1rem;
     font-family: 'M PLUS 1p', sans-serif;
 }
+.tableBorder>td p {
+    margin: 0;
+}
 
 td span{
     color: #007BA4;
