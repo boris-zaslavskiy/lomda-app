@@ -4,7 +4,7 @@ import global from '../../Global/Models/Global.module.css';
 import Header from "../../Global/Navigation/Header/Header";
 import {Container} from "react-bootstrap";
 import {WelcomeSection} from "../../Global/Components/Sections/WelcomeSection/WelcomeSection";
-import {UserCart} from "../../Global/Components/UserCart/UserCart";
+import {UserCard} from "../../Global/Components/UserCard/UserCard";
 import {TitleH2} from "../../Global/Components/Texts/Headers/TitleH2/TitleH2";
 
 
@@ -14,7 +14,7 @@ const Main = () => {
             <Header/>
             <WelcomeSection pageName='main' addBlock='form'/>
             <div className={styles.block}>
-                <UserCart/>
+                <UserCard/>
             </div>
 
         </Container>

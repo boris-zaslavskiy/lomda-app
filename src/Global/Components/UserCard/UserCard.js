@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './UserCart.module.css';
+import styles from './UserCard.module.css';
 
 import usersImg from '../../../Assets/users/alina.png';
 import {TitleH3} from "../Texts/Headers/TitleH3/TitleH3";
 
-const UserCart = (props) => {
+const UserCard = (props) => {
 
 //LineBar, TextBar, TitleH6, OrangeBtn, img srs - they need to be changed using data from the database. - Alina
     return (
@@ -19,4 +19,4 @@ const UserCart = (props) => {
     );
 };
 
-export {UserCart};
+export {UserCard};

@@ -28,7 +28,7 @@ const WelcomeSection = (props) => {
                         <Login/>
                     ) : (
                         <div>
-                            <TextBar flag='UserCart' currentCount='17' text={`Loading progress ${50}%`}/>
+                            <TextBar flag='UserCard' currentCount='17' text={`Loading progress ${50}%`}/>
                             <LineBar currentCount='50' maxCount='100'/>
                         </div>
                     )}
