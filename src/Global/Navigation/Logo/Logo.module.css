@@ -1,0 +1,54 @@
+.blackText {
+    font-size: 1vw;
+    font-weight: 800;
+    color: black;
+
+}
+.blackText p{
+    margin: 0;
+}
+.whiteText  p {
+    margin: 0;
+}
+.whiteText{
+    font-size: 1vw;
+    font-weight: 800;
+}
+.imageBurger{
+    height: 7rem;
+}
+
+@media only screen and (max-width: 576px) {
+    .whiteText{
+        font-size: 3vw;
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+
+    }
+    .blackText {
+        font-size: 3vw;
+    }
+    .imageBurger{
+        height: 4rem;
+    }
+}
+@media (min-width: 577px) and (max-width: 767px) {
+    .whiteText{
+        font-size: 2vw;
+    }
+    .blackText {
+        font-size: 2vw;
+    }
+    .imageBurger{
+        height: 5rem;
+    }
+}
+@media (min-width: 768px) {
+    .whiteText{
+        font-size: 1vw;
+    }
+    .blackText {
+        font-size: 1vw;
+    }
+}

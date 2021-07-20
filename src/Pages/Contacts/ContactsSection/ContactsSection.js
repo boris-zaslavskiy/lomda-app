@@ -3,6 +3,7 @@ import styles from '../ContactsSection/ContactsSection.module.css';
 import {Container, Row} from "react-bootstrap";
 import { FaPhoneSquareAlt, FaMapMarkerAlt,FaEnvelope } from "react-icons/fa";
 import {TitleH2} from "../../../Global/Components/Texts/Headers/TitleH2/TitleH2";
+import {TxtAdditionalBlue} from "../../../Global/Components/Texts/TextDescription/TxtAdditionalBlue/TxtAdditionalBlue";
 
 const ContactsSection = () => {
     return (
