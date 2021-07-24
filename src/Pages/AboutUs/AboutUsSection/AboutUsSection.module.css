@@ -1,5 +1,4 @@
 .aboutUsSection{
-
 }
 .content{
     display: flex;
@@ -8,11 +7,11 @@
     flex-wrap: wrap;
 }
 .content .leftBlock{
-    width: 40%;
     align-self: flex-start;
+    margin-bottom: 10%;
 }
 .content .rightBlock{
-    width: 50%;
+
 }
 .content .rightBlock img{
     width: 100%;
