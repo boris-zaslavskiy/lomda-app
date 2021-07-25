@@ -1,3 +1,9 @@
 .howItWorksSection{
-    background-color:#EBEDF5;
+    background:#EBEDF5 center;
+    padding: 5% 0;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
