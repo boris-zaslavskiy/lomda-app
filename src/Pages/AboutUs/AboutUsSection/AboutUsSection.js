@@ -15,7 +15,7 @@ const AboutUsSection = () => {
                 <TxtAdditionalBlue txt={'LOMDA allows the teacher to control the progress of each student online.'}/>
             </div>
             <div className={styles.rightBlock}>
-                <img src={abUsLogo} alt="About Us Logo"/>
+                <img src={abUsLogo} alt="About Us Menu"/>
             </div>
             </div>
         </div>

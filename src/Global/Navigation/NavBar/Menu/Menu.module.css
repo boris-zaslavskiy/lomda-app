@@ -1,32 +1,40 @@
-.cardBlock{
+.wrapper{
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-.col{
-    width: 48%;
+.ul{
+    list-style-type: none;
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.itemlist a{
+    text-decoration: none;
+    font-size: 1vw;
+    font-weight: bold;
+    margin: 0 20px;
 }
 
 
 
 /*-------------- Tablet Pro--------------*/
 @media only screen and (max-width: 1030px) {
-    .col{
-        width: 60%;
+    .itemlist a{
+        font-size: 1.5vw;
     }
 }
 
 /*-------------- Tablet --------------*/
 @media only screen and (max-width: 770px) {
-    .col{
-        width: 100%;
+    .itemlist a{
+        font-size: 2vw;
     }
 }
-
-
 
 /*-------------- Phone --------------*/
 @media only screen and (max-width: 420px) {

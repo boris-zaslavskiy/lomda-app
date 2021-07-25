@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useRef} from 'react';
 import styles from './HeaderCardItem.module.css';
 import {TxtAdditionalGrey} from "../Texts/TextDescription/TxtAdditionalGrey/TxtAdditionalGrey";
 import {TitleH3} from "../Texts/Headers/TitleH3/TitleH3";
@@ -15,7 +15,7 @@ const HeaderCardItem = (props) => {
     const inputRef = useRef(null);
 
 
-    const handleSubmit = async (e) => {//the function sends the changed data to the database
+    const handleSubmit = async () => {//the function sends the changed data to the database
         setStatusChange(false);
         let newName = name; //new value for the database - Alina  (put request)
     }
@@ -25,11 +25,11 @@ const HeaderCardItem = (props) => {
         setStatusChange(true);
     }
 
-    const handleFocus = (e) => { //the function changes the state and thus changes the button
+    const handleFocus = () => { //the function changes the state and thus changes the button
         setStatusChange(true);
     }
 
-    const setCurrentInput = (e) => {  //the function allows editing the input
+    const setCurrentInput = () => {  //the function allows editing the input
         setStatusChange(true);
         inputRef.current.focus(); //makes autofocus on input
     }
@@ -46,7 +46,7 @@ const HeaderCardItem = (props) => {
                             <div>
                                 <Form className={styles.form}>
                                     <input name='userName' value={name} className={styles.input} onChange={handleChange}
-                                           ref={inputRef} onFocus={handleFocus}/>
+                                           ref={inputRef} onFocus={handleFocus}  style={{borderBottom: `${(statusChange)?('3px solid #F77D48'):('3px solid  #E0E3EF')}` }} />
                                     <div>
                                         {(statusChange) ?
                                             (
@@ -63,17 +63,17 @@ const HeaderCardItem = (props) => {
                         )
                     case 'user':
                         return (
-                            <div className={styles.user}>
-                                <div>
+                            <div className={styles.card}>
+                                <div className={styles.header}>
                                     <TitleH3 title='User Users'/>
                                     <TxtAdditionalGrey txt='56 points - 45 points avg at class'/>
                                 </div>
-                               <GreenBtn type='button' title='Back to profile'/>
+                                <GreenBtn type='button' title='Back to profile'/>
                             </div>
                         )
                     case 'lesson':
                         return (
-                            <div>
+                            <div className={styles.card}>
                                 <TitleH3 title='lesson'/>
                                 <div>
 
@@ -81,7 +81,9 @@ const HeaderCardItem = (props) => {
                             </div>
                         )
                     default:
-                        <div/>
+                        return (
+                            <div/>
+                        )
                 }
             })()}
         </div>

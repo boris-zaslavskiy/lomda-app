@@ -1,15 +1,7 @@
 
-.block{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px 0;
-    padding: 0;
-}
-
 /*-------------- form --------------*/
 .form{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,42 +16,73 @@
     border: 2px solid transparent;
     padding: 0;
 }
+
 input:focus{
     outline: none;
-    border-bottom:3px solid black;
 }
 
 .btn {
     background-color: transparent;
     border: none;
-    font-size: 30px;
-    color: #818A8D;
+    font-size: 1.5vw;
+    color: #878A8B;
 }
 .btn:hover {
     background-color: transparent;
     border: none;
-    font-size: 30px;
     color: black;
 }
 
 
-/*-------------- user --------------*/
-.user{
-    width: 730px; /*---- stub. percents doesn't work ----*/
+/*-------------- user, lesson --------------*/
+.card{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 }
 
 
-/*-------------- Tablet --------------*/
-@media only screen and (max-width: 768px) {
 
+/*-------------- Tablet Pro--------------*/
+@media only screen and (max-width: 1030px) {
+    .form{
+        margin: 0;
+    }
+    .input{
+        height: 40px;
+    }
 }
 
+
+/*-------------- Tablet --------------*/
+@media only screen and (max-width: 770px) {
+    .input{
+        font-size: 3.5vw;
+    }
+    .btn {
+        font-size: 2.5vw;
+    }
+    .card{
+          justify-content: space-between;
+          flex-wrap: wrap;
+      }
+}
 
 
 /*-------------- Phone --------------*/
 @media only screen and (max-width: 420px) {
-
+    .input{
+        font-size: 5vw;
+    }
+    .btn {
+        font-size: 3vw;
+    }
+    .card{
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .header{
+        margin: 0 0 10px;
+    }
 }

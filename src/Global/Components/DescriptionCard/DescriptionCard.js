@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './DescriptionCard.module.css';
+import global from '../../../Global/Modules/Global.module.css';
 import {HeaderCardItem} from "../HeaderCardItem/HeaderCardItem";
 
 import usersImg from '../../../Assets/users/alina.png';
@@ -11,7 +12,7 @@ const DescriptionCard = (props) => {
 //for a HeaderCardIte component there can be one of 3 types: form, user, lesson. (str 19)
 
     return (
-        <div className={styles.wrapper}>
+        <div className={global.WhiteShadowBlock}>
             <div>
                 <img src={usersImg} alt='userImage' className={styles.image}/>
             </div>

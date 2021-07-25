@@ -5,16 +5,23 @@
     padding: 0;
 }
 
+/*-------------- Tablet Pro--------------*/
+@media only screen and (max-width: 1030px) {
+    .txtAdditional{
+        font-size: 1.5vw;
+    }
+}
+
 /*-------------- Tablet --------------*/
 @media only screen and (max-width: 770px) {
     .txtAdditional{
-        font-size: 3vw;
+        font-size: 2.5vw;
     }
 }
 
 /*-------------- Phone --------------*/
 @media only screen and (max-width: 420px) {
     .txtAdditional{
-        font-size: 4vw;
+        font-size: 3.5vw;
     }
 }

@@ -38,14 +38,14 @@ const Header = () => {
     }, [])
 
     return (
-        <context.Provider value = {
+        <context.Provider value={
             {
-                windowWidth,burgerMenu, openBurger,
+                windowWidth, burgerMenu, openBurger,
             }
         }>
 
-            {/* render the menu component depending on the window size  -- Lera*/ }
-            {windowWidth<768?<MenuBurger/>:<Menu/>
+            {/* render the Menu component depending on the window size  -- Lera*/}
+            {windowWidth < 768 ? <MenuBurger/> : <Menu/>
 
             }
         </context.Provider>

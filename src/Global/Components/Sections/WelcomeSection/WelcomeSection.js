@@ -5,7 +5,7 @@ import Login from "../../../Authorization/Login/Login";
 import imgMain from '../../../../Assets/background/main.png';
 import {LineBar} from "../../ProgressBar/LineBar/LineBar";
 import {TextBar} from "../../ProgressBar/TextBar/TextBar";
-//import Registration from "../../../Authorization/Registration/registration"; //only example
+
 
 const WelcomeSection = (props) => {
 
@@ -25,7 +25,10 @@ const WelcomeSection = (props) => {
                 <TitleH1 pageName={page}/>
                 <div className={styles.additionalBlock}>
                     {(statusAddBlock === 'form') ? (
-                        <Login/>
+                        <div>
+                           {/* <Login/>*/}
+                        </div>
+
                     ) : (
                         <div>
                             <TextBar flag='DescriptionCard' currentCount='17' text={`Loading progress ${50}%`}/>
