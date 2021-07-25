@@ -9,6 +9,7 @@ import ReadyToStartSection from "./ReadyToStartSection/ReadyToStartSection";
 const AboutUs = () => {
     return (
        <Container fluid className={GlobalStyles.Wrapper}>
+           <Header/>
            <AboutUsSection/>
            <OurFeaturesSection/>
            <HowItWorksSection/>

@@ -2,12 +2,11 @@ import React from 'react';
 import styles from './Card.module.css';
 import {TxtAdditionalGrey} from "../../../../Global/Components/Texts/TextDescription/TxtAdditionalGrey/TxtAdditionalGrey";
 
-const Card = ({img,txt}) => {
-
+const Card = ({item}) => {
     return (
-        <div className={styles.card}>
-            <img src={img} alt="Card Image"/>
-            <TxtAdditionalGrey txt={txt}/>
+        <div className={`col-12 col-lg-3 ${styles.card}`}>
+            <img src={item.img} alt="Card Image"/>
+            <TxtAdditionalGrey txt={item.txt}/>
         </div>
     );
 };
