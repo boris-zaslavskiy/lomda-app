@@ -4,3 +4,11 @@
     color: #878A8B;
     margin: 10px 0;
 }
+
+
+/*-------------- Phone --------------*/
+@media only screen and (max-width: 420px) {
+    .progressBarSpan{
+        font-size: 3vw;
+    }
+}

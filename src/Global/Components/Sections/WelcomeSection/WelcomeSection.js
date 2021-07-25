@@ -6,6 +6,7 @@ import imgMain from '../../../../Assets/background/main.png';
 import {LineBar} from "../../ProgressBar/LineBar/LineBar";
 import {TextBar} from "../../ProgressBar/TextBar/TextBar";
 
+
 const WelcomeSection = (props) => {
 
 //Logic: The "additionalBlock" component changes depending on the props and on the page on which it is located (Main, Teacher, Student) - Alina
@@ -24,10 +25,13 @@ const WelcomeSection = (props) => {
                 <TitleH1 pageName={page}/>
                 <div className={styles.additionalBlock}>
                     {(statusAddBlock === 'form') ? (
-                        <Login/>
+                        <div>
+                           {/* <Login/>*/}
+                        </div>
+
                     ) : (
                         <div>
-                            <TextBar flag='HeaderTables' currentCount='17' text={`Loading progress ${50}%`}/>
+                            <TextBar flag='DescriptionCard' currentCount='17' text={`Loading progress ${50}%`}/>
                             <LineBar currentCount='50' maxCount='100'/>
                         </div>
                     )}
