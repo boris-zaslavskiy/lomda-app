@@ -1,0 +1,24 @@
+.RTSSection{
+ position: relative;
+}
+.content{
+    display: flex;
+    justify-content: space-around;
+    background: #F1F3F8;
+}
+.content button{
+    font-size: 3vh;
+    background: #F77D48;
+    padding: 2% 0;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    color: white;
+}
+.content button:hover{
+    background: #009DB3;
+    cursor: pointer;
+}
+.RTSSection img{
+
+}

@@ -1,16 +1,82 @@
-.Wrapper{
+.ContainerFluid{ /*--- the most important container without padding, margin ---*/
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.Wrapper{ /*--- a container that defines 80% of the screen width ---*/
     width: 80%;
     margin: 0 auto;
     padding: 0;
 }
 
+.GreyWrapper{ /*--- a gray container without indents should be placed in it (.Wrapper) ---*/
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 0;
+    background-color: #EBEDF5;
+}
+
+.WhiteShadowBlock { /*--- white active block with shadows ---*/
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 0.25rem;
+}
+
+
+.WhiteBlock{ /*--- any white block, you just need to add data and set how the text should be located (center or not) ---*/
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 0.25rem;
+}
+
+/*--- scroll bar---*/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #E0E3EF;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #009DB3;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #F77D48;
+}
+
+
+
+
+/*-------------- Tablet Pro--------------*/
+@media only screen and (max-width: 1030px) {
+    .Wrapper{
+        width: 80%;
+    }
+}
+
 
 /*-------------- Tablet --------------*/
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 770px) {
 
     /*-------------- Add Css --------------*/
 }
-
 
 
 /*-------------- Phone --------------*/

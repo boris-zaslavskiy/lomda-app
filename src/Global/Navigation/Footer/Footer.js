@@ -3,8 +3,9 @@ import { Container, Row } from 'react-bootstrap';
 import Logo from '../Logo/Logo';
 import Bar from '../Bar/Bar';
 import styles from './Footer.module.css';
-import global from '../../../Global/Models/Global.module.css';
+import global from '../../../Global/Modules/Global.module.css';
 import { FaTelegramPlane,FaWhatsapp } from "react-icons/fa";
+import Menu2 from "../NavBar/Menu/Menu";
 
 const Footer = () => {
     return (
