@@ -3,7 +3,7 @@ import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 import Logo from '../../Logo/Logo';
 import Bar from '../../Bar/Bar';
-import Login from '../Login/Login';
+import LoginHeader from '../LoginHeader/LoginHeader';
 const Menu = () => {
     return (
         <Container className='p-0 mt-5 mb-5'>
@@ -15,7 +15,7 @@ const Menu = () => {
                     <Bar position='header'/>
                 </div>
                 <div className='col-2 p-0 d-flex align-items-center'>
-                    <Login/>
+                    <LoginHeader/>
                 </div>
             </Row>
         </Container>

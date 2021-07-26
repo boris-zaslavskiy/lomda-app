@@ -6,10 +6,11 @@ import HowItWorksSection from "./HowItWorksSection/HowItWorksSection";
 import OurFeaturesSection from "./OurFeaturesSection/OurFeaturesSection";
 import ReadyToStartSection from "./ReadyToStartSection/ReadyToStartSection";
 
+
 const AboutUs = () => {
     return (
        <Container fluid className={GlobalStyles.Wrapper}>
-           <Header/>
+           {/*<Header/>*/}
            <AboutUsSection/>
            <OurFeaturesSection/>
            <HowItWorksSection/>
