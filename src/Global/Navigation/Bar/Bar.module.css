@@ -34,16 +34,11 @@
     margin-top: 3rem;
     padding-bottom: 1rem;
 }
-/*.linkActive{*/
-/*    color:#F77D48;*/
-/*}*/
-/*.link{*/
-/*    color:#007BA4;*/
-/*}*/
+
 
 
 .navHeader>a{
-    text-decoration: underline;
+    text-decoration: none;
     color:black;
     font-family: 'M PLUS', sans-serif;
     font-size: 1.5vw;
