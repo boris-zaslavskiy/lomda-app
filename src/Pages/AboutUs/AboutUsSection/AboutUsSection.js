@@ -13,6 +13,7 @@ const AboutUsSection = () => {
             <div className={styles.content}>
             <div className={`col-12 col-lg-5 ${styles.leftBlock}`}>
                 <TxtAdditionalGrey txt={'Project LOMDA is a new interactive system that makes the education process more profound and amusing. It was developed to improve the level of creative and critical thinking of the pupils. The project was also designed as an instrument for creating motivation to achieve a higher level of education. For teachers it is a tool that helps to elevate their lesson to a new level, in order for their pupils to understand and learn the material more deeply and easily.'}/>
+                <br/>
                 <TxtAdditionalBlue txt={'LOMDA allows the teacher to control the progress of each student online.'}/>
             </div>
             <div className={`col-12 col-lg-5 ${styles.rightBlock}`}>

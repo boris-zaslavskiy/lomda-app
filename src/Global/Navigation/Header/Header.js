@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import {context} from '../../../Utils/Context';
 import Menu from '../Header/Menu/Menu';
 import MenuBurger from '../Header/MenuBurger/MenuBurger';
-// import styles from '../Header/Header.module.css';
 
 
 const Header = () => {

@@ -26,7 +26,7 @@ const WelcomeSection = (props) => {
                 <div className={styles.additionalBlock}>
                     {(statusAddBlock === 'form') ? (
                         <div>
-                           {/* <Login/>*/}
+                            <Login/>
                         </div>
 
                     ) : (
