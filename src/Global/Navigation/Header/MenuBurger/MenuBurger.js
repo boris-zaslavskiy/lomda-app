@@ -1,6 +1,6 @@
 import React, {useState, useContext} from 'react';
 import Logo from '../../Logo/Logo';
-import Login from '../Login/Login';
+import LoginHeader from '../LoginHeader/LoginHeader';
 import Bar from '../../Bar/Bar';
 import {context} from '../../../../Utils/Context';
 import styles from '../MenuBurger/MenuBurger.module.css';
@@ -16,7 +16,7 @@ const MenuBurger = () => {
                     <Logo/>
                 </div>
                 <div className={`${styles.login}`}>
-                    <Login/>
+                    <LoginHeader/>
                 </div>
                 <div className={`${styles.buttonBurger} ${openBurger ? styles.active: null}`}
                      onClick={()=>{

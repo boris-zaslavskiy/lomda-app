@@ -1,8 +1,8 @@
 import React from 'react';
 import avatar from '../../../../Assets/avatar.png';
-import styles from '../Login/Login.module.css';
+import styles from './LoginHeader.module.css';
 
-const Login = () => {
+const LoginHeader = () => {
     return (
         <div className={`${styles.positionMenu}`}>
             <img src={avatar} alt="Avatar" className={`${styles.imageBurger}`}/>
@@ -11,4 +11,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default LoginHeader;

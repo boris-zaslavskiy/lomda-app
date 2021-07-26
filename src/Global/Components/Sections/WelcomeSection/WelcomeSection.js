@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import styles from './WelcomeSection.module.css';
 import {TitleH1} from "../../Texts/Headers/TitleH1/TitleH1";
-import Login from "../../../Authorization/Login/Login";
 import imgMain from '../../../../Assets/background/main.png';
 import {LineBar} from "../../ProgressBar/LineBar/LineBar";
 import {TextBar} from "../../ProgressBar/TextBar/TextBar";

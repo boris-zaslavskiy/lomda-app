@@ -1,0 +1,29 @@
+
+.col{
+    width: 48%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+/*-------------- Tablet Pro--------------*/
+@media only screen and (max-width: 1030px) {
+    .col{
+        width: 60%;
+    }
+}
+
+/*-------------- Tablet --------------*/
+@media only screen and (max-width: 770px) {
+    .col{
+        width: 100%;
+    }
+}
+
+
+
+/*-------------- Phone --------------*/
+@media only screen and (max-width: 420px) {
+
+}

@@ -12,10 +12,18 @@
 
 .GreyWrapper{ /*--- a gray container without indents should be placed in it (.Wrapper) ---*/
     width: 100%;
-    margin: 0 auto;
+    margin: 100px auto 0;
     padding: 100px 0;
     background-color: #EBEDF5;
 }
+
+.RowBlock{/*--- row block to additional pages (StudentPage, CreateLesson...) ---*/
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 50px 0;
+}
+
 
 .WhiteShadowBlock { /*--- white active block with shadows ---*/
     width: 100%;
