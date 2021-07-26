@@ -8,7 +8,7 @@ import Header from "./Global/Navigation/Header/Header";
 import Footer from "./Global/Navigation/Footer/Footer";
 import StudentPage from "./Pages/StudentPage/StudentPage";
 import StudentsListPage from "./Pages/StudentsListPage/StudentsListPage";
-import Menu from "./Global/Navigation/NavBar/Menu/Menu";
+
 
 
 
@@ -16,7 +16,6 @@ function App() {
     return (
         <div className="App">
             <Header/>
-            {/*<Menu/>*/}
             <Switch>
                 <Route path={`/`} exact component={Main}/>
                 <Route path={`/about-us`} component={AboutUs}/>

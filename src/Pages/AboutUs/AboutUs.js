@@ -1,5 +1,4 @@
 import React from 'react';
-import GlobalStyles from '../../Global/Modules/Global.module.css'
 import {Container} from "react-bootstrap";
 import AboutUsSection from "./AboutUsSection/AboutUsSection";
 import HowItWorksSection from "./HowItWorksSection/HowItWorksSection";
@@ -8,8 +7,7 @@ import ReadyToStartSection from "./ReadyToStartSection/ReadyToStartSection";
 
 const AboutUs = () => {
     return (
-       <Container fluid className={GlobalStyles.Wrapper}>
-           <Header/>
+       <Container fluid>
            <AboutUsSection/>
            <OurFeaturesSection/>
            <HowItWorksSection/>
