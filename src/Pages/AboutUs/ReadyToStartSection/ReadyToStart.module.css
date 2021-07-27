@@ -1,5 +1,5 @@
 .RTSSection{
- position: relative;
+
 }
 .content{
     display: flex;
@@ -7,13 +7,14 @@
     background: #F1F3F8;
 }
 .content button{
-    font-size: 3vh;
+    font-size: 1.8vw;
     background: #F77D48;
     padding: 2% 0;
     border: none;
     border-radius: 10px;
     font-weight: 600;
     color: white;
+    margin-top: 5%;
 }
 .content button:hover{
     background: #009DB3;

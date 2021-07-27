@@ -19,7 +19,9 @@
 }
 .content{
     margin: 5% 0;
-    font-size: 2.5vh;
+    font-size: 1.4vw;
+    flex-grow: 2;
+    padding: 0 2vw;
 }
 .content p{
     font-weight: 800;
@@ -32,6 +34,22 @@
 color: #677D85;
 }
 .stepItem img{
+    height: auto;
+    flex-grow: 1.5;
     margin-right: 5%;
     padding: 5% 0;
+}
+@media (max-width: 992px) {
+    .stepItem{
+        flex-direction: column;
+    }
+    .number{
+        width: 15%;
+        font-size: 4vw;
+        line-break: auto;
+    }
+    .content{
+        font-size: 2.5vw;
+        padding: 0 2vw;
+    }
 }

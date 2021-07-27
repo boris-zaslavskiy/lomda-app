@@ -1,0 +1,15 @@
+.formWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.login{
+    border: none;
+    color: white;
+    border-radius: 7px;
+    background: #007BA4;
+    margin: 0 auto;
+}
+.login:hover{
+    background: #009DB3;
+}
