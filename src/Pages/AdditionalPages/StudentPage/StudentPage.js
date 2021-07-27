@@ -1,11 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import global from '../../../Global/Modules/Global.module.css';
-import styles from './StudentPage.module.css';
+
 import {Container} from "react-bootstrap";
 import {WelcomeSection} from "../../../Global/Components/Sections/WelcomeSection/WelcomeSection";
-import {DescriptionCard} from "../../../Global/Components/DescriptionCard/DescriptionCard";
+import StPage_Desktop from "./StPage_Desktop/StPage_Desktop";
+import StPage_Mobile from "./StPage_Mobile/StPage_Mobile";
+
 
 const StudentPage = () => {
+
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);//current size of the browser window
+
     return (
         <Container fluid className={global.ContainerFluid}>
             <div className={global.Wrapper}>
@@ -13,21 +18,19 @@ const StudentPage = () => {
             </div>
 
             <div className={global.GreyWrapper}>
-                <div className={global.Wrapper}>
+                {
+                    (windowWidth > 1020)?(
+                        <StPage_Desktop/>
+                    ):(
+                        <StPage_Mobile/>
+                    )
+                }
 
-                    <div className={global.RowBlock}>
-                        <div className={styles.col}>
-                            <DescriptionCard type='form'/> {/* user card by type form (form has input changes)*/}
+            </div>
 
-                            {/* person information*/}
-                        </div>
-                        <div className={styles.col}>
-                            {/* current lesson card*/}
-                        </div>
-                    </div>
-
+            <div className={global.Wrapper}>
+                <div className={global.RowBlock}>
                     {/* previous lessons*/}
-
                 </div>
             </div>
         </Container>

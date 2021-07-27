@@ -28,4 +28,4 @@ const CourseCard = (props) => {
     );
 };
 
-// export {CourseCard};
+export {CourseCard};

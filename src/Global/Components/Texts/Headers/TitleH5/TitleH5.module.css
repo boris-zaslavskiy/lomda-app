@@ -1,0 +1,22 @@
+
+h5{
+    width: 100%;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+/*-------------- Tablet Pro --------------*/
+@media only screen and (max-width: 1030px) {
+    h5{
+        font-size: 18px;
+    }
+}
+
+
+/*-------------- Phone --------------*/
+@media only screen and (max-width: 420px) {
+    h5{
+        font-size: 16px;
+    }
+}

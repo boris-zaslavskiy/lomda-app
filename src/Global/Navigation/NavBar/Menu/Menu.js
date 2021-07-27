@@ -3,6 +3,8 @@ import styles from './Menu.module.css';
 import {NavLink} from "react-router-dom";
 
 const Menu2 = (props) => {
+
+    {/*Alina menu v2*/}
     return (
         <div className={styles.wrapper}>
             <ul className={styles.ul}>

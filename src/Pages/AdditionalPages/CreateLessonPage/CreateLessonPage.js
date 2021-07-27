@@ -15,6 +15,9 @@ const CreateLessonPage = () => {
                     <div className={styles.col}>
                         <DescriptionCard type='user'/>
                     </div>
+                    <div className={styles.col}>
+                        <DescriptionCard type='form'/>
+                    </div>
                 </div>
             </div>
 

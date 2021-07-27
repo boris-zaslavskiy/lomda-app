@@ -9,7 +9,6 @@ const LineBar = (props) => {
 
     useEffect(() => {
         let currentPercent = props.currentCount * 100 / props.maxCount; //calculation of current percent
-        console.log(currentPercent)
         setCurrentLoading(currentPercent);
     }, [props.currentCount,props.maxCount]);
 
