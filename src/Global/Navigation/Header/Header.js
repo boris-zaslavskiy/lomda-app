@@ -2,8 +2,6 @@ import React, {useEffect, useState} from 'react';
 import {context} from '../../../Utils/Context';
 import Menu from '../Header/Menu/Menu';
 import MenuBurger from '../Header/MenuBurger/MenuBurger';
-// import styles from '../Table2Column/Table2Column.module.css';
-
 
 const Header = () => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);//current size of the browser window -- Lera
