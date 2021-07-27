@@ -1,3 +1,36 @@
+.header {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.imageUpload{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageBlock{
+     width: 120px;
+     overflow: hidden;
+     display: flex;
+     justify-content: center;
+     border-radius: 0.25rem 0 0 0.25rem;
+ }
+
+.black{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.black:hover{
+    background: rgba(0,0,0, 0.5);
+    opacity: 1;
+}
 
 .image {
     width: auto;
@@ -5,35 +38,75 @@
     border-radius: 0.25rem 0 0 0.25rem;
 }
 
-.header {
-    width: 580px;
-    margin: 0 auto;
+.black{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 0.25rem 0 0 0.25rem;
 }
+.fileInput{
+    position: absolute;
+    z-index: 10;
+}
+.file {
+    display: none;
+}
+.fileInput label {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform .2s ease-out;
+}
+
+
 
 
 /*-------------- Tablet Pro--------------*/
 @media only screen and (max-width: 1030px) {
-    .image {
-        height: 80px; /*---- stub. percents doesn't work ----*/
+    .imageUpload{
+        margin-right: 10px;
     }
-    .header {
-        width: 400px;
+    .imageBlock{
+        width: 60px;
+    }
+    .image {
+        height: 90px; /*---- stub. percents doesn't work ----*/
+    }
+    .fileInput label {
+        width: 40px;
+        height: 40px;
     }
 }
 
-
 /*-------------- Tablet --------------*/
 @media only screen and (max-width: 770px) {
+    .imageUpload{
+        margin-right: 0;
+    }
     .header {
         width: 500px;
+    }
+    .imageBlock{
+        width: 60px;
     }
 }
 
 
 /*-------------- Phone --------------*/
 @media only screen and (max-width: 420px) {
+    .imageBlock{
+        width: 70px;
+    }
     .image {
-        height: 120px; /*---- stub. percents doesn't work ----*/
+        height: 100px; /*---- stub. percents doesn't work ----*/
     }
     .header {
        margin: 10px;

@@ -3,7 +3,6 @@ import {context} from '../../../Utils/Context';
 import Menu from '../Header/Menu/Menu';
 import MenuBurger from '../Header/MenuBurger/MenuBurger';
 
-
 const Header = () => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);//current size of the browser window -- Lera
     const [openBurger, setOpenBurger] = useState(false);

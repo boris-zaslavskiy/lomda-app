@@ -2,7 +2,7 @@ import React from 'react';
 import global from '../../../Global/Modules/Global.module.css';
 import {Container} from "react-bootstrap";
 import {WelcomeSection} from "../../../Global/Components/Sections/WelcomeSection/WelcomeSection";
-import styles from "../StudentPage/StudentPage.module.css";
+import styles from "../StudentPage/StPage_Desktop/StPage_Desktop.module.css";
 import {DescriptionCard} from "../../../Global/Components/DescriptionCard/DescriptionCard";
 
 const TeacherPage = () => {

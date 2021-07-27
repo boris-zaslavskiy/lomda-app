@@ -19,7 +19,6 @@ import CatalogLessonPage from "./Pages/AdditionalPages/CatalogLessonPage/Catalog
 
 
 
-
 function App() {
     return (
         <div className="App">

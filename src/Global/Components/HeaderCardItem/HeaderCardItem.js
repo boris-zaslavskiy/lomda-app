@@ -43,9 +43,9 @@ const HeaderCardItem = (props) => {
                 switch (props.type) {
                     case 'form':
                         return (
-                            <div>
+                            <div className={styles.formBlock}>
                                 <Form className={styles.form}>
-                                    <input name='userName' value={name} className={styles.input} onChange={handleChange}
+                                    <input type='text' name='userName' value={name} className={styles.input} onChange={handleChange}
                                            ref={inputRef} onFocus={handleFocus}  style={{borderBottom: `${(statusChange)?('3px solid #F77D48'):('3px solid  #E0E3EF')}` }} />
                                     <div>
                                         {(statusChange) ?
@@ -76,7 +76,7 @@ const HeaderCardItem = (props) => {
                             <div className={styles.card}>
                                 <TitleH3 title='lesson'/>
                                 <div>
-
+                                    {/* Odyssey of Homer */}
                                 </div>
                             </div>
                         )

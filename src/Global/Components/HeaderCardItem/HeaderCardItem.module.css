@@ -1,7 +1,11 @@
 
 /*-------------- form --------------*/
+.formBlock{
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+}
 .form{
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,10 +40,11 @@ input:focus{
 
 /*-------------- user, lesson --------------*/
 .card{
-    width: 100%;
+    width: 95%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    margin: 0 auto;
 }
 
 
@@ -47,6 +52,7 @@ input:focus{
 /*-------------- Tablet Pro--------------*/
 @media only screen and (max-width: 1030px) {
     .form{
+        width: 90%;
         margin: 0;
     }
     .input{

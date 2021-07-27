@@ -17,7 +17,7 @@
     background-color: #EBEDF5;
 }
 
-.RowBlock{/*--- row block to additional pages (StudentPage, CreateLesson...) ---*/
+.RowBlock{/*--- row block to additional pages (StPage_Mobile, CreateLesson...) ---*/
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -27,7 +27,6 @@
 
 .WhiteShadowBlock { /*--- white active block with shadows ---*/
     width: 100%;
-    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,9 +38,11 @@
 
 .WhiteBlock{ /*--- any white block, you just need to add data and set how the text should be located (center or not) ---*/
     width: 100%;
+    height: auto;
     margin: 0;
     padding: 20px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background-color: white;
