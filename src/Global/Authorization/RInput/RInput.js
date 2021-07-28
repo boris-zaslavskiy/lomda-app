@@ -1,9 +1,18 @@
 import React, {useState} from 'react';
+import 'font-awesome/css/font-awesome.min.css'
+import styles from './RInput.module.css';
 
 const RInput = (props) => {
 
     const [inpData, setInpData] = useState(``);
 
+    const helpBlock = () =>{
+        if (props.error === 'true'){
+            return(<i className={`fa fa-check ${styles.helpBlockTrue}`}></i>)
+        }else{
+            return props.error;
+        }
+    }
 
     const handleChange = (e) => {
         const key = e.target.name;
@@ -14,12 +23,37 @@ const RInput = (props) => {
         setInpData(value);
         props.getData(inpData, key);
     }
+    const checkInput = () =>{
+        switch (props.type){
+            case 'email':
+                return (
+                    <div className={`mb-3`}>
+                        <input className={`form-control`} type={'email'} placeholder={'e-mail'} onChange={handleChange} name={props.name}/>
+                        <span className={`help-block`}>{helpBlock()}</span>
+                    </div>
+                )
+            case 'password':
+                return (
+                    <div className={`mb-3`}>
+                        <input className={`form-control`} type={'password'} placeholder={'password'} onChange={handleChange} name={props.name}/>
+                        <span className={`help-block`}>{helpBlock()}</span>
+                    </div>
+                )
+            case 'checkbox':
+                return (
+                    <div className={``}>
+                    <input type="checkbox" className={`form-check-input`}/>
+                        <label className={`form-check-label`}>Remember me</label>
+                    </div>
+                )
+            default:
+                return ``;
+        }
+    }
+
 
     return (
-        <>
-        <input type={props.type} placeholder={props.placeholder} onChange={handleChange} name={props.name}/>
-            <span>{props.error}</span>
-        </>
+        checkInput()
     );
 
 }

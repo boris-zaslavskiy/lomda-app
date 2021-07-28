@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import styles from './Login.module.css';
 import RInput from "../RInput/RInput";
-import {Form} from "react-bootstrap";
+import {Form, NavLink} from "react-bootstrap";
 
 
 const Login = () => {
@@ -16,14 +16,18 @@ const Login = () => {
         password:''
     }
 
-    const [error,setError] = useState(``);
+    const [eError,setEmailError] = useState(`Enter your e-mail`);
+    const [pError,setPasswordError] = useState(`Enter your password`);
 
     useEffect(()=> {
         const ePattern = /^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{1,15}$/;
-        if (!ePattern.test(data.email)){
-            setError(`Incorrect input`);
+        if (data.email.length === 0){
+            setEmailError(`Enter your email`);
+        }
+        else if (!ePattern.test(data.email)){
+            setEmailError(`Incorrect input`);
         }else{
-            setError(``);
+            setEmailError(`true`);
             correctData.email = data.email;
         }
     }, [data.email])
@@ -31,12 +35,17 @@ const Login = () => {
     useEffect(()=> {
         const letters = /[a-zA-Z]/g;
         const numbers = /[0-9]/g;
-        if (data.password.length < 6){
-            setError(`Your password needs to contain more that 6 symbols`);
+        if (data.password.length === 0){
+            setPasswordError(`Enter your password`);
+        }
+        else if (data.password.length < 6){
+            setPasswordError(`Your password needs to contain more that 6 symbols`);
         }else if(!letters.test(data.password)){
-           setError(`Your password needs to contain at least 1 letter`);
+           setPasswordError(`Your password needs to contain at least 1 letter`);
         }else if(!numbers.test(data.password)){
-            setError(`Your password needs to contain at least 1 digit`);
+            setPasswordError(`Your password needs to contain at least 1 digit`);
+        }else if(letters.test(data.password) && numbers.test(data.password)){
+            setPasswordError('true');
         }else{
             correctData.password = data.password;
         }
@@ -56,9 +65,17 @@ const Login = () => {
 
     return (
        <Form onSubmit={handleSubmit} className={styles.formWrapper}>
-        <RInput type={`email`} name='email' getData={getDataFromInp} error={error}/>
-        <RInput type={`password`} name='password' getData={getDataFromInp} error={error}/>
-           <button type='submit'>button</button>
+        <RInput type={`email`} name='email' getData={getDataFromInp} error={eError}/>
+        <RInput type={`password`} name='password' getData={getDataFromInp} error={pError}/>
+           <div className={`d-flex justify-content-between align-items-center`}>
+               <RInput type={`checkbox`}/>
+               <NavLink className={styles.FYPLink}>Forgot your password?</NavLink>
+           </div>
+           <div className={'w-100 d-flex flex-column align-items-center justify-content-between mt-3'}>
+           <button className={`mb-5 ${styles.loginBtn}`} type='submit'>Login</button>
+               <p className={`mb-0`}>Don't have an account yet?</p>
+               <NavLink className={`${styles.SILink}`}>Sign in</NavLink>
+           </div>
        </Form>
     );
 };
