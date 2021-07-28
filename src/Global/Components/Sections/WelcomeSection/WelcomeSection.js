@@ -4,6 +4,7 @@ import {TitleH1} from "../../Texts/Headers/TitleH1/TitleH1";
 import imgMain from '../../../../Assets/background/main.png';
 import {LineBar} from "../../ProgressBar/LineBar/LineBar";
 import {TextBar} from "../../ProgressBar/TextBar/TextBar";
+import Login from "../../../Authorization/Login/Login";
 
 
 const WelcomeSection = (props) => {
