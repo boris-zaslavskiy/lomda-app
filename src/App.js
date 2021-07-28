@@ -16,6 +16,7 @@ import CreateLessonPage from "./Pages/AdditionalPages/CreateLessonPage/CreateLes
 import QuestionAnswersPage from "./Pages/AdditionalPages/QuestionAnswersPage/QuestionAnswersPage";
 import GeneralInformationPage from "./Pages/AdditionalPages/GeneralInformationPage/GeneralInformationPage";
 import CatalogLessonPage from "./Pages/AdditionalPages/CatalogLessonPage/CatalogLessonPage";
+import TeacherPage from "./Pages/AdditionalPages/TeacherPage/TeacherPage";
 
 
 
@@ -29,6 +30,7 @@ function App() {
                 <Route path={`/contacts`} component={Contacts}/>
                 <Route path={`/courses`} component={Courses}/>
                 <Route path={`/student`} component={StudentPage}/>
+                <Route path={`/teacher`} component={TeacherPage}/>
                 <Route path={`/studentsList`} component={StudentsListPage}/>
                 <Route path={`/createLesson`} component={CreateLessonPage}/>
                 <Route path={`/questionAnswers`} component={QuestionAnswersPage}/>

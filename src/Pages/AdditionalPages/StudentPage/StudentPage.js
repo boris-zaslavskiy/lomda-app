@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import global from '../../../Global/Modules/Global.module.css';
 
 import {Container} from "react-bootstrap";
@@ -10,6 +10,20 @@ import StPage_Mobile from "./StPage_Mobile/StPage_Mobile";
 const StudentPage = () => {
 
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);//current size of the browser window
+
+    //set the current window width
+    const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+    };
+
+    useEffect(() => {
+        //add an event to the global Window object to track window size changes --Lera
+        window.addEventListener("resize", handleResize)
+
+        return () => {
+            window.removeEventListener("resize", handleResize)
+        }
+    }, [])
 
     return (
         <Container fluid className={global.ContainerFluid}>

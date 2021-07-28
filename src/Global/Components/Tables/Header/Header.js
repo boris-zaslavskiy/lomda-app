@@ -7,8 +7,8 @@ const Header = (props) => {
 
 //Title text, type button changes depending on the props. - Alina
     return (
-        <div className={styles.greenHeader}>
-            <TitleH5 title={props.title}/>
+        <div className={styles.headerBlock} style={{backgroundColor: `${props.color}`}}>
+            <TitleH5 title={props.title} color='white' weight={props.weight}/>
         </div>
     );
 };

@@ -1,7 +1,7 @@
 .greenBtn{
     width: 150px;
     background-color: #009DB3;
-    border: 1px solid #009DB3;
+    border: 2px solid #009DB3;
     color: white;
     font-weight: bold;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -9,7 +9,7 @@
 .greenBtn:hover, .greenBtn:focus{
     background-color: transparent;
     box-shadow: none;
-    border: 1px solid #009DB3;
+    border: 2px solid #009DB3;
     color: #009DB3;
 }
 

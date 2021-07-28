@@ -9,7 +9,7 @@ import {GreenBtn} from "../Button/GreenBtn/GreenBtn";
 
 const HeaderCardItem = (props) => {
 
-    const [name, setName] = useState('Marco Botton');
+    const [name, setName] = useState(props.title);
     const [statusChange, setStatusChange] = useState(false);
 
     const inputRef = useRef(null);
@@ -58,15 +58,15 @@ const HeaderCardItem = (props) => {
                                             )}
                                     </div>
                                 </Form>
-                                <TxtAdditionalGrey txt='56 points - 45 points avg at class'/>
+                                <TxtAdditionalGrey txt={props.txt}/>
                             </div>
                         )
                     case 'user':
                         return (
                             <div className={styles.card}>
                                 <div className={styles.header}>
-                                    <TitleH3 title='User Users'/>
-                                    <TxtAdditionalGrey txt='56 points - 45 points avg at class'/>
+                                    <TitleH3 title={props.title}/>
+                                    <TxtAdditionalGrey txt={props.txt}/>
                                 </div>
                                 <GreenBtn type='button' title='Back to profile'/>
                             </div>
@@ -74,7 +74,7 @@ const HeaderCardItem = (props) => {
                     case 'lesson':
                         return (
                             <div className={styles.card}>
-                                <TitleH3 title='lesson'/>
+                                <TitleH3 title={props.title}/>
                                 <div>
                                     {/* Odyssey of Homer */}
                                 </div>

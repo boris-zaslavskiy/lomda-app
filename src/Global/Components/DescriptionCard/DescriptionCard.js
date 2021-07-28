@@ -35,7 +35,7 @@ const DescriptionCard = (props) => {
 
 
             <div className={styles.header}>
-                <HeaderCardItem type={props.type}/>
+                <HeaderCardItem type={props.type} title={props.title} txt={props.txt}/>
             </div>
         </div>
     );

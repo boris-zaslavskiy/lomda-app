@@ -17,7 +17,7 @@
     background-color: #EBEDF5;
 }
 
-.RowBlock{/*--- row block to additional pages (StPage_Mobile, CreateLesson...) ---*/
+.RowBlock{/*--- row block to additional pages (TeachPage_Mobile, CreateLesson...) ---*/
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -43,7 +43,7 @@
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: white;
     border-radius: 0.25rem;

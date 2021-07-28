@@ -1,10 +1,11 @@
 import React from 'react';
 import styles from './CourseCard.module.css';
-import images from '../../../Assets/background/main.png'
 import {LineBar} from "../ProgressBar/LineBar/LineBar";
 import {TextBar} from "../ProgressBar/TextBar/TextBar";
 import {TitleH6} from "../Texts/Headers/TitleH6/TitleH6";
 import {OrangeBtn} from "../Button/OrangeBtn/OrangeBtn";
+
+import images from '../../../Assets/background/main.png'
 
 const CourseCard = (props) => {
 

@@ -4,6 +4,7 @@ import global from '../../Global/Modules/Global.module.css';
 
 import {Container} from "react-bootstrap";
 import {WelcomeSection} from "../../Global/Components/Sections/WelcomeSection/WelcomeSection";
+import {Table2ColProgress} from "../../Global/Components/Tables/Table2ColProgress/Table2ColProgress";
 
 
 const Main = () => {

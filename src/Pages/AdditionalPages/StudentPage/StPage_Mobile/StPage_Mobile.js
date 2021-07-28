@@ -16,11 +16,11 @@ const StPage_Mobile = () => {
     return (
         <Container fluid className={global.ContainerFluid}>
             <div className={global.Wrapper}>
-                <DescriptionCard type='form'/> {/*user card by type form (form has input changes)*/}
+                <DescriptionCard type='form' title='Student' txt='56 points - 45 points avg at class'/> {/*user card by type form (form has input changes)*/}
 
                 {/* person info - only second parameter should change*/}
                 <div className={styles.tableBlock}>
-                    <Header title='Personal info & progress'/>
+                    <Header title='Personal info & progress' color='#009DB3'/>
                     <Table2Column first='Teacher' second='John Smith'/>
                     <Table2Column first='Class' second='5B'/>
                     <Table2Column first='Points' second='56'/>
