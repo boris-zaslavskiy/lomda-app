@@ -5,6 +5,7 @@ import {Container} from "react-bootstrap";
 import {WelcomeSection} from "../../../Global/Components/Sections/WelcomeSection/WelcomeSection";
 import StPage_Desktop from "./StPage_Desktop/StPage_Desktop";
 import StPage_Mobile from "./StPage_Mobile/StPage_Mobile";
+import PreviousLessons from "../PreviousLessons/PreviousLessons";
 
 
 const StudentPage = () => {
@@ -16,7 +17,6 @@ const StudentPage = () => {
             <div className={global.Wrapper}>
                 <WelcomeSection pageName='student' addBlock='progressBar'/>
             </div>
-
             <div className={global.GreyWrapper}>
                 {
                     (windowWidth > 1020)?(
@@ -28,9 +28,10 @@ const StudentPage = () => {
 
             </div>
 
+            {/* previous lessons*/}
             <div className={global.Wrapper}>
                 <div className={global.RowBlock}>
-                    {/* previous lessons*/}
+                    <PreviousLessons/>
                 </div>
             </div>
         </Container>
