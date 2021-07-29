@@ -9,7 +9,7 @@ import images from '../../../Assets/background/main.png'
 
 const CourseCard = (props) => {
 
-//LineBar, TextBar, TitleH6, OrangeBtn, img srs - they need to be changed using data from the database. - Alina
+//LineBar, TextBar, TitleH6, IconBtn, img srs - they need to be changed using data from the database. - Alina
     return (
         <div className={styles.wrapper}>
             <div className={styles.card}>

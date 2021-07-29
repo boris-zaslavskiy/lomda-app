@@ -4,6 +4,7 @@ import global from '../../../../Global/Modules/Global.module.css';
 import {TitleH5} from "../../Texts/Headers/TitleH5/TitleH5";
 import {TxtAdditionalGrey} from "../../Texts/TextDescription/TxtAdditionalGrey/TxtAdditionalGrey";
 import {GreenBtn} from "../../Button/GreenBtn/GreenBtn";
+import {BorderBtn} from "../../Button/BorderBtn/BorderBtn";
 
 const TableRowWithBtn = (props) => {
 
@@ -15,7 +16,7 @@ const TableRowWithBtn = (props) => {
                     <TitleH5 title={props.title} color='#878A8B' weight='400'/>
                 </div>
                 <div>
-                    <GreenBtn title='view'/>
+                    <BorderBtn title='View' color='#009DB3'/>
                 </div>
             </div>
         </div>

@@ -4,7 +4,7 @@ import {TxtAdditionalGrey} from "../Texts/TextDescription/TxtAdditionalGrey/TxtA
 import {TitleH3} from "../Texts/Headers/TitleH3/TitleH3";
 import {Form} from 'react-bootstrap';
 import {FaPencilAlt, FaCheck} from 'react-icons/fa';
-import {GreenBtn} from "../Button/GreenBtn/GreenBtn";
+import {BorderBtn} from "../Button/BorderBtn/BorderBtn";
 
 
 const HeaderCardItem = (props) => {
@@ -68,7 +68,7 @@ const HeaderCardItem = (props) => {
                                     <TitleH3 title={props.title}/>
                                     <TxtAdditionalGrey txt={props.txt}/>
                                 </div>
-                                <GreenBtn type='button' title='Back to profile'/>
+                                <BorderBtn type='button' title='Back to profile' color='#009DB3'/>
                             </div>
                         )
                     case 'lesson':

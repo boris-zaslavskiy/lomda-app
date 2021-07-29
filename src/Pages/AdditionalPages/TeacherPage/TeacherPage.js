@@ -40,12 +40,6 @@ const TeacherPage = () => {
                 }
 
             </div>
-
-            <div className={global.Wrapper}>
-                <div className={global.RowBlock}>
-                    {/* previous lessons*/}
-                </div>
-            </div>
         </Container>
     );
 };

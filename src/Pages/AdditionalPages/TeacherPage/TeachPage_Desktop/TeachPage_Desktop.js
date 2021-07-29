@@ -18,6 +18,7 @@ import {GreenBtn} from "../../../../Global/Components/Button/GreenBtn/GreenBtn";
 import {OrangeBtn} from "../../../../Global/Components/Button/OrangeBtn/OrangeBtn";
 import {Table2ColProgress} from "../../../../Global/Components/Tables/Table2ColProgress/Table2ColProgress";
 import images from "../../../../Assets/background/main.png";
+import {BorderBtn} from "../../../../Global/Components/Button/BorderBtn/BorderBtn";
 
 const TeachPage_Desktop = () => {
     return (
@@ -63,8 +64,8 @@ const TeachPage_Desktop = () => {
 
                                     <TitleH6 title='Odyssey of Homer'/>
                                     <div className={styles.btnBlock}>
-                                        <GreenBtn title='View lesson'/>
-                                        <OrangeBtn title='Edit lesson'/>
+                                        <BorderBtn title='View lesson' color='#009DB3'/>
+                                        <BorderBtn title='Edit lesson' color='#F77D48'/>
                                     </div>
                                 </div>
                             </div>

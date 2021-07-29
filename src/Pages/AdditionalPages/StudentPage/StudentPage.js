@@ -23,7 +23,7 @@ const StudentPage = () => {
         return () => {
             window.removeEventListener("resize", handleResize)
         }
-    }, [])
+    }, []);
 
     return (
         <Container fluid className={global.ContainerFluid}>
