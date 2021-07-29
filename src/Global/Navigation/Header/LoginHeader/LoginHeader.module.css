@@ -2,10 +2,16 @@
     font-weight: 900;
     padding-top: 0.5rem;
     font-family: 'M PLUS 2p', sans-serif;
-    font-size: 2vw;
+    font-size: 1.5vw;
+}
+.show{
+    display: none;
 }
 .imageBurger{
     height: 3rem;
+    padding: 5px;
+    border: 2px solid #D8DCEB;
+    border-radius: 5px;
 }
 @media (min-width: 768px) {
     .positionMenu{
@@ -19,10 +25,16 @@
 }
 @media (max-width: 767px) {
     .positionMenu>h4 {
-        font-size: 2.5vw;
+        font-size: 3vw;
     }
     .imageBurger{
         height: 2.5rem;
+    }
+    .positionMenu{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 75%;
     }
 }
 

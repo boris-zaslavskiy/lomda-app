@@ -7,7 +7,7 @@ import LoginHeader from '../LoginHeader/LoginHeader';
 const Menu = () => {
     return (
         <Container className='p-0 mt-5 mb-5'>
-            <Row>
+            <Row className='d-flex align-items-center'>
                 <div className='col-3 p-0'>
                     <Logo position='header'/>
                 </div>
