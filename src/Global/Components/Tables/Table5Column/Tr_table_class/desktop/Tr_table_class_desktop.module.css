@@ -1,0 +1,31 @@
+
+.wrapper {
+    width: 100%;
+    margin: 20px 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.col {
+    width: 24%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: white;
+}
+
+.col:first-of-type {
+    border-radius: 0.25rem 0 0  0.25rem;
+}
+
+.col:last-of-type {
+    border-radius: 0 0.25rem 0.25rem 0 ;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

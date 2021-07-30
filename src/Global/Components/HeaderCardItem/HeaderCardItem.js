@@ -4,12 +4,13 @@ import {TxtAdditionalGrey} from "../Texts/TextDescription/TxtAdditionalGrey/TxtA
 import {TitleH3} from "../Texts/Headers/TitleH3/TitleH3";
 import {Form} from 'react-bootstrap';
 import {FaPencilAlt, FaCheck} from 'react-icons/fa';
-import {GreenBtn} from "../Button/GreenBtn/GreenBtn";
+import {BorderBtn} from "../Button/BorderBtn/BorderBtn";
+import {Link} from "react-router-dom";
 
 
 const HeaderCardItem = (props) => {
 
-    const [name, setName] = useState('Marco Botton');
+    const [name, setName] = useState(props.title);
     const [statusChange, setStatusChange] = useState(false);
 
     const inputRef = useRef(null);
@@ -58,23 +59,26 @@ const HeaderCardItem = (props) => {
                                             )}
                                     </div>
                                 </Form>
-                                <TxtAdditionalGrey txt='56 points - 45 points avg at class'/>
+                                <TxtAdditionalGrey txt={props.txt}/>
                             </div>
                         )
                     case 'user':
                         return (
                             <div className={styles.card}>
                                 <div className={styles.header}>
-                                    <TitleH3 title='User Users'/>
-                                    <TxtAdditionalGrey txt='56 points - 45 points avg at class'/>
+                                    <TitleH3 title={props.title}/>
+                                    <TxtAdditionalGrey txt={props.txt}/>
                                 </div>
-                                <GreenBtn type='button' title='Back to profile'/>
+                                <Link to={`/${props.url}`}>
+                                    <BorderBtn type='button' title='Back to profile' color='#009DB3' />
+                                </Link>
+
                             </div>
                         )
                     case 'lesson':
                         return (
                             <div className={styles.card}>
-                                <TitleH3 title='lesson'/>
+                                <TitleH3 title={props.title}/>
                                 <div>
                                     {/* Odyssey of Homer */}
                                 </div>

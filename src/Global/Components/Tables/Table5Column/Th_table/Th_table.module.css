@@ -1,0 +1,39 @@
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.col {
+    width: 24%;
+    align-items: center;
+}
+
+.colGroup{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*-------------- Tablet Pro--------------*/
+@media only screen and (max-width: 1030px) {
+    .row:first-of-type {
+        width: 50%;
+    }
+
+    .row:last-of-type {
+        width: 48%;
+    }
+}
+
+/*-------------- Tablet --------------*/
+@media only screen and (max-width: 770px) {
+    .wrapper {
+        margin: 0 0 10px;
+    }
+}
+
+/*-------------- Phone --------------*/
+@media only screen and (max-width: 420px) {
+
+}

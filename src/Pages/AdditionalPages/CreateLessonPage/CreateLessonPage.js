@@ -5,6 +5,8 @@ import {Container} from "react-bootstrap";
 
 import {DescriptionCard} from "../../../Global/Components/DescriptionCard/DescriptionCard";
 import {TitleH2} from "../../../Global/Components/Texts/Headers/TitleH2/TitleH2";
+import {TitleH5} from "../../../Global/Components/Texts/Headers/TitleH5/TitleH5";
+import {GreenBtn} from "../../../Global/Components/Button/GreenBtn/GreenBtn";
 
 const CreateLessonPage = () => {
     return (
@@ -15,9 +17,6 @@ const CreateLessonPage = () => {
                     <div className={styles.col}>
                         <DescriptionCard type='user'/>
                     </div>
-                    <div className={styles.col}>
-                        <DescriptionCard type='form'/>
-                    </div>
                 </div>
             </div>
 
@@ -25,17 +24,32 @@ const CreateLessonPage = () => {
                 <div className={global.Wrapper}>
 
                     <div className={global.RowBlock}>
-                        {/* first col:
-                         1.
-                         2.
-                         3.
-                         */}
+                        <div className={styles.block}>
+                            <div className={styles.row}>
+                                <TitleH5 title='1. Choose the subject' color='black' weight='900'/>
+                                <GreenBtn title='search'/>
+                            </div>
 
-                        {/* second col:
+                            <div className={styles.row}>
+                                <TitleH5 title='2. Choose the class' color='black' weight='900'/>
+                                <GreenBtn title='search'/>
+                            </div>
+
+                            <div className={styles.row}>
+                                <TitleH5 title='3. Choose the cover of the lesson' color='black' weight='900'/>
+                                <GreenBtn title='search'/>
+                            </div>
+                        </div>
+
+                        <div className={styles.block}>
+                            {/* second col:
                          4.
                          5.
                          6.
                          */}
+                        </div>
+
+
                     </div>
 
                 </div>

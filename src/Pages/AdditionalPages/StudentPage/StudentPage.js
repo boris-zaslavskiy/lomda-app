@@ -1,16 +1,25 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import global from '../../../Global/Modules/Global.module.css';
 
 import {Container} from "react-bootstrap";
 import {WelcomeSection} from "../../../Global/Components/Sections/WelcomeSection/WelcomeSection";
-import StPage_Desktop from "./StPage_Desktop/StPage_Desktop";
-import StPage_Mobile from "./StPage_Mobile/StPage_Mobile";
+import StPageDesktop from "./StPageDesktop/StPageDesktop";
+import StPageMobile from "./StPageMobile/StPageMobile";
 import PreviousLessons from "../PreviousLessons/PreviousLessons";
 
 
 const StudentPage = () => {
 
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);//current size of the browser window
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+    };
+
+    useEffect(() => {
+        window.addEventListener("resize", handleResize)
+    }, []);
+
 
     return (
         <Container fluid className={global.ContainerFluid}>
@@ -20,15 +29,13 @@ const StudentPage = () => {
             <div className={global.GreyWrapper}>
                 {
                     (windowWidth > 1020)?(
-                        <StPage_Desktop/>
+                        <StPageDesktop/>
                     ):(
-                        <StPage_Mobile/>
+                        <StPageMobile/>
                     )
                 }
-
             </div>
 
-            {/* previous lessons*/}
             <div className={global.Wrapper}>
                 <div className={global.RowBlock}>
                     <PreviousLessons/>

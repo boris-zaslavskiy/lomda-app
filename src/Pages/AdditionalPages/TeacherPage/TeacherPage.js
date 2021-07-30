@@ -1,34 +1,37 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import global from '../../../Global/Modules/Global.module.css';
 import {Container} from "react-bootstrap";
 import {WelcomeSection} from "../../../Global/Components/Sections/WelcomeSection/WelcomeSection";
-import styles from "../StudentPage/StPage_Desktop/StPage_Desktop.module.css";
-import {DescriptionCard} from "../../../Global/Components/DescriptionCard/DescriptionCard";
+import TeachPageDesktop from "./TeachPageDesktop/TeachPageDesktop";
+import TeachPageMobile from "./TeachPageMobile/TeachPageMobile";
 
 const TeacherPage = () => {
+
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+    };
+
+    useEffect(() => {
+        window.addEventListener("resize", handleResize)
+    }, [])
+
+
     return (
-        <Container fluid className={global.Wrapper}>
-            <WelcomeSection  pageName='teacher' addBlock='progressBar'/>
+        <Container fluid className={global.ContainerFluid}>
+            <div className={global.Wrapper}>
+                <WelcomeSection pageName='student' addBlock='progressBar'/>
+            </div>
 
             <div className={global.GreyWrapper}>
-                <div className={global.Wrapper}>
-
-                    <div className={global.RowBlock}>
-                        <div className={styles.col}>
-                            <DescriptionCard type='form'/> {/* user card by type form (form has input changes)*/}
-
-                            {/* lesson information*/}
-                        </div>
-                        <div className={styles.col}>
-                            {/* current lesson card*/}
-                        </div>
-
-                        <div className={styles.col}>
-                            {/* current classes progress*/}
-                        </div>
-                    </div>
-
-                </div>
+                {
+                    (windowWidth > 1020)?(
+                        <TeachPageDesktop/>
+                    ):(
+                        <TeachPageMobile/>
+                    )
+                }
             </div>
         </Container>
     );

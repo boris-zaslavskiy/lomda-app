@@ -1,14 +1,16 @@
 import React from 'react';
 import styles from './CourseCard.module.css';
-import images from '../../../Assets/background/main.png'
 import {LineBar} from "../ProgressBar/LineBar/LineBar";
 import {TextBar} from "../ProgressBar/TextBar/TextBar";
 import {TitleH6} from "../Texts/Headers/TitleH6/TitleH6";
 import {OrangeBtn} from "../Button/OrangeBtn/OrangeBtn";
 
+import images from '../../../Assets/background/main.png'
+import {TxtAdditionalGrey} from "../Texts/TextDescription/TxtAdditionalGrey/TxtAdditionalGrey";
+
 const CourseCard = (props) => {
 
-//LineBar, TextBar, TitleH6, OrangeBtn, img srs - they need to be changed using data from the database. - Alina
+//LineBar, TextBar, TitleH6, IconBtn, img srs - they need to be changed using data from the database. - Alina
     return (
         <div className={styles.wrapper}>
             <div className={styles.card}>
@@ -21,7 +23,7 @@ const CourseCard = (props) => {
                 </div>
                 <div className={styles.header}>
                     <TitleH6 title={props.title}/>
-                    <OrangeBtn title='Active'/>
+                    <span className={styles.span}>Active</span>
                 </div>
             </div>
         </div>

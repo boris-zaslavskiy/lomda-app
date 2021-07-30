@@ -21,21 +21,30 @@ const DescriptionCard = (props) => {
 
     return (
         <div className={global.WhiteShadowBlock}>
-            <div className={styles.imageUpload}>
-                <div className={styles.imageBlock}>
-                    <img src={image} alt='userImage' className={styles.image}/>
-                </div>
-                <div className={styles.black}>
-                    <div className={styles.fileInput}>
-                        <input type="file" id="file" className={styles.file} onChange={handleChange}/>
-                        <label htmlFor="file">+</label>
+            {(props.type === 'form')?(
+                <div className={styles.imageUpload}>
+                    <div className={styles.imageBlock}>
+                        <img src={image} alt='userImage' className={styles.image}/>
+                    </div>
+                    <div className={styles.black}>
+                        <div className={styles.fileInput}>
+                            <input type="file" id="file" className={styles.file} onChange={handleChange}/>
+                            <label htmlFor="file">+</label>
+                        </div>
                     </div>
                 </div>
-            </div>
+            ):(
+                <div className={styles.imageUpload}>
+                    <div className={styles.imageBlock}>
+                        <img src={image} alt='userImage' className={styles.image}/>
+                    </div>
+                </div>
+            )}
+
 
 
             <div className={styles.header}>
-                <HeaderCardItem type={props.type}/>
+                <HeaderCardItem type={props.type} title={props.title} txt={props.txt} url={props.url}/>
             </div>
         </div>
     );

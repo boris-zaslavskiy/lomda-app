@@ -4,9 +4,12 @@
     display: flex;
     flex-wrap: wrap;
 }
+.block:first-of-type{
+    background-color: #757FA8;
+}
+.block:last-of-type{
 
-
-
+}
 /*-------------- Tablet Pro--------------*/
 @media only screen and (max-width: 1030px) {
     .col{

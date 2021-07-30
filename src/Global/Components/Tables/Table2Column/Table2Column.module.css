@@ -1,39 +1,44 @@
 
 .wrapper {
     width: 100%;
+    margin: 20px 0 0;
 }
-.col{
+
+.col {
     display: flex;
     justify-content: space-between;
     font-weight: lighter;
 }
 
-.row:first-of-type{
+.row:first-of-type {
     width: 40%;
+    padding: 20px;
+    border-radius: 0.25rem 0 0 0.25rem;
+     background-color: white;
 }
-.row:last-of-type{
+
+.row:last-of-type {
     width: 58%;
+    padding: 20px;
+    border-radius: 0 0.25rem 0.25rem 0;
+     background-color: white;
 }
 
 
 /*-------------- Tablet Pro--------------*/
 @media only screen and (max-width: 1030px) {
-    .row:first-of-type{
+    .row:first-of-type {
         width: 50%;
     }
-    .row:last-of-type{
+
+    .row:last-of-type {
         width: 48%;
     }
 }
 
 /*-------------- Tablet --------------*/
 @media only screen and (max-width: 770px) {
-    .wrapper{
+    .wrapper {
         margin: 0 0 10px;
     }
-}
-
-/*-------------- Phone --------------*/
-@media only screen and (max-width: 420px) {
-
 }

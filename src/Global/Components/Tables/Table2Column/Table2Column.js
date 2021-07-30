@@ -11,14 +11,10 @@ const Table2Column = (props) => {
         <div className={styles.wrapper}>
             <div className={styles.col}>
                 <div className={styles.row}>
-                    <div className={global.WhiteBlock}>
-                        <TitleH5 title={props.first} color='#878A8B' weight='400'/>
-                    </div>
+                    <TitleH5 title={props.first} color='#878A8B' weight='400'/>
                 </div>
                 <div className={styles.row}>
-                    <div className={global.WhiteBlock}>
-                        <TitleH5 title={props.second} color='black' weight='900'/>
-                    </div>
+                    <TitleH5 title={props.second} color='black' weight='900'/>
                 </div>
             </div>
         </div>

@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import 'font-awesome/css/font-awesome.min.css'
 import styles from './RInput.module.css';
 
 const RInput = (props) => {
@@ -8,7 +7,7 @@ const RInput = (props) => {
 
     const helpBlock = () =>{
         if (props.error === 'true'){
-            return(<i className={`fa fa-check ${styles.helpBlockTrue}`}></i>)
+            return(<i className={`fa fa-check ${styles.helpBlockTrue}`}/>)
         }else{
             return props.error;
         }

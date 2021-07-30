@@ -1,6 +1,6 @@
 import React from 'react';
 import global from '../../../../Global/Modules/Global.module.css';
-import styles from './StPage_Mobile.module.css';
+import styles from './StPageMobile.module.css';
 
 import {Container} from "react-bootstrap";
 import {DescriptionCard} from "../../../../Global/Components/DescriptionCard/DescriptionCard";
@@ -12,15 +12,17 @@ import {TitleH6} from "../../../../Global/Components/Texts/Headers/TitleH6/Title
 import {Header} from "../../../../Global/Components/Tables/Header/Header";
 import {Table2Column} from "../../../../Global/Components/Tables/Table2Column/Table2Column";
 
-const StPage_Mobile = () => {
+import images from "../../../../Assets/background/main.png";
+
+const StPageMobile = () => {
     return (
         <Container fluid className={global.ContainerFluid}>
             <div className={global.Wrapper}>
-                <DescriptionCard type='form'/> {/*user card by type form (form has input changes)*/}
+                <DescriptionCard type='form' title='Student' txt='56 points - 45 points avg at class'/> {/*user card by type form (form has input changes)*/}
 
                 {/* person info - only second parameter should change*/}
                 <div className={styles.tableBlock}>
-                    <Header title='Personal info & progress'/>
+                    <Header title='Personal info & progress' color='#009DB3'/>
                     <Table2Column first='Teacher' second='John Smith'/>
                     <Table2Column first='Class' second='5B'/>
                     <Table2Column first='Points' second='56'/>
@@ -43,7 +45,7 @@ const StPage_Mobile = () => {
                 </div>
 
                 <div className={styles.col}>
-                    <CourseCard/>
+                    <CourseCard img={images} title='test1'/>
                 </div>
                     <div className={styles.descBlock}>
                         <div className={styles.container}>
@@ -62,4 +64,4 @@ const StPage_Mobile = () => {
     );
 };
 
-export default StPage_Mobile;
+export default StPageMobile;
