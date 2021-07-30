@@ -6,6 +6,7 @@ import {TitleH6} from "../Texts/Headers/TitleH6/TitleH6";
 import {OrangeBtn} from "../Button/OrangeBtn/OrangeBtn";
 
 import images from '../../../Assets/background/main.png'
+import {TxtAdditionalGrey} from "../Texts/TextDescription/TxtAdditionalGrey/TxtAdditionalGrey";
 
 const CourseCard = (props) => {
 
@@ -14,15 +15,15 @@ const CourseCard = (props) => {
         <div className={styles.wrapper}>
             <div className={styles.card}>
                 <div>
-                    <img src={images} alt="Norway" className={styles.images}/>
+                    <img src={props.img} alt="Norway" className={styles.images}/>
                 </div>
                 <div>
                     <LineBar currentCount='17' maxCount='34'/>
-                    <TextBar flag='DescriptionCard' currentCount='17' text={`${17} of ${34} students completed the task`}/>
+                    <TextBar flag='CourseCard' currentCount='17' text={`${17} of ${34} students completed the task`}/>
                 </div>
                 <div className={styles.header}>
-                    <TitleH6 title='Odyssey of Homer'/>
-                    <OrangeBtn title='Active'/>
+                    <TitleH6 title={props.title}/>
+                    <span className={styles.span}>Active</span>
                 </div>
             </div>
         </div>

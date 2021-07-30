@@ -17,6 +17,10 @@
     align-content: space-between;
     flex-wrap: wrap;
 }
+
+.imgBlock{
+    width: 65%;
+}
 .descBlock{
     width: 30%;
 }

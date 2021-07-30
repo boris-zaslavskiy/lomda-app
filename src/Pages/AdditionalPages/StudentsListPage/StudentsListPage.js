@@ -5,31 +5,36 @@ import {Container} from "react-bootstrap";
 
 import {DescriptionCard} from "../../../Global/Components/DescriptionCard/DescriptionCard";
 import {TitleH2} from "../../../Global/Components/Texts/Headers/TitleH2/TitleH2";
+import {Table5Column} from "../../../Global/Components/Tables/Table5Column/Table5Column";
+import {useDispatch, useSelector} from "react-redux";
 import {Th_table} from "../../../Global/Components/Tables/Table5Column/Th_table/Th_table";
-import {Tr_table_class_desktop} from "../../../Global/Components/Tables/Table5Column/Tr_table_class/desktop/Tr_table_class_desktop";
-import {Tr_table_student_desktop} from "../../../Global/Components/Tables/Table5Column/Tr_table_student/desktop/Tr_table_student_desktop";
-import {Tr_table_class_mobile} from "../../../Global/Components/Tables/Table5Column/Tr_table_class/mobile/Tr_table_class_mobile";
-import {Tr_table_student_mobile} from "../../../Global/Components/Tables/Table5Column/Tr_table_student/mobile/Tr_table_student_mobile";
 
 
 const StudentsListPage = () => {
 
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);//current size of the browser window
+    const dispatch = useDispatch();
+    const currentClasses = useSelector(state => state.classStates.classes);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-    //set the current window width
     const handleResize = () => {
         setWindowWidth(window.innerWidth);
     };
 
     useEffect(() => {
-        //add an event to the global Window object to track window size changes --Lera
         window.addEventListener("resize", handleResize)
-
-        return () => {
-            window.removeEventListener("resize", handleResize)
-        }
     }, []);
 
+
+    const listClasses = currentClasses.map((item, index) => {
+        return(
+            <Table5Column
+                key={index}
+                className={item.className}
+                studentsMaxCount={item.studentsMaxCount}
+                studentsCount={item.studentsCount}
+                students={currentClasses[index].students}/>
+        )
+    });
 
     return (
         <Container fluid className={global.ContainerFluid}>
@@ -37,7 +42,7 @@ const StudentsListPage = () => {
                <TitleH2 titleType='h2' title='Students list'/>
                 <div className={global.RowBlock}>
                     <div className={styles.col}>
-                        <DescriptionCard type='user' title='Teacher' txt='Subject: World Literature'/>
+                        <DescriptionCard type='user' title='Teacher' txt='Subject: World Literature' url='teacher'/>
                     </div>
                     <div className={styles.col}>
                         {/* btn add new class */}
@@ -47,29 +52,18 @@ const StudentsListPage = () => {
 
             <div className={global.GreyWrapper}>
                 <div className={global.Wrapper}>
-
                     {
                         (windowWidth > 650)?(
                             <div>
-                                <Th_table first='aaa' second='bbb'/>
-                                <Tr_table_class_desktop/>
-                                <div className={styles.panel}>
-                                    <Tr_table_student_desktop/>
-                                    <Tr_table_student_desktop/>
-                                    <Tr_table_student_desktop/>
-                                </div>
+                                <Th_table/>
+                                {listClasses}
                             </div>
                         ):(
-                            <div className={styles.panel}>
-                                <Tr_table_class_mobile/>
-                                <div style={{width: '100%'}}>
-                                    <Tr_table_student_mobile/>
-                                    <Tr_table_student_mobile/>
-                                </div>
+                            <div style={{width: '100%'}}>
+                                {listClasses}
                             </div>
                         )
                     }
-
                 </div>
             </div>
         </Container>

@@ -1,0 +1,112 @@
+.input_group{
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+.input_groupOrange{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.orangeInput{
+    width: 18rem;
+    border: 1px solid #F77D48;
+}
+.greenInput{
+    width: 13rem;
+    border: 1px solid #009DB3;
+}
+.greenBtn{
+    width: 10rem;
+    background-color: #009DB3;
+    border: 1px solid #009DB3;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.greenBtn:hover{
+    background-color: transparent;
+    box-shadow: none;
+    border: 1px solid #009DB3;
+    color: #009DB3;
+}
+
+
+.orangeBtn{
+    width: 10rem;
+    background-color: #F77D48;
+    border: 1px solid #F77D48;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.orangeBtn:hover{
+    background-color: transparent;
+    box-shadow: none;
+    border: 1px solid #F77D48;
+    color: #F77D48;
+}
+@media screen and (max-width: 435px){
+    .input_group, .input_groupOrange {
+        display: flex;
+        flex-direction: column;
+        /*justify-content: center;*/
+        margin-top: 2rem;
+    }
+    .orangeInput{
+        width: 10rem;;
+    }
+    .greenInput{
+        width: 10rem;
+    }
+    .greenBtn{
+        width: 10rem;
+        font-size: 1rem;
+    }
+    .orangeBtn{
+        width: 7rem;
+    }
+}
+@media (min-width: 436px)and (max-width: 767px) {
+    .input_group, .input_groupOrange {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    .orangeInput{
+        width: 10rem;;
+    }
+    .greenInput{
+        width: 10rem;
+    }
+    .greenBtn{
+        width: 10rem;
+        font-size: 1rem;
+    }
+    .orangeBtn{
+        width: 7rem;
+    }
+
+}
+@media (min-width: 992px) and (max-width: 1200px){
+    .orangeInput{
+        width: 15rem;;
+    }
+    .greenInput{
+        width: 10rem;
+    }
+    .greenBtn{
+        width: 10rem;
+        font-size: 1rem;
+    }
+    .orangeBtn{
+        width: 10rem;
+    }
+}
+

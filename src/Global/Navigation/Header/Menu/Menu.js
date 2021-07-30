@@ -1,13 +1,15 @@
 
 import React from 'react';
+import global from '../../../Modules/Global.module.css'
 import { Container, Row } from 'react-bootstrap';
 import Logo from '../../Logo/Logo';
 import Bar from '../../Bar/Bar';
 import LoginHeader from '../LoginHeader/LoginHeader';
+
 const Menu = () => {
     return (
-        <Container className='p-0 mt-5 mb-5'>
-            <Row>
+        <div className={global.Wrapper}>
+            <Row className='d-flex align-items-center'>
                 <div className='col-3 p-0'>
                     <Logo position='header'/>
                 </div>
@@ -18,7 +20,7 @@ const Menu = () => {
                     <LoginHeader/>
                 </div>
             </Row>
-        </Container>
+        </div>
     );
 };
 

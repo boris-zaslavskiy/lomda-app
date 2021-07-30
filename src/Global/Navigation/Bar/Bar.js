@@ -6,7 +6,7 @@ import styles from '../Bar/Bar.module.css';
 const Bar = ({position}) => {
 
     return (
-        <div className={`${position==='burger'? styles.navBurger :position === 'footer'?styles.navFooter: `${styles.navHeader} mt-4`} `}>
+        <div className={`${position==='burger'? styles.navBurger :position === 'footer'?styles.navFooter: `${styles.navHeader}`} `}>
             <NavLink exact to={`/`} activeStyle={position === 'header'?{color: '#007BA4', borderBottom: '1px solid #007BA4'}:null}>Home</NavLink>
             <NavLink exact to={`/courses`} activeStyle={position === 'header'?{color: '#007BA4', borderBottom: '1px solid #007BA4'}:null}>Courses</NavLink>
             <NavLink exact to={`/about-us`} activeStyle={position === 'header'?{color: '#007BA4', borderBottom: '1px solid #007BA4'}:null}>About us</NavLink>

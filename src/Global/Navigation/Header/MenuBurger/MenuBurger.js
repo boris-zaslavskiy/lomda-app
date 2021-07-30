@@ -15,8 +15,9 @@ const MenuBurger = () => {
                 <div className={`${styles.logo}`}>
                     <Logo/>
                 </div>
-                <div className={`${styles.login}`}>
-                    <LoginHeader/>
+                <div className='p-0'>
+
+                    <LoginHeader />
                 </div>
                 <div className={`${styles.buttonBurger} ${openBurger ? styles.active: null}`}
                      onClick={()=>{

@@ -5,9 +5,6 @@ import {BorderBtn} from "../../../../Button/BorderBtn/BorderBtn";
 import {LineBar} from "../../../../ProgressBar/LineBar/LineBar";
 import {TextBar} from "../../../../ProgressBar/TextBar/TextBar";
 
-/*import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowDown} from '@fortawesome/free-solid-svg-icons'
-const icon = <FontAwesomeIcon icon={faArrowDown}/>;*/
 
 const Tr_table_class_desktop = (props) => {
 
@@ -16,15 +13,15 @@ const Tr_table_class_desktop = (props) => {
         <div className={styles.wrapper}>
             <div className={styles.col}>
                 <div  className={styles.row}>
-                    <TitleH5 title='5A' color='black' weight='900'/>
-                    <BorderBtn title='Show' color='#009DB3'/>
+                    <TitleH5 title={props.className} color='black' weight='900'/>
+                    <BorderBtn title='Show' color='#009DB3' clicked={props.clicked}/>
                 </div>
             </div>
 
             <div className={styles.col}>
                 <div>
-                    <LineBar currentCount='17' maxCount='34'/>
-                    <TextBar flag='DescriptionCard' currentCount='17' text={`${17} of ${34} students completed the task`}/>
+                    <LineBar currentCount={props.studentsCount} maxCount={props.studentsMaxCount}/>
+                    <TextBar flag='DescriptionCard' currentCount={props.studentsCount} text={`${props.studentsCount} of ${props.studentsMaxCount} students completed the task`}/>
                 </div>
             </div>
 

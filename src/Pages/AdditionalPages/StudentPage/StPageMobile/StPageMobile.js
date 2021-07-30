@@ -1,6 +1,6 @@
 import React from 'react';
 import global from '../../../../Global/Modules/Global.module.css';
-import styles from './StPage_Mobile.module.css';
+import styles from './StPageMobile.module.css';
 
 import {Container} from "react-bootstrap";
 import {DescriptionCard} from "../../../../Global/Components/DescriptionCard/DescriptionCard";
@@ -12,7 +12,9 @@ import {TitleH6} from "../../../../Global/Components/Texts/Headers/TitleH6/Title
 import {Header} from "../../../../Global/Components/Tables/Header/Header";
 import {Table2Column} from "../../../../Global/Components/Tables/Table2Column/Table2Column";
 
-const StPage_Mobile = () => {
+import images from "../../../../Assets/background/main.png";
+
+const StPageMobile = () => {
     return (
         <Container fluid className={global.ContainerFluid}>
             <div className={global.Wrapper}>
@@ -43,7 +45,7 @@ const StPage_Mobile = () => {
                 </div>
 
                 <div className={styles.col}>
-                    <CourseCard/>
+                    <CourseCard img={images} title='test1'/>
                 </div>
                     <div className={styles.descBlock}>
                         <div className={styles.container}>
@@ -62,4 +64,4 @@ const StPage_Mobile = () => {
     );
 };
 
-export default StPage_Mobile;
+export default StPageMobile;

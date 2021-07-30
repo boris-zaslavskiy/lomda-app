@@ -1,15 +1,37 @@
 .formWrapper{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    width: 80%;
+    height: 100%;
+    padding: 5vh 3vw;
+    color: #878A8B;
 }
-.login{
+.loginBtn{
+    width: 30%;
     border: none;
     color: white;
+    font-size: 1.2vw;
+    padding: 1% 5%;
+    font-weight:800;
     border-radius: 7px;
-    background: #007BA4;
-    margin: 0 auto;
-}
-.login:hover{
     background: #009DB3;
 }
+.loginBtn:hover{
+    background: #007BA4;
+}
+.FYPLink{
+    text-decoration: none;
+    color: #878A8B;
+}
+.FYPLink:hover{
+    color: #009DB3;
+}
+.SILink{
+    color: #F77D48;
+    font-size: 1.2vw;
+}
+.SILink:hover{
+    color: #009DB3;
+}
+
+

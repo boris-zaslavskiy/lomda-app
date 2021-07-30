@@ -1,14 +1,9 @@
 import React from 'react';
 import styles from './Th_table.module.css';
-import global from '../../../../Modules/Global.module.css';
-import {TitleH5} from "../../../Texts/Headers/TitleH5/TitleH5";
-import {TxtAdditionalGrey} from "../../../Texts/TextDescription/TxtAdditionalGrey/TxtAdditionalGrey";
-import {BorderBtn} from "../../../Button/BorderBtn/BorderBtn";
 import {Header} from "../../Header/Header";
 
-const Th_table = (props) => {
+const Th_table = () => {
 
-//Title text, type button changes depending on the props. - Alina
     return (
         <div className={styles.wrapper}>
             <div className={styles.col}>

@@ -2,25 +2,19 @@ import React, {useEffect, useState} from 'react';
 import global from '../../../Global/Modules/Global.module.css';
 import {Container} from "react-bootstrap";
 import {WelcomeSection} from "../../../Global/Components/Sections/WelcomeSection/WelcomeSection";
-import TeachPage_Desktop from "./TeachPage_Desktop/TeachPage_Desktop";
-import TeachPage_Mobile from "./TeachPage_Mobile/TeachPage_Mobile";
+import TeachPageDesktop from "./TeachPageDesktop/TeachPageDesktop";
+import TeachPageMobile from "./TeachPageMobile/TeachPageMobile";
 
 const TeacherPage = () => {
 
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);//current size of the browser window
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-    //set the current window width
     const handleResize = () => {
         setWindowWidth(window.innerWidth);
     };
 
     useEffect(() => {
-        //add an event to the global Window object to track window size changes --Lera
         window.addEventListener("resize", handleResize)
-
-        /*return () => {
-            window.removeEventListener("resize", handleResize)
-        }*/
     }, [])
 
 
@@ -33,12 +27,11 @@ const TeacherPage = () => {
             <div className={global.GreyWrapper}>
                 {
                     (windowWidth > 1020)?(
-                        <TeachPage_Desktop/>
+                        <TeachPageDesktop/>
                     ):(
-                        <TeachPage_Mobile/>
+                        <TeachPageMobile/>
                     )
                 }
-
             </div>
         </Container>
     );

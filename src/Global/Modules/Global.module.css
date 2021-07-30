@@ -8,6 +8,7 @@
     width: 80%;
     margin: 0 auto;
     padding: 0;
+
 }
 
 .GreyWrapper{ /*--- a gray container without indents should be placed in it (.Wrapper) ---*/
@@ -17,7 +18,7 @@
     background-color: #EBEDF5;
 }
 
-.RowBlock{/*--- row block to additional pages (TeachPage_Mobile, CreateLesson...) ---*/
+.RowBlock{/*--- row block to additional pages (TeachPageMobile, CreateLesson...) ---*/
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;

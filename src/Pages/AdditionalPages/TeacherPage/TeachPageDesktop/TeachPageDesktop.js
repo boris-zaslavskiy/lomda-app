@@ -1,26 +1,23 @@
 import React from 'react';
 import global from '../../../../Global/Modules/Global.module.css';
-import styles from './TeachPage_Desktop.module.css';
+import styles from './TeachPageDesktop.module.css';
 
 import {Container} from "react-bootstrap";
 import {DescriptionCard} from "../../../../Global/Components/DescriptionCard/DescriptionCard";
-import {TitleH4} from "../../../../Global/Components/Texts/Headers/TitleH4/TitleH4";
 import {TitleH5} from "../../../../Global/Components/Texts/Headers/TitleH5/TitleH5";
-import {TxtAdditionalGrey} from "../../../../Global/Components/Texts/TextDescription/TxtAdditionalGrey/TxtAdditionalGrey";
-import {CourseCard} from "../../../../Global/Components/CourseCard/CourseCard";
 import {TitleH6} from "../../../../Global/Components/Texts/Headers/TitleH6/TitleH6";
 import {Header} from "../../../../Global/Components/Tables/Header/Header";
 import {Table2Column} from "../../../../Global/Components/Tables/Table2Column/Table2Column";
 import {TableRowWithBtn} from "../../../../Global/Components/Tables/TableRowWithBtn/TableRowWithBtn";
 import {TextBar} from "../../../../Global/Components/ProgressBar/TextBar/TextBar";
 import {LineBar} from "../../../../Global/Components/ProgressBar/LineBar/LineBar";
-import {GreenBtn} from "../../../../Global/Components/Button/GreenBtn/GreenBtn";
-import {OrangeBtn} from "../../../../Global/Components/Button/OrangeBtn/OrangeBtn";
 import {Table2ColProgress} from "../../../../Global/Components/Tables/Table2ColProgress/Table2ColProgress";
-import images from "../../../../Assets/background/main.png";
 import {BorderBtn} from "../../../../Global/Components/Button/BorderBtn/BorderBtn";
 
-const TeachPage_Desktop = () => {
+import images from "../../../../Assets/background/main.png";
+
+
+const TeachPageDesktop = () => {
     return (
         <Container fluid className={global.ContainerFluid}>
             <div className={global.Wrapper}>
@@ -99,4 +96,4 @@ const TeachPage_Desktop = () => {
     );
 };
 
-export default TeachPage_Desktop;
+export default TeachPageDesktop;

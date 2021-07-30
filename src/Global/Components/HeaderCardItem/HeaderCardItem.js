@@ -5,6 +5,7 @@ import {TitleH3} from "../Texts/Headers/TitleH3/TitleH3";
 import {Form} from 'react-bootstrap';
 import {FaPencilAlt, FaCheck} from 'react-icons/fa';
 import {BorderBtn} from "../Button/BorderBtn/BorderBtn";
+import {Link} from "react-router-dom";
 
 
 const HeaderCardItem = (props) => {
@@ -68,7 +69,10 @@ const HeaderCardItem = (props) => {
                                     <TitleH3 title={props.title}/>
                                     <TxtAdditionalGrey txt={props.txt}/>
                                 </div>
-                                <BorderBtn type='button' title='Back to profile' color='#009DB3'/>
+                                <Link to={`/${props.url}`}>
+                                    <BorderBtn type='button' title='Back to profile' color='#009DB3' />
+                                </Link>
+
                             </div>
                         )
                     case 'lesson':
