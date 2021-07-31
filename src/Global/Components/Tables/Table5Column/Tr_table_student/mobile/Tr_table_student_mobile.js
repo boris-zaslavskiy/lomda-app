@@ -25,7 +25,11 @@ const Tr_table_student_mobile = (props) => {
                     <img src={avatar} alt='avatar'/>
                 </div>
                 <TitleH6 title={props.name} color='black' weight='900'/>
-                <IconBtn icon={faTrashAlt}/>
+                <IconBtn icon={faTrashAlt}
+                         color='#878A8B'
+                         border='#878A8B'
+                         backgroundColor='transparent'
+                         clicked={() => {props.deleteCurrentStudent(props.id, props.classId)}}/>
             </div>
 
             <div className={styles.col}>

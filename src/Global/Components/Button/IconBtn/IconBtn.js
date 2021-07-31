@@ -6,9 +6,8 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 const IconBtn = (props) => {
 
-//Title text, type button changes depending on the props. - Alina
     return (
-        <Button type={props.type} className={styles.iconBtn}><FontAwesomeIcon icon={props.icon}/></Button>
+        <Button type={props.type} style={{color: `${props.color}`, border: `2px solid ${props.color}`, backgroundColor: `${props.backgroundColor}`}} className={styles.iconBtn} onClick={props.clicked}><FontAwesomeIcon icon={props.icon}/></Button>
     );
 };
 

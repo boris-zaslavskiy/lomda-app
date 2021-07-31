@@ -6,7 +6,7 @@ const GreenBtn = (props) => {
 
 //Title text, type button changes depending on the props. - Alina
     return (
-        <Button type={props.type} className={styles.greenBtn}>{props.title}</Button>
+        <Button type={props.type} className={styles.greenBtn} onClick={props.clicked}>{props.title}</Button>
     );
 };
 
