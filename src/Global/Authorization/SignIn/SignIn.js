@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import styles from "./SignIn.module.css";
 import RInput from "../RInput/RInput";
 import {Form} from "react-bootstrap";
+import {Link} from "react-router-dom";
 
 const SignIn = () => {
 
@@ -9,6 +10,13 @@ const SignIn = () => {
         teacher:true,
         student:false
     })
+    const linkPath = () =>{
+        if (formState.teacher===true){
+            return '/teacher';
+        }else{
+            return '/student';
+        }
+    }
 
     const render = () =>{
         if (formState.teacher === true){
@@ -27,7 +35,7 @@ const SignIn = () => {
                     <RInput type='password'/>
                     <RInput type='confirm-password'/>
                     <div className={`w-100 d-flex`}>
-                    <button className={styles.subBtn}>Submit</button>
+                        <Link to={linkPath()} className={styles.subBtn} type={`submit`}>Submit</Link>
                     </div>
                 </Form>
             </div>
@@ -48,7 +56,7 @@ const SignIn = () => {
                             <RInput type='password'/>
                             <RInput type='confirm-password'/>
                             <div className={`w-100 d-flex`}>
-                                <button className={styles.subBtn} type={`submit`}>Submit</button>
+                                <Link to={linkPath()} className={styles.subBtn} type={`submit`}>Submit</Link>
                             </div>
                         </Form>
                     </div>
