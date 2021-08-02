@@ -1,15 +1,32 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from './Tr_table_class_mobile.module.css';
 import {TitleH5} from "../../../../Texts/Headers/TitleH5/TitleH5";
 import {BorderBtn} from "../../../../Button/BorderBtn/BorderBtn";
+import {IconBtn} from "../../../../Button/IconBtn/IconBtn";
+import {faTrashAlt} from "@fortawesome/free-solid-svg-icons";
 
 const Tr_table_class_mobile = (props) => {
 
-//Title text, type button changes depending on the props. - Alina
+    const [accordionStatus, setAccordionStatus] = useState(false);
+
+    useEffect(() => {
+        setAccordionStatus(props.status)
+    }, [props.status]);
+
     return (
         <div className={styles.wrapper}>
-            <TitleH5 title='5A' color='white' weight='900'/>
-            <BorderBtn title='Show' color='white' clicked={props.clicked}/>
+            <TitleH5 title={props.className} color='white' weight='900'/>
+            <div className={styles.block}>
+                {(accordionStatus)?
+                    (<BorderBtn title='Hide' color='white' clicked={props.clicked}/>):
+                    (<BorderBtn title='Show' color='white' clicked={props.clicked}/>)}
+
+                <IconBtn icon={faTrashAlt}
+                         color='white'
+                         border='white'
+                         backgroundColor='transparent'
+                         clicked={() => {props.deleteClass(props.classId)}}/>
+            </div>
         </div>
     );
 };

@@ -3,10 +3,8 @@ import styles from './CourseCard.module.css';
 import {LineBar} from "../ProgressBar/LineBar/LineBar";
 import {TextBar} from "../ProgressBar/TextBar/TextBar";
 import {TitleH6} from "../Texts/Headers/TitleH6/TitleH6";
-import {OrangeBtn} from "../Button/OrangeBtn/OrangeBtn";
+import {BorderBtn} from "../Button/BorderBtn/BorderBtn";
 
-import images from '../../../Assets/background/main.png'
-import {TxtAdditionalGrey} from "../Texts/TextDescription/TxtAdditionalGrey/TxtAdditionalGrey";
 
 const CourseCard = (props) => {
 
@@ -14,8 +12,11 @@ const CourseCard = (props) => {
     return (
         <div className={styles.wrapper}>
             <div className={styles.card}>
-                <div>
+                <div className={styles.imgWrapper}>
                     <img src={props.img} alt="Norway" className={styles.images}/>
+                    <div className={styles.imgBlock}>
+                        <BorderBtn title='12.34.50' color='white'/>
+                    </div>
                 </div>
                 <div>
                     <LineBar currentCount='17' maxCount='34'/>

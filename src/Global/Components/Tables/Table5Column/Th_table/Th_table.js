@@ -7,27 +7,27 @@ const Th_table = () => {
     return (
         <div className={styles.wrapper}>
             <div className={styles.col}>
-                <Header title='Name' color='#009DB3'/>
+                <Header title='Name' color='#009DB3' radius='0.25rem 0 0 0.25rem'/>
             </div>
 
             <div className={styles.col}>
                 <div className={styles.colGroup}>
                     <div style={{width: '47%'}}>
-                        <Header title='Rate' color='#009DB3'/>
+                        <Header title='Rate' color='#009DB3' radius='0'/>
                     </div>
                     <div style={{width: '47%'}}>
-                    <Header title='Class' color='#009DB3'/>
+                    <Header title='Class' color='#009DB3' radius='0'/>
                     </div>
                 </div>
             </div>
 
 
             <div className={styles.col}>
-                <Header title='Answers & questions' color='#009DB3'/>
+                <Header title='Answers & questions' color='#009DB3' radius='0'/>
             </div>
 
             <div className={styles.col}>
-                <Header title='Evaluations' color='#009DB3'/>
+                <Header title='Evaluations' color='#009DB3' radius='0 0.25rem 0.25rem 0'/>
             </div>
 
         </div>

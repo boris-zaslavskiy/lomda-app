@@ -7,8 +7,8 @@ const BlockLessons = ({lessonsToRender}) => {
 
     return (
         <div className='row'>
-            {lessonsToRender.map((lesson, index)=>
-                <div className='col-12 col-lg-6 col-xl-4 mt-3'>
+            {lessonsToRender.map((lesson, index) =>
+                <div className='col-12 col-lg-6 col-xl-4 mt-3' key={index}>
                     <CourseCard img={lesson.image} title={lesson.title}/>
                 </div> )}
         </div>

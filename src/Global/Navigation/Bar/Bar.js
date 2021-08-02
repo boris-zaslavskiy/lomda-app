@@ -7,10 +7,10 @@ const Bar = ({position}) => {
 
     return (
         <div className={`${position==='burger'? styles.navBurger :position === 'footer'?styles.navFooter: `${styles.navHeader}`} `}>
-            <NavLink exact to={`/`} activeStyle={position === 'header'?{color: '#007BA4', borderBottom: '1px solid #007BA4'}:null}>Home</NavLink>
-            <NavLink exact to={`/courses`} activeStyle={position === 'header'?{color: '#007BA4', borderBottom: '1px solid #007BA4'}:null}>Courses</NavLink>
-            <NavLink exact to={`/about-us`} activeStyle={position === 'header'?{color: '#007BA4', borderBottom: '1px solid #007BA4'}:null}>About us</NavLink>
-            <NavLink exact to={`/contacts`} activeStyle={position === 'header'?{color: '#007BA4', borderBottom: '1px solid #007BA4'}:null}>Contacts</NavLink>
+            <NavLink exact to={`/`} activeStyle={position === 'header'?{color: '#009DB3', borderBottom: '3px solid #009DB3'}:null}>Home</NavLink>
+            <NavLink exact to={`/courses`} activeStyle={position === 'header'?{color: '#009DB3', borderBottom: '3px solid #009DB3'}:null}>Courses</NavLink>
+            <NavLink exact to={`/about-us`} activeStyle={position === 'header'?{color: '#009DB3', borderBottom: '3px solid #009DB3'}:null}>About us</NavLink>
+            <NavLink exact to={`/contacts`} activeStyle={position === 'header'?{color: '#009DB3', borderBottom: '3px solid #009DB3'}:null}>Contacts</NavLink>
         </div>
     );
 };

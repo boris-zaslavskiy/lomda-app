@@ -1,0 +1,36 @@
+
+.wrapper {
+    width: 100%;
+}
+
+.block{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.col{
+    width: 48%;
+    display: flex;
+}
+
+
+
+/*-------------- Tablet --------------*/
+@media only screen and (max-width: 770px) {
+    .col{
+        width: 100%;
+    }
+}
+
+
+
+/*-------------- Phone --------------*/
+@media only screen and (max-width: 420px) {
+    .col{
+        width: 100%;
+    }
+}

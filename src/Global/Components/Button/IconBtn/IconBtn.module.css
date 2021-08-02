@@ -1,13 +1,7 @@
-.iconBtn {
-    background-color: transparent;
-    box-shadow: none;
-    border: 2px solid #878A8B;
-    color: #878A8B;
-}
+
 
 .iconBtn:hover{
     background-color: transparent;
-    box-shadow: none;
     border: 2px solid #F77D48;
     color: #F77D48;
 }
@@ -17,8 +11,6 @@
     background-color: #F77D48;
     border: 2px solid #F77D48;
     color: white;
-    font-weight: bold;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /*-------------- Phone --------------*/

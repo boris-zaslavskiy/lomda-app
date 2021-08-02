@@ -18,7 +18,7 @@ const LoginHeader = () => {
             <img src={login?user[0].avatar:avatar} alt="Avatar" className={`${styles.imageBurger}`}/>
             <h4 className='ms-2' onClick={()=>handleClickLogin()}>{login?`${user[0].name} ${user[0].last_name}`:'Login'}</h4>
             <div className={`ms-1 ${login?null:`${styles.show}`}`} onClick={()=>handleClickLogout()}>
-                <FaSignOutAlt style={{ fontSize: 20, color: '#007BA4' }}/>
+                <FaSignOutAlt style={{ fontSize: 20, color: '#009DB3' }}/>
             </div>
         </div>
     );
