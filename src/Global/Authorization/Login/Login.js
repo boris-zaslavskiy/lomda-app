@@ -2,9 +2,10 @@ import React, {useEffect, useState} from 'react';
 import styles from './Login.module.css';
 import RInput from "../RInput/RInput";
 import {Form, NavLink} from "react-bootstrap";
+import {Link} from "react-router-dom";
 
 
-const Login = () => {
+const Login = (props) => {
 
     const [data, setData] = useState({
         email:'',
@@ -69,12 +70,12 @@ const Login = () => {
         <RInput type={`password`} name='password' getData={getDataFromInp} error={pError}/>
            <div className={`d-flex justify-content-between align-items-center`}>
                <RInput type={`checkbox`}/>
-               <NavLink className={styles.FYPLink}>Forgot your password?</NavLink>
+               <Link className={styles.FYPLink}>Forgot your password?</Link>
            </div>
            <div className={'w-100 d-flex flex-column align-items-center justify-content-between mt-3'}>
            <button className={`mb-5 ${styles.loginBtn}`} type='submit'>Login</button>
                <p className={`mb-0`}>Don't have an account yet?</p>
-               <NavLink className={`${styles.SILink}`}>Sign in</NavLink>
+               <div onClick={()=>{props.setPage('sign-in')}} className={`${styles.SILink}`}>Sign in</div>
            </div>
        </Form>
     );
