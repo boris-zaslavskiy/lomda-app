@@ -48,6 +48,7 @@ const StudentsListPage = () => {
                 <Table5Column
                     key={item.id}
                     id={item.id}
+                    currentLesson={item.currentLesson}
                     className={item.className}
                     studentsMaxCount={item.studentsMaxCount}
                     studentsCount={item.studentsCount}
@@ -67,9 +68,11 @@ const StudentsListPage = () => {
                     <div className={styles.col}>
                         <DescriptionCard type='user' title='Teacher' txt='Subject: World Literature' url='teacher'/>
                     </div>
+
                     <div className={styles.col}>
                         {/* btn add new class */}
                     </div>
+
                 </div>
             </div>
 

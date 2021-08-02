@@ -10,6 +10,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faStar, faPlus, faCheck} from '@fortawesome/free-solid-svg-icons'
 import {useDispatch, useSelector} from "react-redux";
 import {setClasses} from "../../../../../../Store/Reducers/classReducer";
+import {Link} from "react-router-dom";
 
 
 const Tr_table_student_desktop = (props) => {
@@ -84,14 +85,19 @@ const Tr_table_student_desktop = (props) => {
             <div className={styles.col}>
                 <div className={styles.row}>
                     <TitleH6 title={props.questions} color='black' weight='900'/>
-                    <BorderBtn title='Show' color='#F77D48'/>
+                    <Link to={`/questionAnswers/${props.id}`}>
+                        <BorderBtn title='View' color='#F77D48' />
+                    </Link>
                 </div>
             </div>
 
             <div className={styles.col}>
                 <div className={styles.row}>
                     <TitleH6 title={props.evaluations} color='black' weight='900'/>
-                    <BorderBtn title='Show' color='#F77D48'/>
+                    <Link to={`/generalInfo/${props.currentLesson}`}>
+                        <BorderBtn title='View' color='#F77D48' />
+                    </Link>
+
                 </div>
             </div>
 

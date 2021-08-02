@@ -53,7 +53,6 @@ const Table5Column = (props) => {
                        /*dispatch(setClasses(currentClasses[i].students = newArr));*/
                     }else{
                         setStudentsList(newArr);
-
                     }
                 });
             }
@@ -90,6 +89,7 @@ const Table5Column = (props) => {
             <Tr_table_student_desktop
                 key={item.id}
                 classId={props.id}
+                currentLesson={props.currentLesson}
                 id={item.id}
                 name={item.name}
                 rate={item.rate}

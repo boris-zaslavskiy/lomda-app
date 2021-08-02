@@ -17,6 +17,6 @@ h5{
 /*-------------- Phone --------------*/
 @media only screen and (max-width: 420px) {
     h5{
-        font-size: 16px;
+        font-size: 14px;
     }
 }

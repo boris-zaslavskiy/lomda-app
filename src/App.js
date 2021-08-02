@@ -34,7 +34,7 @@ function App() {
                 <Route path={`/studentsList`} component={StudentsListPage}/>
                 <Route path={`/createLesson`} component={CreateLessonPage}/>
                 <Route path={`/questionAnswers`} component={QuestionAnswersPage}/>
-                <Route path={`/generalInfo`} component={GeneralInformationPage}/>
+                <Route path={`/generalInfo/:classId`} component={GeneralInformationPage}/>
                 <Route path={`/catalog`} component={CatalogLessonPage}/>
             </Switch>
             <Footer/>
