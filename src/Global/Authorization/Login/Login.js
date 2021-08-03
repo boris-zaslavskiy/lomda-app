@@ -70,7 +70,7 @@ const Login = (props) => {
         <RInput type={`password`} name='password' getData={getDataFromInp} error={pError}/>
            <div className={`d-flex justify-content-between align-items-center`}>
                <RInput type={`checkbox`}/>
-               <Link className={styles.FYPLink}>Forgot your password?</Link>
+               <Link className={styles.FYPLink}>Forgot your password?</Link> {/*You forgot to='url'*/}
            </div>
            <div className={'w-100 d-flex flex-column align-items-center justify-content-between mt-3'}>
            <button className={`mb-5 ${styles.loginBtn}`} type='submit'>Login</button>

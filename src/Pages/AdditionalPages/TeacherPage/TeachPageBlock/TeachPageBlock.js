@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import global from '../../../../Global/Modules/Global.module.css';
-import styles from './TeachPageDesktop.module.css';
+import styles from './TeachPageBlock.module.css';
 
 import {Container} from "react-bootstrap";
 import {DescriptionCard} from "../../../../Global/Components/DescriptionCard/DescriptionCard";
@@ -17,44 +17,64 @@ import {BorderBtn} from "../../../../Global/Components/Button/BorderBtn/BorderBt
 import images from "../../../../Assets/background/main.png";
 
 
-const TeachPageDesktop = () => {
+const TeachPageBlock = (props) => {
+
+    const userName = `${props.data.firstName} ${props.data.surName}`;
+    let savedLes, activeLes, closedLes = [];
+
+    useEffect(() => {
+       /* props.data.map((item) => {
+            item.map((element) => {
+               if(element.status === 'saved'){
+                   savedLes.push(element);
+               }else if(element.status === 'active'){
+                   activeLes.push(element);
+               }else{
+                   closedLes.push(element);
+               }
+            });
+        });*/
+    }, []);
+
+
+
     return (
         <Container fluid className={global.ContainerFluid}>
             <div className={global.Wrapper}>
                 <div className={global.RowBlock}>
 
                     <div className={styles.col}>
-                        <div>
-                            <DescriptionCard type='form' title='Teacher' txt='Subject: World Literature'/> {/*user card by type form (form has input changes)*/}
+                        <div className={styles.tableBlock}>
+                            <DescriptionCard type='form' title={userName} txt={`Subject: ${props.data.subjectTitle}`}/> {/*user card by type form (form has input changes)*/}
                         </div>
 
                         {/* person info - only second parameter should change*/}
                         <div className={styles.tableBlock}>
-                            <Header title='Personal info & progress' color='#009DB3' weight='700'/>
-                            <Table2Column first='Lessons' second='53 lessons'/>
+                            <Header title='Personal info & progress' color='#009DB3' weight='700' radius='0.25rem'/>
+                            <Table2Column first='Lessons' second= {`${props.data.lessons.length} lessons`}/>
                         </div>
 
                         <div className={styles.tableBlock}>
-                            <Header title='+ Create new lesson' color='#F77D48' weight='700'/>
+                            <Header title='+ Create new lesson' color='#F77D48' weight='700' radius='0.25rem'/>
                             <TableRowWithBtn title='Initial (2)'/>
                             <TableRowWithBtn title='Active (2)'/>
                             <TableRowWithBtn title='Closed (2)'/>
                         </div>
-
                     </div>
 
-                    <div className={styles.col}>
-                        <div className={styles.block}>
-                            <div style={{margin: '0 0 50px '}}>
-                                <TitleH5 title='Classes progress:' color='black' weight='900'/>
-                            </div>
 
+                    <div className={styles.col}>
+                        <div className={styles.tableBlock}>
+                            <TitleH5 title='Current lesson:' color='black' weight='900'/>
+                        </div>
+
+                        <div className={styles.tableBlock}>
                             <div className={styles.currentLesson}>
                                 <div className={styles.card}>
                                     <div>
                                         <img src={images} alt="Norway" className={styles.images}/>
                                     </div>
-                                    <div>
+                                    <div style={{margin: '0 0 10px '}}>
                                         <LineBar currentCount='17' maxCount='34'/>
                                         <TextBar flag='DescriptionCard' currentCount='17' text={`${17} of ${34} students completed the task`}/>
                                     </div>
@@ -66,34 +86,34 @@ const TeachPageDesktop = () => {
                                     </div>
                                 </div>
                             </div>
-
-                            <div className={styles.header}>
-                                <Header title='View All lesson' color='#009DB3' weight='700'/>
-                            </div>
                         </div>
 
-                        <div className={styles.block}>
-                            <div style={{margin: '0 0 50px '}}>
-                                <TitleH5 title='Classes progress:' color='black' weight='900'/>
-                            </div>
-
-                            <div>
-                                <Table2ColProgress class='5A' currentCount='10' maxCount='36'/>
-                                <Table2ColProgress class='5A' currentCount='15' maxCount='30'/>
-                                <Table2ColProgress class='5A' currentCount='10' maxCount='36'/>
-                                <Table2ColProgress class='5A' currentCount='15' maxCount='30'/>
-                                <Table2ColProgress class='5A' currentCount='34' maxCount='36'/>
-                            </div>
-
-                            <div className={styles.header}>
-                                <Header title='Students List' color='#F77D48' weight='700'/>
-                            </div>
+                        <div className={styles.tableBlock}>
+                            <Header title='View All lesson' color='#009DB3' weight='700' radius='0.25rem'/>
                         </div>
                     </div>
+
+
+                    <div className={styles.col}>
+                        <div className={styles.tableBlock}>
+                            <TitleH5 title='Classes progress:' color='black' weight='900'/>
+                        </div>
+
+                        <div className={styles.tableBlock}>
+                                <Table2ColProgress class='5A' currentCount='10' maxCount='36'/>
+                                <Table2ColProgress class='5A' currentCount='15' maxCount='30'/>
+                                <Table2ColProgress class='5A' currentCount='10' maxCount='36'/>
+                        </div>
+
+                        <div className={styles.tableBlock}>
+                            <Header title='Students List' color='#F77D48' weight='700' radius='0.25rem'/>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </Container>
     );
 };
 
-export default TeachPageDesktop;
+export default TeachPageBlock;

@@ -2,15 +2,19 @@ import React, {useState, useRef} from 'react';
 import styles from './HeaderCardItem.module.css';
 import {TxtAdditionalGrey} from "../Texts/TextDescription/TxtAdditionalGrey/TxtAdditionalGrey";
 import {TitleH3} from "../Texts/Headers/TitleH3/TitleH3";
+import {TitleH5} from "../Texts/Headers/TitleH5/TitleH5";
+import {TitleH6} from "../Texts/Headers/TitleH6/TitleH6";
 import {Form} from 'react-bootstrap';
 import {FaPencilAlt, FaCheck} from 'react-icons/fa';
 import {BorderBtn} from "../Button/BorderBtn/BorderBtn";
 import {Link} from "react-router-dom";
+import {TitleH4} from "../Texts/Headers/TitleH4/TitleH4";
 
 
 const HeaderCardItem = (props) => {
 
-    const [name, setName] = useState(props.title);
+
+    const [name, setName] = useState(undefined);
     const [statusChange, setStatusChange] = useState(false);
 
     const inputRef = useRef(null);
@@ -46,7 +50,7 @@ const HeaderCardItem = (props) => {
                         return (
                             <div className={styles.formBlock}>
                                 <Form className={styles.form}>
-                                    <input type='text' name='userName' value={name} className={styles.input} onChange={handleChange}
+                                    <input type='text' name='userName' value={(name === undefined)?(props.title):(name)} className={styles.input} onChange={handleChange}
                                            ref={inputRef} onFocus={handleFocus}  style={{borderBottom: `${(statusChange)?('3px solid #F77D48'):('3px solid  #E0E3EF')}` }} />
                                     <div>
                                         {(statusChange) ?
@@ -77,10 +81,20 @@ const HeaderCardItem = (props) => {
                         )
                     case 'lesson':
                         return (
-                            <div className={styles.card}>
-                                <TitleH3 title={props.title}/>
-                                <div>
-                                    {/* Odyssey of Homer */}
+                            <div>
+                                <div className={styles.card}>
+                                    <TitleH4 title={props.title}/>
+                                </div>
+
+                                <div className={styles.card}>
+                                    <div className={styles.header}>
+                                        <TxtAdditionalGrey txt='Teacher:'/>
+                                        <TitleH6 title={props.teacher} color='black' weight='900'/>
+                                    </div>
+                                    <div className={styles.header}>
+                                        <TxtAdditionalGrey txt='Active until:'/>
+                                        <TitleH5 title={props.time} color='#F77D48' weight='900'/>
+                                    </div>
                                 </div>
                             </div>
                         )

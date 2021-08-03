@@ -1,33 +1,28 @@
-.col {
+.col{
+    max-height: 100%;
     display: flex;
     justify-content: space-between;
     align-content: space-between;
     flex-wrap: wrap;
 }
 
-.col:first-of-type {
-    width: 36%;
+.col:nth-child(1){
+    width: 40%;
 }
 
-.col:last-of-type {
-    width: 60%;
+.col:nth-child(2),.col:nth-child(3){
+    width: 25%;
 }
 
 .tableBlock {
     width: 100%;
-    margin: 10px 0 0;
+    margin: 20px 0 0;
     display: flex;
     flex-wrap: wrap;
 }
 
-.block:first-of-type {
-    width: auto;
-}
 
-.block:last-of-type {
-    width: 40%;
-}
-
+/*-------------- Card Lesson--------------*/
 .currentLesson {
     width: auto;
     display: flex;
@@ -44,7 +39,7 @@
 
 .images {
     width: 100%;
-    height: 260px;
+    height: auto;
     margin: 0 0 20px;
 }
 
@@ -55,24 +50,29 @@
     align-items: center;
 }
 
-.header{
-    margin: 100px 0 0;
+
+/*-------------- 1300px--------------*/
+@media only screen and (max-width: 1300px) {
+    .col:nth-child(1){
+        width: 50%;
+        margin: 0 0 50px;
+    }
+
+    .col:nth-child(2){
+        width: 45%;
+        margin: 0 0 50px;
+    }
+
+    .col:nth-child(3){
+        width: 50%;
+    }
 }
 
 
-/*-------------- 1600 --------------*/
-@media only screen and (max-width: 1600px) {
-    .col:first-of-type {
-        width: 50%;
-        height: 800px;
-    }
-    .col:last-of-type {
-        width: 48%;
-    }
-    .block:last-of-type {
+/*-------------- Tablet --------------*/
+@media only screen and (max-width: 770px) {
+
+    .col:nth-child(1),.col:nth-child(2),.col:nth-child(3){
         width: 100%;
-    }
-    .header{
-        margin: 50px 0 0;
     }
 }

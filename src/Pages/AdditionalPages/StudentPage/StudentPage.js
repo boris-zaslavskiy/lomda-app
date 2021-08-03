@@ -1,25 +1,13 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import global from '../../../Global/Modules/Global.module.css';
 
 import {Container} from "react-bootstrap";
 import {WelcomeSection} from "../../../Global/Components/Sections/WelcomeSection/WelcomeSection";
-import StPageDesktop from "./StPageDesktop/StPageDesktop";
-import StPageMobile from "./StPageMobile/StPageMobile";
+import StudentPageBlock from "./StudentPageBlock/StudentPageBlock";
 import PreviousLessons from "../PreviousLessons/PreviousLessons";
 
 
 const StudentPage = () => {
-
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-    const handleResize = () => {
-        setWindowWidth(window.innerWidth);
-    };
-
-    useEffect(() => {
-        window.addEventListener("resize", handleResize)
-    }, []);
-
 
     return (
         <Container fluid className={global.ContainerFluid}>
@@ -27,13 +15,7 @@ const StudentPage = () => {
                 <WelcomeSection pageName='student' addBlock='progressBar'/>
             </div>
             <div className={global.GreyWrapper}>
-                {
-                    (windowWidth > 1020)?(
-                        <StPageDesktop/>
-                    ):(
-                        <StPageMobile/>
-                    )
-                }
+                <StudentPageBlock/>
             </div>
 
             <div className={global.Wrapper}>

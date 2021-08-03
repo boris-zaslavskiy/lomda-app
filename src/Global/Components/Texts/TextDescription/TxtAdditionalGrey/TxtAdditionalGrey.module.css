@@ -1,5 +1,5 @@
 .txtAdditional{
-    font-size: 1.3vw;
+    font-size: 20px;/* 1vw*/
     color: #878A8B;
     margin: 0;
     padding: 0;
@@ -7,21 +7,21 @@
 
 /*-------------- Tablet Pro--------------*/
 @media only screen and (max-width: 1030px) {
-    .txtAdditional{
-        font-size: 1.5vw;
-    }
+    /*  .txtAdditional{
+         font-size:1.5vw;
+    }*/
 }
 
 /*-------------- Tablet --------------*/
 @media only screen and (max-width: 770px) {
     .txtAdditional{
-        font-size: 2.5vw;
+        font-size: 13px;/*2.5vw*/
     }
 }
 
 /*-------------- Phone --------------*/
 @media only screen and (max-width: 420px) {
-    .txtAdditional{
-        font-size: 3.5vw;
-    }
+    /* .txtAdditional{
+        font-size:3.5vw;
+    }*/
 }

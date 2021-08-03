@@ -9,7 +9,7 @@ const TitleH1 = (props) => {
         <div className={styles.titleH1Block}>
             <h1>
                 <span className={styles.titleH1Green}>{(props.pageName === 'main')?('Your new way'):('Welcome back,')}</span><br/>
-                <span className={styles.titleH1Black}>{(props.pageName === 'main')?('to online Education'):('PERSON')}</span> {/*  It is necessary to replace persons with data from the database!*/}
+                <span className={styles.titleH1Black}>{(props.pageName === 'main')?('to online Education'):(props.person)}</span> {/*  It is necessary to replace persons with data from the database!*/}
             </h1>
             <TxtAdditionalGrey txt={props.pageName}/>
         </div>
