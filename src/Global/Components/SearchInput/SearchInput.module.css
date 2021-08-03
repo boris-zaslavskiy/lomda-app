@@ -12,10 +12,14 @@
 .orangeInput{
     width: 18rem;
     border: 1px solid #F77D48;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
 }
 .greenInput{
     width: 13rem;
     border: 1px solid #009DB3;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
 }
 .greenBtn{
     width: 10rem;
@@ -24,6 +28,8 @@
     color: white;
     font-weight: bold;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
 }
 
 
@@ -42,6 +48,8 @@
     color: white;
     font-weight: bold;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
 }
 .orangeBtn:hover{
     background-color: transparent;

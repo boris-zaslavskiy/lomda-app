@@ -1,6 +1,5 @@
 .positionMenu>h4 {
     font-weight: 900;
-    padding-top: 0.5rem;
     font-family: 'M PLUS 2p', sans-serif;
     font-size: 1.5vw;
 }
@@ -18,8 +17,6 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        width: 100%;
-
     }
 
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import styles from './CourseCard.module.css';
 import {LineBar} from "../ProgressBar/LineBar/LineBar";
 import {TextBar} from "../ProgressBar/TextBar/TextBar";
@@ -9,8 +9,13 @@ import {BorderBtn} from "../Button/BorderBtn/BorderBtn";
 const CourseCard = (props) => {
 
 //LineBar, TextBar, TitleH6, IconBtn, img srs - they need to be changed using data from the database. - Alina
+    const ref = useRef(null);
+    // useEffect(() => {
+    //     console.log(ref.current.offsetHeight);
+    //     // props.itemHeight(ref.current.offsetHeight);//doesn't work
+    // },[]);
     return (
-        <div className={styles.wrapper}>
+        <div className={`${styles.wrapper}`} ref={ref} >
             <div className={styles.card}>
                 <div className={styles.imgWrapper}>
                     <img src={props.img} alt="Norway" className={styles.images}/>

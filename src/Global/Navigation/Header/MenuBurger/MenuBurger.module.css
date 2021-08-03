@@ -14,7 +14,7 @@
     position: absolute;
     display: flex;
     top: 5vw;
-    right: 0;
+    right: 1rem;
     width: 7vw;
     height: 9vw;
     cursor: pointer;
