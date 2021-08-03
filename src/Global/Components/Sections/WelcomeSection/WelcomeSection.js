@@ -9,26 +9,33 @@ import Authorization from "../../../Authorization/Authorization";
 
 const WelcomeSection = (props) => {
 
-//Logic: The "additionalBlock" component changes depending on the props and on the page on which it is located (Main, Teacher, Student) - Alina
+
     const [page, setPage] = useState('main');
     const [statusAddBlock, setStatusAddBlock] = useState('form');
+
+    const [currentTeacher, setCurrentTeacher] = useState({});
 
     useEffect(() => {
         setPage(props.pageName);
         setStatusAddBlock(props.addBlock);
     }, [props.addBlock]);
-//----------------------------------------------
+
+
+    useEffect(() => {
+        setCurrentTeacher(props.data);
+    }, []);
+
+    console.log(props.pageName)
 
     return (
         <div className={styles.wrapper}>
             <div className={styles.leftBlock}>
-                <TitleH1 pageName={page}/>
+                <TitleH1 pageName={page} person ={(page === 'main')? null :(`${props.data.firstName} ${props.data.surName}`)} />
                 <div className={styles.additionalBlock}>
                     {(statusAddBlock === 'form') ? (
                         <div>
                             <Authorization/>
                         </div>
-
                     ) : (
                         <div>
                             <TextBar flag='DescriptionCard' currentCount='17' text={`Loading progress ${50}%`}/>

@@ -12,6 +12,9 @@ const GeneralInformationPage = () => {
 
     const dispatch = useDispatch(); //not remember remove
     const arrayClasses = useSelector(state => state.classStates.classes);
+    const [currentTeacher, setCurrentTeacher] = useState(0);
+    const [currentLesson, setCurrentLesson] = useState({});
+
     const [studentsFirstTaskCompleted, setStudentsFirstTaskCompleted] = useState([]);
     const [studentsFirstTaskNotCompleted, setStudentsFirstTaskNotCompleted] = useState([]);
     const [studentsSecondTaskCompleted, setStudentsSecondTaskCompleted] = useState([]);
@@ -23,17 +26,26 @@ const GeneralInformationPage = () => {
 
 
     useEffect(() => {
+        getCurrentLesson();
         getStudentsFirstTaskCompleted();
         getStudentsFirstTaskNotCompleted();
         getStudentsSecondTaskCompleted();
         getStudentsSecondTaskNotCompleted();
     }, []);
 
+    const getCurrentLesson = () => {
+        arrayClasses.map((elem) => {
+            if(elem.currentLesson.id === currentClassId){
+               setCurrentTeacher(elem.teacher);
+                setCurrentLesson(elem.currentLesson);
+            }
+        });
+    };
 
     const getStudentsFirstTaskCompleted = () => {
         let firstTaskTrue = [];
         arrayClasses.map((elem) => {
-            if(elem.currentLesson === currentClassId){
+            if(elem.currentLesson.id === currentClassId){
                 elem.students.map((item) => {
                     if(item.firstTask === true) {
                         firstTaskTrue.push(item);
@@ -48,7 +60,7 @@ const GeneralInformationPage = () => {
     const getStudentsFirstTaskNotCompleted = () => {
         let firstTaskFalse = [];
         arrayClasses.map((elem) => {
-            if(elem.currentLesson === currentClassId){
+            if(elem.currentLesson.id === currentClassId){
                 elem.students.map((item) => {
                     if(item.firstTask === false){
                         firstTaskFalse.push(item);
@@ -62,7 +74,7 @@ const GeneralInformationPage = () => {
     const getStudentsSecondTaskCompleted = () => {
         let secondTaskTrue = [];
         arrayClasses.map((elem) => {
-            if(elem.currentLesson === currentClassId){
+            if(elem.currentLesson.id === currentClassId){
                 elem.students.map((item) => {
                     if(item.secondTask === true){
                         secondTaskTrue.push(item);
@@ -76,7 +88,7 @@ const GeneralInformationPage = () => {
     const getStudentsSecondTaskNotCompleted = () => {
         let secondTaskFalse = [];
         arrayClasses.map((elem) => {
-            if(elem.currentLesson === currentClassId){
+            if(elem.currentLesson.id === currentClassId){
                 elem.students.map((item) => {
                     if(item.secondTask === false){
                         secondTaskFalse.push(item);
@@ -95,7 +107,10 @@ const GeneralInformationPage = () => {
                <TitleH2 titleType='h2' title='General Information'/>
                 <div className={global.RowBlock}>
                     <div className={styles.col}>
-                        <DescriptionCard type='user' title='Teacher' txt='Subject: World Literature' url='teacher'/>
+                        <DescriptionCard type='user' title={currentTeacher} txt={`Subject: ${currentLesson.subject}`} url='teacher'/>
+                    </div>
+                    <div className={styles.col}>
+                        <DescriptionCard type='lesson' title={currentLesson.title} teacher={currentTeacher} time={currentLesson.endLesson} />
                     </div>
                 </div>
             </div>

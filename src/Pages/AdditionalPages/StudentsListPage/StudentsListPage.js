@@ -48,7 +48,7 @@ const StudentsListPage = () => {
                 <Table5Column
                     key={item.id}
                     id={item.id}
-                    currentLesson={item.currentLesson}
+                    currentLesson={item.currentLesson.id}
                     className={item.className}
                     studentsMaxCount={item.studentsMaxCount}
                     studentsCount={item.studentsCount}

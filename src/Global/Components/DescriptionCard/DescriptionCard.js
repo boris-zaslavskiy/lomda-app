@@ -44,7 +44,7 @@ const DescriptionCard = (props) => {
 
 
             <div className={styles.header}>
-                <HeaderCardItem type={props.type} title={props.title} txt={props.txt} url={props.url}/>
+                <HeaderCardItem type={props.type} title={props.title} txt={props.txt} url={props.url} teacher={props.teacher} time={props.time}/>
             </div>
         </div>
     );

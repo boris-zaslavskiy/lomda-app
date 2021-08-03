@@ -1,0 +1,55 @@
+.col{
+    width: 48%;
+    max-height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+.tableBlock {
+    width: 100%;
+    margin: 20px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.block{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container:nth-child(1){
+    width: 60%;
+}
+
+.container:nth-child(2){
+    width: 35%;
+}
+
+
+
+/*-------------- Tablet --------------*/
+@media only screen and (max-width: 770px) {
+    .col{
+        width: 100%;
+    }
+}
+
+/*-------------- Phone --------------*/
+@media only screen and (max-width: 420px) {
+    .container:nth-child(1){
+        width: 70%;
+    }
+
+    .container:nth-child(2){
+        width: 25%;
+    }
+}

@@ -3,6 +3,9 @@ import styles from "./SignIn.module.css";
 import RInput from "../RInput/RInput";
 import {Form} from "react-bootstrap";
 import {Link} from "react-router-dom";
+import {OrangeBtn} from "../../Components/Button/OrangeBtn/OrangeBtn";
+
+import axios from "axios"; // an asynchronous method for working with requests returns a promise
 
 const SignIn = () => {
 
@@ -10,6 +13,7 @@ const SignIn = () => {
         teacher:true,
         student:false
     })
+
     const linkPath = () =>{
         if (formState.teacher===true){
             return '/teacher';
@@ -17,6 +21,16 @@ const SignIn = () => {
             return '/student';
         }
     }
+
+   //get data from mongoDB - test - Alina
+   /*  const getData = async (e) => {
+        e.preventDefault();
+        if(formState.teacher === true){
+
+        }else{
+
+        }
+    }*/
 
     const render = () =>{
         if (formState.teacher === true){
@@ -35,7 +49,13 @@ const SignIn = () => {
                     <RInput type='password'/>
                     <RInput type='confirm-password'/>
                     <div className={`w-100 d-flex`}>
-                        <Link to={linkPath()} className={styles.subBtn} type={`submit`}>Submit</Link>
+                       {/* <Link to={linkPath()} className={styles.subBtn} type={`submit`}>Submit</Link>*/}
+
+                      {/* alina change btn */}
+                       <div style={{width: '100%', display: 'flex', justifyContent: 'center'}}>
+                           <Link to='/teacher/1t' ><OrangeBtn type='submit' title='Submit'/></Link>{/*clicked={getData}*/}
+                       </div>
+
                     </div>
                 </Form>
             </div>
@@ -56,7 +76,13 @@ const SignIn = () => {
                             <RInput type='password'/>
                             <RInput type='confirm-password'/>
                             <div className={`w-100 d-flex`}>
-                                <Link to={linkPath()} className={styles.subBtn} type={`submit`}>Submit</Link>
+                                {/*<Link to={linkPath()} className={styles.subBtn} type={`submit`}></Link>*/}
+
+                                {/* alina change btn */}
+                                <div style={{width: '100%', display: 'flex', justifyContent: 'center'}}>
+                                    <Link to='/student/1s' ><OrangeBtn type='submit' title='Submit'/></Link> {/*clicked={getData}*/}
+                                </div>
+
                             </div>
                         </Form>
                     </div>

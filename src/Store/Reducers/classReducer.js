@@ -2,12 +2,20 @@ import {SET_CLASSES} from '../types'
 
 
 const defaultState = {
-    classes: [
+    /*classes: [
         {
             id:11,
             className: '4A',
             teacher: 'John Smith',
-            currentLesson: '100',
+            currentLesson:
+                {
+                    id: '100',
+                    title: 'Iliada Homer',
+                    startLesson: '10.00.00',
+                    endLesson: '23.00.00',
+                    subject: 'World Literature',
+                    status: 'active'
+                },
             studentsMaxCount: 23,
             studentsCount: 5,
             students: [
@@ -50,7 +58,15 @@ const defaultState = {
             id:22,
             className: '3C',
             teacher: 'John Smith',
-            currentLesson: '200',
+            currentLesson:
+                {
+                    id: '200',
+                    title: 'Odyssey',
+                    startLesson: '13.30.00',
+                    endLesson: '20.30.00',
+                    subject: 'World Literature',
+                    status: 'active'
+                },
             studentsMaxCount: 28,
             studentsCount: 19,
             students: [
@@ -110,6 +126,54 @@ const defaultState = {
                     secondTask: true
                 }
             ]
+        }
+    ]*/
+
+    classes: [
+        {
+            id: '10A',
+            title: 'A1',
+            students: [
+                { id: '1s', firstName: 'Samuel', surname: 'Harryson'},
+                { id: '3s', firstName: 'Ivy', surname: 'Redski'},
+                { id: '4s', firstName: 'Alice', surname: 'Alice'},
+                { id: '7s', firstName: 'Isabelle', surname: 'Belle'},
+                { id: '8s', firstName: 'Leo', surname: 'Belle'}
+            ],
+            subjects: [
+                { id: '100L', title: 'literature', idTeacher: '1t', idCurrentLesson: '1000L'},
+                { id: '101B', title: 'biology', idTeacher: '2t', idCurrentLesson: '1001B' },
+                { id: '102H', title: 'history', idTeacher: '3t', idCurrentLesson: '1002H' }
+            ],
+        },
+        {
+            id: '10B',
+            title: 'B1',
+            students: [
+                { id: '5s', firstName: 'Alfie', surname: 'Alfie'},
+                { id: '9s', firstName: 'Oliver', surname: 'Oliver'},
+                { id: '10s', firstName: 'Archie', surname: 'Archie'},
+                { id: '11s', firstName: 'Noah', surname: 'Noah'}
+            ],
+            subjects: [
+                { id: '100L', title: 'literature', idTeacher: '1t', idCurrentLesson: '1000L'},
+                { id: '101B', title: 'biology', idTeacher: '2t', idCurrentLesson: '1001B' }
+            ],
+        },
+        {
+            id: '20A',
+            title: 'A2',
+            students: [
+                { id: '12s', firstName: 'Ryan', surname: 'Ryan'},
+                { id: '13s', firstName: 'Harry', surname: 'Ryan'},
+                { id: '14s', firstName: 'Zoe', surname: 'Zoe'},
+                { id: '15s', firstName: 'Heidi', surname: 'Heidi'},
+                { id: '16s', firstName: 'Scarlett', surname: 'Scarlett'}
+            ],
+            subjects: [
+                { id: '101B', title: 'biology', idTeacher: '2t', idCurrentLesson: '2001B' },
+                { id: '102H', title: 'history', idTeacher: '3t', idCurrentLesson: '2002H' }
+            ],
         }
     ]
 };
