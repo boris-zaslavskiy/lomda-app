@@ -45,6 +45,10 @@
     font-weight: 700;
     color: #F77D48;
 }
+.panel{
+    animation: slow 2s;
+    /*transition: all  2s linear;*/
+}
 
 /*-------------- Phone --------------*/
 @media only screen and (max-width: 420px) {
@@ -56,6 +60,7 @@
         /* height: 200px; -- Lera */
     }
 }
+
 
 
 

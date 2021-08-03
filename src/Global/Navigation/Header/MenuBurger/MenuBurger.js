@@ -10,7 +10,7 @@ const MenuBurger = () => {
     const {openBurger, burgerMenu} = useContext(context);
 
     return (
-        <div  className={`container mt-5 p-0 mb-4`}>
+        <div  className={`container mt-5 p-0 mb-4 mx-2`}>
             <div className={`${styles.headerBody}`}>
                 <div className={`${styles.logo}`}>
                     <Logo/>

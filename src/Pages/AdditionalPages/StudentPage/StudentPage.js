@@ -5,6 +5,10 @@ import {Container} from "react-bootstrap";
 import {WelcomeSection} from "../../../Global/Components/Sections/WelcomeSection/WelcomeSection";
 import StudentPageBlock from "./StudentPageBlock/StudentPageBlock";
 import PreviousLessons from "../PreviousLessons/PreviousLessons";
+import QuestionAnswersPage from "../QuestionAnswersPage/QuestionAnswersPage";
+import CatalogLessonPage from "../CatalogLessonPage/CatalogLessonPage";
+import StudentsListPage from "../StudentsListPage/StudentsListPage";
+import AnsweringQuestionsPage from "../AnsweringQuestionsPage/AnsweringQuestionsPage";
 
 
 const StudentPage = () => {
@@ -21,6 +25,7 @@ const StudentPage = () => {
             <div className={global.Wrapper}>
                 <div className={global.RowBlock}>
                     <PreviousLessons/>
+                    <StudentsListPage/>
                 </div>
             </div>
         </Container>
