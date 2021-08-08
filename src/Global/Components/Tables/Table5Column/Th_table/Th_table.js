@@ -16,7 +16,7 @@ const Th_table = () => {
                         <Header title='Rate' color='#009DB3' weight='700' radius='0'/>
                     </div>
                     <div style={{width: '47%'}}>
-                    <Header title='Class' color='#009DB3' weight='700' radius='0'/>
+                    <Header title='Average' color='#009DB3' weight='700' radius='0'/>
                     </div>
                 </div>
             </div>

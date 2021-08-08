@@ -15,26 +15,46 @@ import {Table2ColProgress} from "../../../../Global/Components/Tables/Table2ColP
 import {BorderBtn} from "../../../../Global/Components/Button/BorderBtn/BorderBtn";
 
 import images from "../../../../Assets/background/main.png";
+import {Link} from "react-router-dom";
 
 
 const TeachPageBlock = (props) => {
 
     const userName = `${props.data.firstName} ${props.data.surName}`;
-    let savedLes, activeLes, closedLes = [];
+    const [lessonsNumber, setLessonsNumber] = useState({
+        allLes: 0,
+        savedLes: 0,
+        activeLes: 0,
+        closedLes: 0
+    });
 
     useEffect(() => {
-       /* props.data.map((item) => {
-            item.map((element) => {
-               if(element.status === 'saved'){
-                   savedLes.push(element);
-               }else if(element.status === 'active'){
-                   activeLes.push(element);
-               }else{
-                   closedLes.push(element);
-               }
+        if(Object.keys(props.data).length !== 0){
+            let allLes = props.data.lessons.length;
+            let savedLes = [];
+            let activeLes = [];
+            let closedLes = [];
+
+            props.data.lessons.map((item) => {
+                if(item.status === 'saved'){
+                    savedLes.push(item);
+                }else if(item.status === 'active'){
+                    activeLes.push(item);
+                }else{
+                    closedLes.push(item);
+                }
             });
-        });*/
-    }, []);
+
+            setLessonsNumber({
+                allLes: allLes,
+                savedLes: savedLes.length,
+                activeLes: activeLes.length,
+                closedLes: closedLes.length
+            });
+        }
+    }, [props.data]);
+
+
 
 
 
@@ -48,24 +68,27 @@ const TeachPageBlock = (props) => {
                             <DescriptionCard type='form' title={userName} txt={`Subject: ${props.data.subjectTitle}`}/> {/*user card by type form (form has input changes)*/}
                         </div>
 
-                        {/* person info - only second parameter should change*/}
                         <div className={styles.tableBlock}>
-                            <Header title='Personal info & progress' color='#009DB3' weight='700' radius='0.25rem'/>
-                            <Table2Column first='Lessons' second= {`${props.data.lessons.length} lessons`}/>
+                            <div style={{margin: '20px 0'}}>
+                                <TitleH5 title='Personal info & progress :' color='black' weight='900'/>
+                            </div>
+                            <Table2Column first='Lessons' second= {`${lessonsNumber.allLes} lessons`}/> {/* props.data.lessons.length - doesn't work .... */}
                         </div>
 
                         <div className={styles.tableBlock}>
-                            <Header title='+ Create new lesson' color='#F77D48' weight='700' radius='0.25rem'/>
-                            <TableRowWithBtn title='Initial (2)'/>
-                            <TableRowWithBtn title='Active (2)'/>
-                            <TableRowWithBtn title='Closed (2)'/>
+                            <Link to={'/createLesson'} className={global.Link}>
+                                <Header title='+ Create new lesson' color='#F77D48' weight='700' radius='0.25rem'/>
+                            </Link>
+                            <TableRowWithBtn title={`Initial (${lessonsNumber.savedLes})`}/>
+                            <TableRowWithBtn title={`Active (${lessonsNumber.activeLes})`}/>
+                            <TableRowWithBtn title={`Closed (${lessonsNumber.closedLes})`}/>
                         </div>
                     </div>
 
 
                     <div className={styles.col}>
                         <div className={styles.tableBlock}>
-                            <TitleH5 title='Current lesson:' color='black' weight='900'/>
+                            <TitleH5 title='Current lesson :' color='black' weight='900'/>
                         </div>
 
                         <div className={styles.tableBlock}>
@@ -81,7 +104,7 @@ const TeachPageBlock = (props) => {
 
                                     <TitleH6 title='Odyssey of Homer'/>
                                     <div className={styles.btnBlock}>
-                                        <BorderBtn title='View lesson' color='#009DB3'/>
+                                        {/*<BorderBtn title='View lesson' color='#009DB3'/>*/}
                                         <BorderBtn title='Edit lesson' color='#F77D48'/>
                                     </div>
                                 </div>
@@ -89,14 +112,16 @@ const TeachPageBlock = (props) => {
                         </div>
 
                         <div className={styles.tableBlock}>
-                            <Header title='View All lesson' color='#009DB3' weight='700' radius='0.25rem'/>
+                            <Link to={'/catalog'} className={global.Link}>
+                                <Header title='View All lesson' color='#009DB3' weight='700' radius='0.25rem'/>
+                            </Link>
                         </div>
                     </div>
 
 
                     <div className={styles.col}>
                         <div className={styles.tableBlock}>
-                            <TitleH5 title='Classes progress:' color='black' weight='900'/>
+                            <TitleH5 title='Classes progress :' color='black' weight='900'/>
                         </div>
 
                         <div className={styles.tableBlock}>
@@ -106,7 +131,10 @@ const TeachPageBlock = (props) => {
                         </div>
 
                         <div className={styles.tableBlock}>
-                            <Header title='Students List' color='#F77D48' weight='700' radius='0.25rem'/>
+                            <Link to={'/studentsList'} className={global.Link}>
+                                <Header title='Students List' color='#F77D48' weight='700' radius='0.25rem'/>
+                            </Link>
+
                         </div>
                     </div>
 

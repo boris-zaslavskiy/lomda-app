@@ -1,9 +1,38 @@
-
-.col{
-    width: 48%;
+.descBlock{
+    width: 100%;
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
+
+.col:nth-child(1){
+    width: 70%;
+    display: flex;
+}
+
+.col:nth-child(2), .col:nth-child(3){
+    width: 13%;
+    display: flex;
+    text-align: center;
+}
+
+.colum{
+     width: 48%;
+     display: flex;
+ }
+
+/* star component */
+.star{
+     color: #818A8D;
+     cursor: pointer;
+ }
+
+.star:hover, .star:focus{
+    color: #F77D48;
+}
+/* ------------------ */
+
+
 
 
 
@@ -16,8 +45,12 @@
 
 /*-------------- Tablet --------------*/
 @media only screen and (max-width: 770px) {
-    .col{
+    .col:nth-child(1){
         width: 100%;
+    }
+    .col:nth-child(2), .col:nth-child(3){
+        width: 48%;
+        margin: 20px 0;
     }
 }
 

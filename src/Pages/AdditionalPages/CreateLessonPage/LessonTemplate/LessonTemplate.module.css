@@ -1,0 +1,54 @@
+
+.wrapper{
+    width: 100%;
+    height: 900px;
+    overflow: auto;
+}
+
+.coverBlock{
+    width: 100%;
+    height: 300px;
+    background-color: #E0E3EF;
+}
+.cover{
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    border-radius: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: transparent;
+    transition: background-color 0.5s;
+}
+.cover:hover{
+    background-color: rgba(0,0,0,0.2);
+}
+
+
+/* text block*/
+
+.block{
+    padding: 30px;
+}
+
+.txt{
+    margin: 30px 0;
+}
+
+
+/*-------------- Tablet Pro--------------*/
+@media only screen and (max-width: 1030px) {
+
+}
+
+/*-------------- Tablet --------------*/
+@media only screen and (max-width: 770px) {
+
+}
+
+/*-------------- Phone --------------*/
+@media only screen and (max-width: 420px) {
+
+}

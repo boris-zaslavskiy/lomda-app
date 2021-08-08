@@ -10,7 +10,7 @@ const defaultState = {
            email: 'harryson@mail.com',
            password: 'harryson123456',
            position: 'student',
-           rating: '17',
+           rating: 17,
            class: { id: '10A', title: 'A1' }
        },{
            id: '2s',
@@ -19,7 +19,7 @@ const defaultState = {
            email: 'snoyden@mail.com',
            password: 'snoyden123456',
            position: 'student',
-           rating: '23',
+           rating: 23,
            class: { id: '10B', title: 'B1' }
        },{
            id: '3s',
@@ -28,7 +28,7 @@ const defaultState = {
            email: 'redski@mail.com',
            password: 'redski123456',
            position: 'student',
-           rating: '23',
+           rating: 21,
            class: { id: '10A', title: 'A1' }
        },{
            id: '4s',
@@ -37,7 +37,7 @@ const defaultState = {
            email: 'alice@mail.com',
            password: 'alice123456',
            position: 'student',
-           rating: '15',
+           rating: 16,
            class: { id: '10A', title: 'A1' }
        },{
            id: '5s',
@@ -46,7 +46,7 @@ const defaultState = {
            email: 'al@mail.com',
            password: 'al123456',
            position: 'student',
-           rating: '20',
+           rating: 20,
            class: { id: '10B', title: 'B1' }
        },{
            id: '6s',
@@ -55,7 +55,7 @@ const defaultState = {
            email: 'harry@mail.com',
            password: 'harryi123456',
            position: 'student',
-           rating: '17',
+           rating: 17,
            class: { id: '20A', title: 'A2' }
        },{
            id: '7s',
@@ -64,7 +64,7 @@ const defaultState = {
            email: 'bell@mail.com',
            password: 'bell123456',
            position: 'student',
-           rating: '25',
+           rating: 25,
            class: { id: '10A', title: 'A1' }
        },{
            id: '8s',
@@ -73,7 +73,7 @@ const defaultState = {
            email: 'leo@mail.com',
            password: 'leo123456',
            position: 'student',
-           rating: '21',
+           rating: 16,
            class: { id: '10A', title: 'A1' }
        },{
            id: '9s',
@@ -82,7 +82,7 @@ const defaultState = {
            email: 'oliv@mail.com',
            password: 'oliv123456',
            position: 'student',
-           rating: '20',
+           rating: 20,
            class: { id: '10B', title: 'B1' }
        }
        ,{
@@ -92,7 +92,7 @@ const defaultState = {
            email: 'archi@mail.com',
            password: 'archi123456',
            position: 'student',
-           rating: '16',
+           rating: 15,
            class: { id: '10B', title: 'B1' }
        }
        ,{
@@ -102,7 +102,7 @@ const defaultState = {
            email: 'noah@mail.com',
            password: 'noah123456',
            position: 'student',
-           rating: '17',
+           rating: 17,
            class: { id: '10B', title: 'B1' }
        },{
            id: '12s',
@@ -111,7 +111,7 @@ const defaultState = {
            email: 'ryan@mail.com',
            password: 'ryani123456',
            position: 'student',
-           rating: '19',
+           rating: 19,
            class: { id: '20A', title: 'A2' }
        }
        ,{
@@ -121,7 +121,7 @@ const defaultState = {
            email: 'hr@mail.com',
            password: 'hri123456',
            position: 'student',
-           rating: '14',
+           rating: 14,
            class: { id: '20A', title: 'A2' }
        }
        ,{
@@ -131,7 +131,7 @@ const defaultState = {
            email: 'zoe@mail.com',
            password: 'zoei123456',
            position: 'student',
-           rating: '19',
+           rating: 18,
            class: { id: '20A', title: 'A2' }
        }
        ,{
@@ -139,19 +139,19 @@ const defaultState = {
            firstName: 'Heidi',
            surName: 'Heidi',
            email: 'heidi@mail.com',
-           password: 'heidii123456',
+           password: 'heidi123456',
            position: 'student',
-           rating: '20',
+           rating: 20,
            class: { id: '20A', title: 'A2' }
        }
        ,{
            id: '16s',
            firstName: 'Scarlett',
            surName: 'Scarlett',
-           email: 'scarlett@mail.com',
-           password: 'scarletti123456',
+           email: 'scarlet@mail.com',
+           password: 'scarlet123456',
            position: 'student',
-           rating: '23',
+           rating: 23,
            class: { id: '20A', title: 'A2' }
        }
    ]

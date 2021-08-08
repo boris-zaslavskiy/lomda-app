@@ -1,0 +1,70 @@
+
+.wrapper{
+    width: 100%;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.col{
+    width: 48%;
+}
+
+.block{
+    width: 100%;
+    margin: 20px 0;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 0.25rem;
+}
+
+.block p{
+    margin: 0;
+    padding: 0;
+}
+
+.blockBtn{
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.calendar:nth-of-type(1){
+    width: 60%;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+.calendar:nth-of-type(2){
+    width: 40%;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+
+/*-------------- Tablet --------------*/
+@media only screen and (max-width: 770px) {
+    .blockBtn{
+        width: 30%;
+    }
+}
+
+/*-------------- Phone --------------*/
+@media only screen and (max-width: 420px) {
+    .col{
+        width: 100%;
+    }
+    .blockBtn{
+         width: 40%;
+     }
+}

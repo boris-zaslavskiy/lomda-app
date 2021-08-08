@@ -19,6 +19,7 @@
 }
 
 .RowBlock{/*--- row block to additional pages (TeachPageMobile, CreateLesson...) ---*/
+    width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -48,6 +49,11 @@
     align-items: center;
     background-color: white;
     border-radius: 0.25rem;
+}
+
+.Link{
+    width: 100%;
+    text-decoration: none;
 }
 
 /*--- scroll bar---*/

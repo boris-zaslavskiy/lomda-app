@@ -44,7 +44,7 @@ const Tr_table_student_mobile = (props) => {
                 <div className={styles.cell}>
                     <span style={{color: '#818A8D',fontSize: '12px'}}>rating</span>
                     <div className={styles.tr}>
-                        <TitleH6 title={props.class} color='black' weight='900'/>
+                        <TitleH6 title={props.averageNumber} color='black' weight='900'/>
                     </div>
                 </div>
 

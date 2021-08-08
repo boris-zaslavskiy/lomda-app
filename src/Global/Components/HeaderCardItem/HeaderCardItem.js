@@ -2,13 +2,13 @@ import React, {useState, useRef} from 'react';
 import styles from './HeaderCardItem.module.css';
 import {TxtAdditionalGrey} from "../Texts/TextDescription/TxtAdditionalGrey/TxtAdditionalGrey";
 import {TitleH3} from "../Texts/Headers/TitleH3/TitleH3";
+import {TitleH4} from "../Texts/Headers/TitleH4/TitleH4";
 import {TitleH5} from "../Texts/Headers/TitleH5/TitleH5";
 import {TitleH6} from "../Texts/Headers/TitleH6/TitleH6";
 import {Form} from 'react-bootstrap';
 import {FaPencilAlt, FaCheck} from 'react-icons/fa';
 import {BorderBtn} from "../Button/BorderBtn/BorderBtn";
 import {Link} from "react-router-dom";
-import {TitleH4} from "../Texts/Headers/TitleH4/TitleH4";
 
 
 const HeaderCardItem = (props) => {
@@ -94,6 +94,20 @@ const HeaderCardItem = (props) => {
                                     <div className={styles.header}>
                                         <TxtAdditionalGrey txt='Active until:'/>
                                         <TitleH5 title={props.time} color='#F77D48' weight='900'/>
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    case 'FAQ':
+                        return (
+                            <div>
+                                <div className={styles.card}>
+                                    <TitleH6 title={props.title} color='#F77D48' weight='900'/>
+                                </div>
+
+                                <div className={styles.card}>
+                                    <div className={styles.header}>
+                                        <TitleH4 title={props.question} color='black' weight='900'/>
                                     </div>
                                 </div>
                             </div>

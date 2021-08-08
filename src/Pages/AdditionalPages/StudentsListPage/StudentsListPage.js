@@ -10,12 +10,16 @@ import {useDispatch, useSelector} from "react-redux";
 import {Th_table} from "../../../Global/Components/Tables/Table5Column/Th_table/Th_table";
 import {TitleH6} from "../../../Global/Components/Texts/Headers/TitleH6/TitleH6";
 
+
+
 const StudentsListPage = () => {
 
     const dispatch = useDispatch(); //not remember remove
     const arrayClasses = useSelector(state => state.classStates.classes);
-    const [currentClasses, setCurrentClasses] = useState(arrayClasses);
+    const [classes, setClasses] = useState(arrayClasses);
+    const [currentClass, setCurrentClass] = useState({});
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
 
     const handleResize = () => {
         setWindowWidth(window.innerWidth);
@@ -26,33 +30,36 @@ const StudentsListPage = () => {
     }, []);
 
 
+
+
+
     const deleteClass = (id) => {
         let currentClassId = id;
         let arrClass = [];
-        currentClasses.map((item,index) => {
+        classes.map((item,index) => {
             if(item.id === currentClassId){
-                setCurrentClasses(arrClass);
-                //dispatch(setClasses(currentClasses));
+                setClasses(arrClass);
             }else{
                 arrClass.push(item);
-                setCurrentClasses(arrClass);
+                setClasses(arrClass);
             }
         });
     };
 
 
     let listClasses;
-    if(currentClasses.length > 0){
-        listClasses = currentClasses.map((item, index) => {
+    if(classes.length > 0){
+        listClasses = classes.map((item, index) => {
             return(
                 <Table5Column
                     key={item.id}
                     id={item.id}
-                    currentLesson={item.currentLesson.id}
-                    className={item.className}
-                    studentsMaxCount={item.studentsMaxCount}
-                    studentsCount={item.studentsCount}
-                    students={arrayClasses[index].students}
+                 /*   currentLesson={item.currentLesson.id}*/
+                    currentLesson={item.id}
+                    className={item.title}
+                    /*studentsMaxCount={item.students.length}*/
+                    studentsCount={item.students.length}
+                    students={item.students}
                     deleteClass={() => {deleteClass(item.id)}}
                 />
             )
@@ -60,25 +67,28 @@ const StudentsListPage = () => {
     }
 
 
+
+
     return (
         <Container fluid className={global.ContainerFluid}>
             <div className={global.Wrapper}>
-               <TitleH2 titleType='h2' title='Students list'/>
+                <TitleH2 titleType='h2' title='Students list'/>
                 <div className={global.RowBlock}>
                     <div className={styles.col}>
                         <DescriptionCard type='user' title='Teacher' txt='Subject: World Literature' url='teacher'/>
                     </div>
 
                     <div className={styles.col}>
-                        {/* btn add new class */}
+                        {/*btn add new class */}
                     </div>
 
                 </div>
             </div>
 
+
             <div className={global.GreyWrapper}>
                 <div className={global.Wrapper}>
-                    {(currentClasses.length === 0)?(
+                    {(classes.length === 0)?(
                         <div style={{ textAlign: 'center'}}>
                             <TitleH6 title='The class list is empty. Please add your first class.'/>
                         </div>
@@ -99,5 +109,4 @@ const StudentsListPage = () => {
         </Container>
     );
 };
-
 export default StudentsListPage;

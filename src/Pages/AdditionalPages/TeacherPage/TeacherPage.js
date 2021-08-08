@@ -25,7 +25,7 @@ const TeacherPage = () => {
     }, []);
 
 
-console.log(currentTeacher)
+//console.log(currentTeacher)
 
     return (
         <Container fluid className={global.ContainerFluid}>

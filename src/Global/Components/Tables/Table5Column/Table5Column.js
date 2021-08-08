@@ -15,6 +15,8 @@ const Table5Column = (props) => {
     const currentClasses = useSelector(state => state.classStates.classes);
     const [studentsList, setStudentsList] = useState(props.students);
     const [studentsListEmpty, setStudentsListEmpty] = useState(false);
+    const [averageNumber, setAverageNumber] = useState(0);
+
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [accordionStatus, setAccordionStatus] = useState(false);
     const [panelHeight, setPanelHeight] = useState(0);
@@ -25,7 +27,14 @@ const Table5Column = (props) => {
     };
 
     useEffect(() => {
-        window.addEventListener("resize", handleResize)
+        window.addEventListener("resize", handleResize);
+
+        let sum = 0;
+        studentsList.map((item) => {
+            sum += item.rating;
+        });
+        setAverageNumber(Math.round(sum/props.students.length));
+
     }, []);
 
 
@@ -85,15 +94,17 @@ const Table5Column = (props) => {
 
 
     const listStudentsDesktop = studentsList.map((item) => {
+
+        const studentName = `${item.firstName} ${item.surName}`;
         return(
             <Tr_table_student_desktop
                 key={item.id}
                 classId={props.id}
                 currentLesson={props.currentLesson}
                 id={item.id}
-                name={item.name}
-                rate={item.rate}
-                class={item.class}
+                name={studentName}
+                rate={item.rating}
+                averageNumber={averageNumber}
                 questions={item.questions}
                 evaluations={item.evaluations}
                 chosen={item.chosen}
