@@ -25,7 +25,7 @@ const WelcomeSection = (props) => {
         setCurrentTeacher(props.data);
     }, []);
 
-    console.log(props.pageName)
+
 
     return (
         <div className={styles.wrapper}>

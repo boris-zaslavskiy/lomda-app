@@ -34,17 +34,18 @@ const GeneralInformationPage = () => {
     }, []);
 
     const getCurrentLesson = () => {
-        arrayClasses.map((elem) => {
-            if(elem.currentLesson.id === currentClassId){
-               setCurrentTeacher(elem.teacher);
-                setCurrentLesson(elem.currentLesson);
-            }
+       arrayClasses.map((item) => {
+          // console.log(item.id)
+           /*  if(elem.currentLesson.id === currentClassId){
+               setCurrentTeacher(item.teacher);
+                setCurrentLesson(item.currentLesson);
+            }*/
         });
     };
 
     const getStudentsFirstTaskCompleted = () => {
         let firstTaskTrue = [];
-        arrayClasses.map((elem) => {
+        /*arrayClasses.map((elem) => {
             if(elem.currentLesson.id === currentClassId){
                 elem.students.map((item) => {
                     if(item.firstTask === true) {
@@ -52,14 +53,14 @@ const GeneralInformationPage = () => {
                     }
                 });
             }
-        });
+        });*/
         setStudentsFirstTaskCompleted(firstTaskTrue);
     };
 
 
     const getStudentsFirstTaskNotCompleted = () => {
         let firstTaskFalse = [];
-        arrayClasses.map((elem) => {
+        /*arrayClasses.map((elem) => {
             if(elem.currentLesson.id === currentClassId){
                 elem.students.map((item) => {
                     if(item.firstTask === false){
@@ -67,13 +68,13 @@ const GeneralInformationPage = () => {
                     }
                 });
             }
-        });
+        });*/
         setStudentsFirstTaskNotCompleted(firstTaskFalse);
     };
 
     const getStudentsSecondTaskCompleted = () => {
         let secondTaskTrue = [];
-        arrayClasses.map((elem) => {
+        /*arrayClasses.map((elem) => {
             if(elem.currentLesson.id === currentClassId){
                 elem.students.map((item) => {
                     if(item.secondTask === true){
@@ -81,13 +82,13 @@ const GeneralInformationPage = () => {
                     }
                 });
             }
-        });
+        });*/
         setStudentsSecondTaskCompleted(secondTaskTrue);
     };
 
     const getStudentsSecondTaskNotCompleted = () => {
         let secondTaskFalse = [];
-        arrayClasses.map((elem) => {
+       /* arrayClasses.map((elem) => {
             if(elem.currentLesson.id === currentClassId){
                 elem.students.map((item) => {
                     if(item.secondTask === false){
@@ -95,7 +96,7 @@ const GeneralInformationPage = () => {
                     }
                 });
             }
-        });
+        });*/
         setStudentsSecondTaskNotCompleted(secondTaskFalse);
     };
 

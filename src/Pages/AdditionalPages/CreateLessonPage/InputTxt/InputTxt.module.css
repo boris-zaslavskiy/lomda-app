@@ -1,0 +1,32 @@
+.form{
+    display: flex;
+}
+.input{
+    width: 100%;
+    font-weight: 900;
+    border-radius: 0.25rem 0 0 0.25rem;
+    margin-right: -3px;
+    padding: 0 10px;
+}
+
+input:hover{
+    background-color: #E0E3EF;
+    cursor: pointer;
+}
+
+input:focus{
+    outline: none;
+}
+
+::-webkit-input-placeholder {
+    font-weight: normal;
+    font-size: 18px;
+}
+
+
+/*-------------- Phone --------------*/
+@media only screen and (max-width: 420px) {
+    .input{
+        font-size: 18px !important;
+    }
+}

@@ -1,0 +1,50 @@
+.form{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-end;
+}
+.textarea{
+    width: 100%;
+    min-height: 45px;
+    border-radius: 0.25rem;
+    padding: 10px;
+    overflow: hidden;
+}
+
+textarea:hover{
+    background-color: #E0E3EF;
+    cursor: pointer;
+}
+
+textarea:focus{
+    outline: none;
+}
+
+::-webkit-input-placeholder {
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.block:nth-of-type(1){
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.block:nth-of-type(2){
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+
+/*-------------- Phone --------------*/
+@media only screen and (max-width: 420px) {
+    .textarea{
+        padding: 5px;
+        min-height: 35px;
+    }
+}

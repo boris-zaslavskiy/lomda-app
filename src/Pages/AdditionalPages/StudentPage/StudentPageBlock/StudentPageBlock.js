@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import global from '../../../../Global/Modules/Global.module.css';
 import styles from './StudentPageBlock.module.css';
 
@@ -9,31 +9,75 @@ import {TitleH5} from "../../../../Global/Components/Texts/Headers/TitleH5/Title
 import {TitleH6} from "../../../../Global/Components/Texts/Headers/TitleH6/TitleH6";
 import {TxtAdditionalGrey} from "../../../../Global/Components/Texts/TextDescription/TxtAdditionalGrey/TxtAdditionalGrey";
 import {CourseCard} from "../../../../Global/Components/CourseCard/CourseCard";
-import {Header} from "../../../../Global/Components/Tables/Header/Header";
 import {Table2Column} from "../../../../Global/Components/Tables/Table2Column/Table2Column";
 
 import images from '../../../../Assets/background/main.png'
+import SearchInput from "../../../../Global/Components/SearchInput/SearchInput";
+import {useSelector} from "react-redux";
 
 
-const StudentPageBlock = () => {
+const StudentPageBlock = (props) => {
+
+    const classes = useSelector(state => state.classStates.classes);
+    const [currentClass, setCurrentClass] = useState({});
+    const [subject, setSubjects] = useState({
+        id: '',
+        idCurrentLesson: '',
+        idTeacher: '',
+        nameTeacher: '',
+        title: ''
+    });
+
+    const userName = `${props.data.firstName} ${props.data.surName}`;
+    const [averageNumber, setAverageNumber] = useState(0);
+
+
+
+    let sum = 0;
+    useEffect(() => {
+        if( Object.keys(props.data).length !== 0 ){
+            props.students.map((item) => {
+               sum += item.rating;
+            });
+            setAverageNumber(Math.round(sum/props.students.length));
+
+            classes.map((item) => {
+                if(item.id === props.data.class.id){
+                    setCurrentClass(item);
+                }
+            });
+        }
+    }, [props.data]);
+
+
+    useEffect(() => {
+        if(Object.keys(currentClass).length !== 0){
+            currentClass.subjects.map((item) => {
+                if(item.id === '100L'){
+                    setSubjects(item);
+                }
+            });
+        }
+    }, [currentClass]);
+
+
     return (
         <Container fluid className={global.ContainerFluid}>
             <div className={global.Wrapper}>
                 <div className={global.RowBlock}>
-
                     <div className={styles.col}>
+
                         <div className={styles.tableBlock}>
-                            <DescriptionCard type='form' title='Student' txt='56 points - 45 points avg at class'/>  {/*user card by type form (form has input changes)*/}
+                            <DescriptionCard type='form' title={userName} txt={`${props.data.rating} points - ${averageNumber} points avg at class`}/>
                         </div>
 
                         <div className={styles.tableBlock}>
-                            {/*person info - only second parameter should change*/}
                             <div className={styles.tableBlock}>
-                                <Header title='Personal info & progress' color='#009DB3' weight='700' radius='0.25rem'/>
-                                <Table2Column first='Teacher' second='John Smith'/>
-                                <Table2Column first='Class' second='5B'/>
-                                <Table2Column first='Points' second='56'/>
-                                <Table2Column first='Avg points at class' second='45'/>
+                              {/*  <Header title='Personal info & progress' color='#009DB3' weight='700' radius='0.25rem'/>*/}
+                                <SearchInput type='options'/>
+                                <Table2Column first='Teacher' second={subject.nameTeacher}/>
+                                <Table2Column first='Points' second={props.data.rating}/>
+                                <Table2Column first='Avg points at class' second={averageNumber}/>
                             </div>
                         </div>
                     </div>
@@ -46,11 +90,11 @@ const StudentPageBlock = () => {
                                 <div className={styles.block}>
                                     <div className={styles.col} style={{margin: '10px 0 0'}}>{/* person info*/}
                                         <TxtAdditionalGrey txt='teacher'/>
-                                        <TitleH5 title='John Smith' color='black' weight='900'/>
+                                        <TitleH5 title={subject.nameTeacher} color='black' weight='900'/>
                                     </div>
                                     <div className={styles.col} style={{margin: '10px 0 0'}}>
                                         <TxtAdditionalGrey txt='subject'/>
-                                        <TitleH5 title='World literature' color='#F77D48' weight='900'/>
+                                        <TitleH5 title={subject.title} color='#F77D48' weight='900'/>
                                     </div>
                                 </div>
                             </div>

@@ -29,7 +29,6 @@ function App() {
                 <Route path={`/`} exact component={Main}/>
                 <Route path={`/about-us`} component={AboutUs}/>
                 <Route path={`/contacts`} component={Contacts}/>
-                <Route path={`/courses`} component={Courses}/>
                 <Route path={`/student/:studentId`} component={StudentPage}/>
                 <Route path={`/teacher/:teacherId`} component={TeacherPage}/>
                 <Route path={`/studentsList`} component={StudentsListPage}/>

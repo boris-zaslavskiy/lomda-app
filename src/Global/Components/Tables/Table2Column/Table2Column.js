@@ -1,12 +1,9 @@
 import React from 'react';
 import styles from './Table2Column.module.css';
-import global from '../../../../Global/Modules/Global.module.css';
 import {TitleH5} from "../../Texts/Headers/TitleH5/TitleH5";
-import {TxtAdditionalGrey} from "../../Texts/TextDescription/TxtAdditionalGrey/TxtAdditionalGrey";
 
 const Table2Column = (props) => {
 
-//Title text, type button changes depending on the props. - Alina
     return (
         <div className={styles.wrapper}>
             <div className={styles.col}>

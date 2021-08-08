@@ -1,18 +1,4 @@
 
-
-.iconBtn:hover{
-    background-color: transparent;
-    border: 2px solid #F77D48;
-    color: #F77D48;
-}
-
-
-.iconBtn:focus{
-    background-color: #F77D48;
-    border: 2px solid #F77D48;
-    color: white;
-}
-
 /*-------------- Phone --------------*/
 @media only screen and (max-width: 420px) {
     .iconBtn{

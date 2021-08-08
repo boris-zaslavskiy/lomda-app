@@ -78,7 +78,7 @@ const Tr_table_student_desktop = (props) => {
 
             <div className={styles.col}>
                 <div className={styles.row}>
-                    <TitleH6 title={props.class} color='black' weight='900'/>
+                    <TitleH6 title={props.averageNumber} color='black' weight='900'/>
                 </div>
             </div>
 

@@ -11,15 +11,15 @@ const defaultState = {
            password: 'ned123456',
            position: 'teacher',
            subjectId: '100L',
-           subjectTitle: 'literature',
+           subjectTitle: 'Literature',
            lessons: [
-               { id: '100', status: 'active' },
-               { id: '101', status: 'saved' },
-               { id: '102', status: 'active' },
-               { id: '103', status: 'closed' },
-               { id: '104', status: 'closed' },
-               { id: '105', status: 'saved' },
-               { id: '106', status: 'closed' }
+               { id: '1000L', status: 'active' },
+               { id: '1001L', status: 'saved' },
+               { id: '1002L', status: 'saved' },
+               { id: '1003L', status: 'closed' },
+               { id: '1004L', status: 'closed' },
+               { id: '1005L', status: 'saved' },
+               { id: '1006L', status: 'closed' }
            ],
            classes: [
                { id: '10A', title: 'A1' },
@@ -34,13 +34,13 @@ const defaultState = {
            password: 'snow123456',
            position: 'teacher',
            subjectId: '101B',
-           subjectTitle: 'biology',
+           subjectTitle: 'Biology',
            lessons: [
-               { id: '107', status: 'active' },
-               { id: '108', status: 'saved' },
-               { id: '109', status: 'active' },
-               { id: '110', status: 'closed' },
-               { id: '111', status: 'closed'}
+               { id: '1000B', status: 'active' },
+               { id: '1001B', status: 'saved' },
+               { id: '1002B', status: 'active' },
+               { id: '1003B', status: 'closed' },
+               { id: '1004B', status: 'closed'}
            ],
            classes: [
                { id: '10A', title: 'A1' },
@@ -55,12 +55,12 @@ const defaultState = {
            password: 'oscar123456',
            position: 'teacher',
            subjectId: '102H',
-           subjectTitle: 'history',
+           subjectTitle: 'History',
            lessons: [
-               { id: '112', status: 'active' },
-               { id: '113', status: 'saved' },
-               { id: '114', status: 'active' },
-               { id: '115', status: 'closed' }
+               { id: '1000H', status: 'active' },
+               { id: '1001H', status: 'saved' },
+               { id: '1002H', status: 'active' },
+               { id: '1003H', status: 'closed' }
            ],
            classes: [
                { id: '10A', title: 'A1' },

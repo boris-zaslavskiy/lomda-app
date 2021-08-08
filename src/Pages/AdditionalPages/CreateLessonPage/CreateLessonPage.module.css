@@ -1,32 +1,52 @@
-
-.col{
-    width: 48%;
+.wrapper{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
 }
-.block:first-of-type{
-    background-color: #757FA8;
+.col{
+    width: 48%;
 }
-.block:last-of-type{
 
+.col:nth-child(2){
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
 }
+
+.row{
+    margin: 50px 0;
+}
+
+.block{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.block:nth-child(1){
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
 /*-------------- Tablet Pro--------------*/
 @media only screen and (max-width: 1030px) {
     .col{
-        width: 60%;
-    }
-}
-
-/*-------------- Tablet --------------*/
-@media only screen and (max-width: 770px) {
-    .col{
         width: 100%;
     }
-}
 
+    .block:nth-child(1){
+        width: 40%;
+    }
+}
 
 
 /*-------------- Phone --------------*/
 @media only screen and (max-width: 420px) {
-
+    .block:nth-child(1){
+        width: 57%;
+    }
 }
