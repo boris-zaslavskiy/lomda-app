@@ -18,15 +18,22 @@ import images from "../../../../Assets/background/main.png";
 import {Link} from "react-router-dom";
 
 
+
+let listClasses = [];
+
 const TeachPageBlock = (props) => {
 
     const userName = `${props.data.firstName} ${props.data.surName}`;
+    const [currentTeacher, setCurrentTeacher] = useState({});
+
     const [lessonsNumber, setLessonsNumber] = useState({
         allLes: 0,
         savedLes: 0,
         activeLes: 0,
         closedLes: 0
     });
+
+
 
     useEffect(() => {
         if(Object.keys(props.data).length !== 0){
@@ -54,6 +61,18 @@ const TeachPageBlock = (props) => {
         }
     }, [props.data]);
 
+
+
+    useEffect(() => {
+        if(Object.keys(props.data).length !== 0){
+            listClasses = props.data.classes.map((item) => {
+               // console.log(item)
+               return(
+                   <Table2ColProgress key={item.id} class={item.title} currentCount='10' maxCount='36'/>
+               )
+            });
+        }
+    }, [props.data]);
 
 
 
@@ -125,9 +144,10 @@ const TeachPageBlock = (props) => {
                         </div>
 
                         <div className={styles.tableBlock}>
-                                <Table2ColProgress class='5A' currentCount='10' maxCount='36'/>
+                            {listClasses}
+                                {/*<Table2ColProgress class='5A' currentCount='10' maxCount='36'/>
                                 <Table2ColProgress class='5A' currentCount='15' maxCount='30'/>
-                                <Table2ColProgress class='5A' currentCount='10' maxCount='36'/>
+                                <Table2ColProgress class='5A' currentCount='10' maxCount='36'/>*/}
                         </div>
 
                         <div className={styles.tableBlock}>

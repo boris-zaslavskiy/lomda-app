@@ -36,3 +36,19 @@
 }
 
 
+.formWrapper{
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    width: 80%;
+    height: 100%;
+    padding: 5vh 3vw;
+    color: #878A8B;
+}
+
+
+/*-------------- Tablet Pro--------------*/
+@media only screen and (max-width: 1030px) {
+    .formWrapper{
+        width: 100%;
+    }
+}

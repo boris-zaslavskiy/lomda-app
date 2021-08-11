@@ -1,10 +1,12 @@
 import React, {useEffect, useState} from 'react';
+import axios from "axios";
 import global from '../../../Global/Modules/Global.module.css';
 import {Container} from "react-bootstrap";
+
 import {WelcomeSection} from "../../../Global/Components/Sections/WelcomeSection/WelcomeSection";
 import TeachPageBlock from "./TeachPageBlock/TeachPageBlock";
-
 import {useSelector} from "react-redux";
+
 
 
 const TeacherPage = () => {
@@ -23,6 +25,18 @@ const TeacherPage = () => {
             }
         });
     }, []);
+
+
+
+    useEffect(() => {
+        axios.get('/api/courses/current')
+            .then(res => {
+                console.log(res)
+            })
+            .catch(err => {
+                console.log(err)
+            });
+    },[]);
 
 
 //console.log(currentTeacher)

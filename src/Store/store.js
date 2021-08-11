@@ -6,12 +6,14 @@ import thunk from "redux-thunk";
 import classReducer from "./Reducers/classReducer";
 import teacherReducer from "./Reducers/teacherReducer";
 import studentReducer from "./Reducers/studentReducer";
+import subjectReducer from "./Reducers/subjectReducer";
 
 
 const rootReducer = combineReducers({
     classStates: classReducer,
     teacherStates: teacherReducer,
-    studentStates: studentReducer
+    studentStates: studentReducer,
+    subjectStates: subjectReducer
 });
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));

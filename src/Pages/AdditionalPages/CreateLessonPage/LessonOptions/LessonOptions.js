@@ -4,7 +4,6 @@ import styles from './LessonOptions.module.css';
 import {Container} from "react-bootstrap";
 import {TitleH6} from "../../../../Global/Components/Texts/Headers/TitleH6/TitleH6";
 import SearchInput from "../../../../Global/Components/SearchInput/SearchInput";
-import TimePicker from 'react-bootstrap-time-picker';
 import {BorderBtn} from "../../../../Global/Components/Button/BorderBtn/BorderBtn";
 import {IconBtn} from "../../../../Global/Components/Button/IconBtn/IconBtn";
 
