@@ -9,7 +9,7 @@
 .greenBtn:hover, .greenBtn:focus{
     background-color: transparent;
     box-shadow: none;
-    border: 2px solid #009DB3;
+    border: 2px solid #009db3;
     color: #009DB3;
 }
 

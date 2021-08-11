@@ -1,4 +1,4 @@
-.class{
+.slowDown{
     width: 100%;
     transition: max-height 2s ease-out;
     overflow: hidden;
