@@ -6,10 +6,13 @@ const SearchInput = (props) => {
     console.log(props.data);
     const [search, setSearch] = useState('');
     const [option, setOption] = useState('');
+
+
     const handleChange = (search) => {
         console.log(search);
         setSearch('');
     }
+
     const handleChangeOption = (option) => {
         setOption(option);
         console.log(option)

@@ -20,7 +20,7 @@ const BlockLessons = ({lessonsToRender, itemHeight}) => {
 
 
     return (
-        <div className={`row`} ref={ref}>
+        <div className={`row`} ref={ref}> {/*добавила привязку*/}
             {lessonsToRender.map((lesson) =>
                 <div className={`col-12 col-lg-6 col-xl-4 mt-3 `} >
                     <CourseCard img={lesson.image} title={lesson.title} />

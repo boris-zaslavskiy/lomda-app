@@ -23,21 +23,24 @@ import CatalogLessonPage from "./Pages/AdditionalPages/CatalogLessonPage/Catalog
 
 function App() {
     return (
-        <div className="App">
+        <div>
             <Header/>
-            <Switch>
-                <Route path={`/`} exact component={Main}/>
-                <Route path={`/about-us`} component={AboutUs}/>
-                <Route path={`/contacts`} component={Contacts}/>
-                <Route path={`/student/:studentId`} component={StudentPage}/>
-                <Route path={`/teacher/:teacherId`} component={TeacherPage}/>
-                <Route path={`/studentsList`} component={StudentsListPage}/>
-                <Route path={`/createLesson`} component={CreateLessonPage}/>
-                <Route path={`/currentLesson`} component={CurrentLessonPage}/>
-                <Route path={`/questionAnswers`} component={QuestionAnswersPage}/>
-                <Route path={`/generalInfo/:classId`} component={GeneralInformationPage}/>
-                <Route path={`/catalog`} component={CatalogLessonPage}/>
-            </Switch>
+            <div className="App">
+                <Switch>
+                    <Route path={`/`} exact component={Main}/>
+                    <Route path={`/about-us`} component={AboutUs}/>
+                    <Route path={`/contacts`} component={Contacts}/>
+                    <Route path={`/student/:studentId`} component={StudentPage}/>
+                    <Route path={`/teacher/:teacherId`} component={TeacherPage}/>
+                    <Route path={`/studentsList`} component={StudentsListPage}/>
+                    <Route path={`/createLesson`} component={CreateLessonPage}/>
+                    <Route path={`/currentLesson`} component={CurrentLessonPage}/>
+                    <Route path={`/questionAnswers`} component={QuestionAnswersPage}/>
+                    <Route path={`/generalInfo/:classId`} component={GeneralInformationPage}/>
+                    <Route path={`/catalog`} component={CatalogLessonPage}/>
+                </Switch>
+            </div>
+
             <Footer/>
         </div>
     );

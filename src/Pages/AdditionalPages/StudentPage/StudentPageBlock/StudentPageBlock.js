@@ -20,6 +20,8 @@ import {subjects} from "../../../../Utils/constants";
 const StudentPageBlock = (props) => {
 
     const classes = useSelector(state => state.classStates.classes);
+    const subjects = useSelector(state => state.subjectStates.subjects);
+
     const [currentClass, setCurrentClass] = useState({});
     const [subject, setSubjects] = useState({
         id: '',
@@ -51,14 +53,21 @@ const StudentPageBlock = (props) => {
     }, [props.data]);
 
 
+
+
     useEffect(() => {
         if(Object.keys(currentClass).length !== 0){
             currentClass.subjects.map((item) => {
-                if(item.id === '100L'){
-                    setSubjects(item);
-                }
+                subjects.map((elem) => {
+                    /*console.log(elem)*/
+                    if(item.id === elem.id){
+                        setSubjects(item);
+                        console.log(elem)
+                    }
+                });
             });
         }
+
     }, [currentClass]);
 
 
@@ -75,7 +84,11 @@ const StudentPageBlock = (props) => {
                         <div className={styles.tableBlock}>
                             <div className={styles.tableBlock}>
                               {/*  <Header title='Personal info & progress' color='#009DB3' weight='700' radius='0.25rem'/>*/}
-                                <SearchInput data={subjects} title='Choose a Subject'/>
+
+                                <div style={{width: '100%'}}>
+                                    <SearchInput data={subjects} title='Choose a Subject'/>
+                                </div>
+
                                 <Table2Column first='Teacher' second={subject.nameTeacher}/>
                                 <Table2Column first='Points' second={props.data.rating}/>
                                 <Table2Column first='Avg points at class' second={averageNumber}/>
