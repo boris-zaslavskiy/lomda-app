@@ -8,8 +8,8 @@ import global from '../../../Modules/Global.module.css';
 import styles from '../Menu/Menu.module.css';
 const Menu = () => {
     return (
-        <div className={`p-0 my-5 ${global.Wrapper}`}>
-            <Row className='d-flex align-items-center'>
+        <div className={`p-0 my-5`}>
+            <Row className={`d-flex align-items-center ${global.Wrapper}`}>
                 <div className='col-3 p-0'>
                     <Logo position='header'/>
                 </div>

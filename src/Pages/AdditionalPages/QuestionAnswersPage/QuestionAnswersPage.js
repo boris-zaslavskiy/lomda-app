@@ -8,15 +8,30 @@ import {TitleH2} from "../../../Global/Components/Texts/Headers/TitleH2/TitleH2"
 import {TitleH5} from "../../../Global/Components/Texts/Headers/TitleH5/TitleH5";
 import {faStar} from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import CurrentStudentAnswers from "./CurrentStudentAnswers/CurrentStudentAnswers";
+import OtherStudentsAnswers from "./OtherStudentsAnswers/OtherStudentsAnswers";
+import ListQuestionsAnswers from "./ListQuestionsAnswers/ListQuestionsAnswers";
+import {questions} from "../../../Utils/constants";
 
 const QuestionAnswersPage = () => {
 
     const [points,setPoints] = useState('');
+    const [heightLeft, setHeightLeft] = useState(0);// ------Lera
+    const [heightRight, setHeightRight] = useState(0);//------Lera
 
     useEffect(() => {
         const newPoints = '56 points';
         setPoints(newPoints);
     });
+    //--------------Lera ---------
+    const getHeightLeft = (heightLeft) =>{
+        let currentHeightLeft = 2 *(heightLeft+20);
+        setHeightLeft(currentHeightLeft );
+    }
+    const getHeightRight = (heightRight) =>{
+        let currentHeightRight = 2 *(heightRight+20);
+        setHeightRight(currentHeightRight );
+    }
 
 
     return (
@@ -55,10 +70,21 @@ const QuestionAnswersPage = () => {
                     <div className={global.RowBlock}>
                         <div className={styles.colum}>
                            {/* Mark's Answers to Questions*/}
+                            {/*------------Lera----------------*/}
+                            <ListQuestionsAnswers title='Mark Answers to Questions'
+                                                  componentToRender={<CurrentStudentAnswers itemHeight={getHeightLeft}/>}
+                                                  height={heightLeft}
+                            />
                         </div>
 
                         <div className={styles.colum}>
                             {/*3 Students who answer to question*/}
+                            {/*------------Lera----------------*/}
+                            <ListQuestionsAnswers title='Students who answer to question'
+                                                  number={3}
+                                                  componentToRender={<OtherStudentsAnswers itemHeight={getHeightRight}/>}
+                                                  height={heightRight}
+                            />
                         </div>
                     </div>
 
