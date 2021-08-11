@@ -62,6 +62,11 @@
     background-color: #F77D48;
     font-weight: 800;
 }
+.hideButton{
+    pointer-events: none;
+    opacity: 0.4;
+}
+
 @media (min-width:1200px) {
     .step {
         white-space: nowrap

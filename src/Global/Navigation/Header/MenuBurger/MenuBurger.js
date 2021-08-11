@@ -4,13 +4,14 @@ import LoginHeader from '../LoginHeader/LoginHeader';
 import Bar from '../../Bar/Bar';
 import {context} from '../../../../Utils/Context';
 import styles from '../MenuBurger/MenuBurger.module.css';
+import global from '../../../Modules/Global.module.css';
 
 
 const MenuBurger = () => {
     const {openBurger, burgerMenu} = useContext(context);
 
     return (
-        <div  className={`container mt-5 p-0 mb-4 mx-2`}>
+        <div  className={`container mt-5 p-0 mb-4 ${global.Wrapper}`}>
             <div className={`${styles.headerBody}`}>
                 <div className={`${styles.logo}`}>
                     <Logo/>

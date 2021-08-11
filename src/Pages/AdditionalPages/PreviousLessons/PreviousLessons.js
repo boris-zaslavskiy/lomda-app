@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { GreenBtn } from '../../../Global/Components/Button/GreenBtn/GreenBtn';
 import { TitleH2 } from '../../../Global/Components/Texts/Headers/TitleH2/TitleH2';
 import BlockLessons from './BlockLessons/BlockLessons';
-import {arrayLessons} from '../../../Utils/constants';
+import {arrayLessons, subjects} from '../../../Utils/constants';
 import SearchInput from '../../../Global/Components/SearchInput/SearchInput';
 import styles from '../PreviousLessons/PreviousLessons.module.css';
 
@@ -120,16 +120,16 @@ const PreviousLessons = () => {
                 <TitleH2 titleType='h2' title='Previous Lessons' />
                 <div className={`row my-3 my-md-5 `}>
                     <div className='col-12 col-md-6'>
-                        <SearchInput type='options'/>
+                        <SearchInput type='options' data={subjects} title='Choose a Subject'/>
                     </div>
                     <div className={`col-12 col-md-6`}>
-                        <SearchInput type='search'/>
+                        <SearchInput type='search'  title='Search'/>
                     </div>
                 </div>
             </div>
 
             {/*3 cards always */}
-            <div className={`${styles.class}`} style={{maxHeight: `${maxHeight}px`}} >{/*`${(lessonsToShow.length * 500)/3}px`*/}
+            <div className={`${styles.slowDown}`} style={{maxHeight: `${maxHeight}px`}} >{/*`${(lessonsToShow.length * 500)/3}px`*/}
                 <BlockLessons lessonsToRender={lessonsToShow} itemHeight={getHeight}/>
             </div>
             <div className={`mt-3 mb-3 text-center`}>

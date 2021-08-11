@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import global from '../../../../Global/Modules/Global.module.css';
 import styles from './LessonOptions.module.css';
 import {Container} from "react-bootstrap";
+
 import {TitleH6} from "../../../../Global/Components/Texts/Headers/TitleH6/TitleH6";
 import SearchInput from "../../../../Global/Components/SearchInput/SearchInput";
 import {BorderBtn} from "../../../../Global/Components/Button/BorderBtn/BorderBtn";

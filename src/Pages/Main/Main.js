@@ -9,6 +9,7 @@ const Main = () => {
     return (
         <Container fluid className={global.Wrapper}>
             <WelcomeSection pageName='main' addBlock='form'/>
+
         </Container>
     );
 };

@@ -6,23 +6,28 @@
 }
 .input_groupOrange{
     display: flex;
-    justify-content: flex-end;
+    align-items: stretch;
     width: 100%;
 }
 .orangeInput{
-    width: 18rem;
+    width: 60%;
     border: 1px solid #F77D48;
     border-top-left-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem;
+    background: transparent;
+}
+.orangeInput:hover, .greenInput:hover {
+    background: transparent;
 }
 .greenInput{
-    width: 13rem;
+    width: 60%;
     border: 1px solid #009DB3;
     border-top-left-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem;
+    background: transparent;
 }
 .greenBtn{
-    width: 10rem;
+    width: 40%;
     background-color: #009DB3;
     border: 1px solid #009DB3;
     color: white;
@@ -42,7 +47,7 @@
 
 
 .orangeBtn{
-    width: 10rem;
+    width: 40%;
     background-color: #F77D48;
     border: 1px solid #F77D48;
     color: white;
@@ -59,24 +64,21 @@
 }
 @media screen and (max-width: 435px){
     .input_group, .input_groupOrange {
-        display: flex;
-        flex-direction: column;
-        /*justify-content: center;*/
         margin-top: 2rem;
     }
-    .orangeInput{
-        width: 10rem;;
-    }
-    .greenInput{
-        width: 10rem;
-    }
-    .greenBtn{
-        width: 10rem;
-        font-size: 1rem;
-    }
-    .orangeBtn{
-        width: 7rem;
-    }
+    /*.orangeInput{*/
+    /*    width: 10rem;;*/
+    /*}*/
+    /*.greenInput{*/
+    /*    width: 10rem;*/
+    /*}*/
+    /*.greenBtn{*/
+    /*    width: 10rem;*/
+    /*    font-size: 1rem;*/
+    /*}*/
+    /*.orangeBtn{*/
+    /*    width: 7rem;*/
+    /*}*/
 }
 @media (min-width: 436px)and (max-width: 767px) {
     .input_group, .input_groupOrange {
@@ -87,34 +89,34 @@
 }
 
 @media (min-width: 768px) and (max-width: 991px){
-    .orangeInput{
-        width: 10rem;;
-    }
-    .greenInput{
-        width: 10rem;
-    }
-    .greenBtn{
-        width: 10rem;
-        font-size: 1rem;
-    }
-    .orangeBtn{
-        width: 7rem;
-    }
+    /*.orangeInput{*/
+    /*    width: 10rem;;*/
+    /*}*/
+    /*.greenInput{*/
+    /*    width: 10rem;*/
+    /*}*/
+    /*.greenBtn{*/
+    /*    width: 10rem;*/
+    /*    font-size: 1rem;*/
+    /*}*/
+    /*.orangeBtn{*/
+    /*    width: 7rem;*/
+    /*}*/
 
 }
 @media (min-width: 992px) and (max-width: 1200px){
-    .orangeInput{
-        width: 15rem;;
-    }
-    .greenInput{
-        width: 10rem;
-    }
-    .greenBtn{
-        width: 10rem;
-        font-size: 1rem;
-    }
-    .orangeBtn{
-        width: 10rem;
-    }
+    /*.orangeInput{*/
+    /*    width: 15rem;;*/
+    /*}*/
+    /*.greenInput{*/
+    /*    width: 10rem;*/
+    /*}*/
+    /*.greenBtn{*/
+    /*    width: 10rem;*/
+    /*    font-size: 1rem;*/
+    /*}*/
+    /*.orangeBtn{*/
+    /*    width: 10rem;*/
+    /*}*/
 }
 
