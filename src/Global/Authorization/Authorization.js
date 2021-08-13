@@ -7,18 +7,22 @@ const Authorization = () => {
 
     const [state,setState] = useState('');
 
-    const switchPage = () => {
+    /*const switchPage = () => {
         console.log(state);
         if (state === 'sign-in'){
             return(<SignIn/>);
         }else{
             return (<Login setPage={setState}/>);
         }
-    }
+    }*/
 
 
     return (
-        switchPage()
+       /* switchPage()*/
+        <Switch>
+            <Route path='/login' component={Login} />
+            <Route path='/sign-in' component={SignIn}/>
+        </Switch>
     );
 };
 
