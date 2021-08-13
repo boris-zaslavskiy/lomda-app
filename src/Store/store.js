@@ -7,13 +7,15 @@ import classReducer from "./Reducers/classReducer";
 import teacherReducer from "./Reducers/teacherReducer";
 import studentReducer from "./Reducers/studentReducer";
 import subjectReducer from "./Reducers/subjectReducer";
+import lessonReducer from "./Reducers/lessonReducer";
 
 
 const rootReducer = combineReducers({
     classStates: classReducer,
     teacherStates: teacherReducer,
     studentStates: studentReducer,
-    subjectStates: subjectReducer
+    subjectStates: subjectReducer,
+    lessonStates:  lessonReducer
 });
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
