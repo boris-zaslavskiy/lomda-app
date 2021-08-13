@@ -14,7 +14,7 @@ import {Table2Column} from "../../../../Global/Components/Tables/Table2Column/Ta
 import images from '../../../../Assets/background/main.png'
 import SearchInput from "../../../../Global/Components/SearchInput/SearchInput";
 import {useSelector} from "react-redux";
-import {subjects} from "../../../../Utils/constants";
+//import {subjects} from "../../../../Utils/constants";
 
 
 const StudentPageBlock = (props) => {
@@ -86,7 +86,7 @@ const StudentPageBlock = (props) => {
                               {/*  <Header title='Personal info & progress' color='#009DB3' weight='700' radius='0.25rem'/>*/}
 
                                 <div style={{width: '100%'}}>
-                                    <SearchInput data={subjects} title='Choose a Subject'/>
+                                    <SearchInput data={[1,2,3]} title='Choose a Subject'/>
                                 </div>
 
                                 <Table2Column first='Teacher' second={subject.nameTeacher}/>

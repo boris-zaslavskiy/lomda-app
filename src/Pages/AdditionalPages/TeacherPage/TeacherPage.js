@@ -28,8 +28,16 @@ const TeacherPage = () => {
 
 
 
+//test ------------------------------------------------------------
+    /*"proxy": "http://18.133.237.151:8000",*/
+
     useEffect(() => {
-        axios.get('/api/courses/current')
+        axios.get('http://18.133.237.151:8000/api/courses/current',{crossdomain: true}
+
+        /*{headers: {
+                'Authorization': 'Token c54a830fbac13d286949ac69f554951382e8ce1d'
+            }}*/
+        )
             .then(res => {
                 console.log(res)
             })
@@ -38,6 +46,7 @@ const TeacherPage = () => {
             });
     },[]);
 
+//--------------------------------------------------------------------
 
 //console.log(currentTeacher)
 
