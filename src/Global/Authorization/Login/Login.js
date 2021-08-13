@@ -77,12 +77,15 @@ const Login = (props) => {
 
                {/* alina change btn */}
                <div style={{width: '100%', display: 'flex', justifyContent: 'center'}}>
-                   <Link to='/student/1s' ><GreenBtn type='submit' title='Login'/></Link>
+                   <Link to='/teacher/1t'><GreenBtn type='submit' title='Login'/></Link>
                </div>
 
            {/*<button className={`mb-5 ${styles.loginBtn}`} type='submit'>Login</button>*/}
                <p className={`mb-0`}>Don't have an account yet?</p>
-               <div onClick={()=>{props.setPage('sign-in')}} className={`${styles.SILink}`}>Sign in</div>
+               <div style={{width: '100%', display: 'flex', justifyContent: 'center'}}>
+                   <Link to='/sign-in'><GreenBtn type='submit' title='Sign in'/></Link>
+               </div>
+               {/*<div onClick={()=>{props.setPage('sign-in')}} className={`${styles.SILink}`}>Sign in</div>*/}
            </div>
        </Form>
     );
