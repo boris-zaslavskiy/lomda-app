@@ -23,16 +23,19 @@ const CurrentStudentSAnswers = (props) => {
                             </div>
                         </div>
                         <div className={`d-flex justify-content-end w-25`}>
-                            <StarsRating index={0}/>
+
+                            {/*it is necessary to change the index number, otherwise the dependence between the stars in the lines*/}
+                            <StarsRating index={0} ratingQ={3}/>
                         </div>
                     </div>
                         <div className={`${styles.scroll} `} style={{minHeight:140}}>
                             <p className={`py-3 px-2 m-0 `}>
                                 <div className={`${styles.starsPosition}`}>
-                                    <StarsRating index={1}/>
+
+                                    {/*it is necessary to change the index number, otherwise the dependence between the stars in the lines*/}
+                                    <StarsRating index={2} ratingAns={4}/>
                                 </div>
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-
                             </p>
                         </div>
                 </div>
