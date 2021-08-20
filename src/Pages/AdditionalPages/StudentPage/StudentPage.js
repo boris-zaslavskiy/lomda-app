@@ -5,7 +5,6 @@ import {Container} from "react-bootstrap";
 import {WelcomeSection} from "../../../Global/Components/Sections/WelcomeSection/WelcomeSection";
 import StudentPageBlock from "./StudentPageBlock/StudentPageBlock";
 import PreviousLessons from "../PreviousLessons/PreviousLessons";
-import StudentsListPage from "../StudentsListPage/StudentsListPage";
 import {useSelector} from "react-redux";
 import AnsweringQuestionsPage from "../AnsweringQuestionsPage/AnsweringQuestionsPage";
 

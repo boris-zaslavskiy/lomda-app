@@ -16,8 +16,8 @@ import {questions} from "../../../Utils/constants";
 const QuestionAnswersPage = () => {
 
     const [points,setPoints] = useState('');
-    const [heightLeft, setHeightLeft] = useState(0);// ------Lera
-    const [heightRight, setHeightRight] = useState(0);//------Lera
+    const [heightLeft, setHeightLeft] = useState(0);//height for left column ------Lera
+    const [heightRight, setHeightRight] = useState(0);//height for right column------Lera
 
     useEffect(() => {
         const newPoints = '56 points';
@@ -25,11 +25,11 @@ const QuestionAnswersPage = () => {
     });
     //--------------Lera ---------
     const getHeightLeft = (heightLeft) =>{
-        let currentHeightLeft = 2 *(heightLeft+20);
+        let currentHeightLeft = 1 *(heightLeft+20);
         setHeightLeft(currentHeightLeft );
     }
     const getHeightRight = (heightRight) =>{
-        let currentHeightRight = 2 *(heightRight+20);
+        let currentHeightRight = 1 *(heightRight+20);
         setHeightRight(currentHeightRight );
     }
 
@@ -72,7 +72,10 @@ const QuestionAnswersPage = () => {
                            {/* Mark's Answers to Questions*/}
                             {/*------------Lera----------------*/}
                             <ListQuestionsAnswers title='Mark Answers to Questions'
-                                                  componentToRender={<CurrentStudentAnswers itemHeight={getHeightLeft}/>}
+                                                  componentToRender={
+                                                      <CurrentStudentAnswers
+                                                          itemHeight={getHeightLeft}
+                                                          />}
                                                   height={heightLeft}
                             />
                         </div>
@@ -81,7 +84,7 @@ const QuestionAnswersPage = () => {
                             {/*3 Students who answer to question*/}
                             {/*------------Lera----------------*/}
                             <ListQuestionsAnswers title='Students who answer to question'
-                                                  number={3}
+                                                  number={3}//the number of students who answered the question---Lera
                                                   componentToRender={<OtherStudentsAnswers itemHeight={getHeightRight}/>}
                                                   height={heightRight}
                             />
