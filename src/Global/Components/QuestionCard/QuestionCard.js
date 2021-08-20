@@ -1,5 +1,5 @@
 import React, {useRef, useState} from 'react';
-import Popup from 'reactjs-popup';
+//import Popup from 'reactjs-popup';
 import styles from './QuestionCard.module.css';
 import StarsRating from "../StarsRating/StarsRating";
 import { FaStar } from "react-icons/fa";

@@ -1,6 +1,6 @@
 import React from "react";
 import './App.css';
-import {Route, Switch} from "react-router";
+import {Redirect, Route, Switch} from "react-router";
 
 import Main from "./Pages/Main/Main";
 import AboutUs from "./Pages/AboutUs/AboutUs";
@@ -23,21 +23,25 @@ import CatalogLessonPage from "./Pages/AdditionalPages/CatalogLessonPage/Catalog
 
 function App() {
     return (
-        <div className="App">
+        <div>
             <Header/>
-            <Switch>
-                <Route path={`/`} exact component={Main}/>
-                <Route path={`/about-us`} component={AboutUs}/>
-                <Route path={`/contacts`} component={Contacts}/>
-                <Route path={`/student/:studentId`} component={StudentPage}/>
-                <Route path={`/teacher/:teacherId`} component={TeacherPage}/>
-                <Route path={`/studentsList`} component={StudentsListPage}/>
-                <Route path={`/createLesson`} component={CreateLessonPage}/>
-                <Route path={`/currentLesson`} component={CurrentLessonPage}/>
-                <Route path={`/questionAnswers`} component={QuestionAnswersPage}/>
-                <Route path={`/generalInfo/:classId`} component={GeneralInformationPage}/>
-                <Route path={`/catalog`} component={CatalogLessonPage}/>
-            </Switch>
+            <div className="App">
+                <Switch>
+                    <Route path={'/about-us'} component={AboutUs}/>
+                    <Route path={'/contacts'} component={Contacts}/>
+                    <Route path={'/student/:studentId'} component={StudentPage}/>
+                    <Route path={'/teacher/:teacherId'} component={TeacherPage}/>
+                    <Route path={'/studentsList'} component={StudentsListPage}/>
+                    <Route path={'/createLesson'} component={CreateLessonPage}/>
+                    <Route path={'/currentLesson'} component={CurrentLessonPage}/>
+                    <Route path={'/questionAnswers'} component={QuestionAnswersPage}/>
+                    <Route path={'/generalInfo/:classId'} component={GeneralInformationPage}/>
+                    <Route path={'/catalog'} component={CatalogLessonPage}/>
+                    <Redirect exact from='/' to='/login' />
+                    <Route path={'/'} component={Main}/>
+                </Switch>
+            </div>
+
             <Footer/>
         </div>
     );

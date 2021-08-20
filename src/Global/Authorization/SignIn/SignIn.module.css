@@ -13,6 +13,7 @@
     background: rgba(216, 220, 235, 0.39);
 }
 .signIn{
+    width: 80%;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
 }
 .active{
@@ -37,4 +38,12 @@
     border-radius: 10px;
     margin: 0 auto;
     text-decoration: none;
+}
+
+
+/*-------------- Tablet Pro--------------*/
+@media only screen and (max-width: 1030px) {
+    .signIn{
+        width: 100%;
+    }
 }

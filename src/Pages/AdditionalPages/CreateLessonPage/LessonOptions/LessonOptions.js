@@ -2,9 +2,9 @@ import React, {useState, useEffect} from 'react';
 import global from '../../../../Global/Modules/Global.module.css';
 import styles from './LessonOptions.module.css';
 import {Container} from "react-bootstrap";
+
 import {TitleH6} from "../../../../Global/Components/Texts/Headers/TitleH6/TitleH6";
 import SearchInput from "../../../../Global/Components/SearchInput/SearchInput";
-// import TimePicker from 'react-bootstrap-time-picker';
 import {BorderBtn} from "../../../../Global/Components/Button/BorderBtn/BorderBtn";
 import {IconBtn} from "../../../../Global/Components/Button/IconBtn/IconBtn";
 
@@ -12,6 +12,34 @@ import {IconBtn} from "../../../../Global/Components/Button/IconBtn/IconBtn";
 const LessonOptions = () => {
 
     const [coverIsHover, setCoverIsHover] = useState();
+    const [fontStyle, setFontStyle] = useState({
+        regularText: true,
+        underlinedText: false,
+        boldText: false
+    });
+
+
+    const changeStyleDescription = (value) => {
+        if(value === 'regularText'){
+            setFontStyle({
+                regularText: true,
+                underlinedText: false,
+                boldText: false
+            });
+        }else if(value === 'boldText'){
+            setFontStyle({
+                regularText: false,
+                underlinedText: false,
+                boldText: true
+            });
+        }else{
+            setFontStyle({
+                regularText: false,
+                underlinedText: true,
+                boldText: false
+            });
+        }
+    };
 
 
     return (
@@ -22,14 +50,14 @@ const LessonOptions = () => {
                     <div className={styles.col}>
                         <TitleH6 color='black' weight='900' title='3. *Choose the subject:'/>
                         <div className={styles.block}>
-                            <SearchInput type='options'/>
+                            <SearchInput data={[1,2,3]} title='Choose'/>
                         </div>
                     </div>
 
                     <div className={styles.col}>
                         <TitleH6 color='black' weight='900' title='4. *Choose the class:'/>
                         <div className={styles.block}>
-                            <SearchInput type='options'/>
+                            <SearchInput data={[1,2,3]} title='Choose'/>
                         </div>
                     </div>
                 </div>
@@ -37,21 +65,21 @@ const LessonOptions = () => {
                 <div>
                     <TitleH6 color='black' weight='900' title='*Ask the first question:'/>
                     <div className={styles.block}>
-                        <SearchInput type='search'/>
+                        <SearchInput title='save'/>
                     </div>
                 </div>
 
                 <div>
                     <TitleH6 color='black' weight='900' title='*Ask the second question:'/>
                     <div className={styles.block}>
-                        <SearchInput type='search'/>
+                        <SearchInput title='save'/>
                     </div>
                 </div>
 
                 <div>
                     <TitleH6 color='black' weight='900' title='*Ask the third question:'/>
                     <div className={styles.block}>
-                        <SearchInput type='search'/>
+                        <SearchInput title='save'/>
                     </div>
                 </div>
 
@@ -96,9 +124,12 @@ const LessonOptions = () => {
                     <div className={styles.block}>
                         <p>description</p>
                         <div className={styles.blockBtn}>
-                            <IconBtn color='white' border='transparent' backgroundColor='#F77D48' txt='Aa'/>
-                            <IconBtn color='#818A8D' border='#818A8D' backgroundColor='transparent' txt='Aa'/>
-                            <IconBtn color='#818A8D' border='#818A8D' backgroundColor='transparent' txt='Aa'/>
+                            <IconBtn color={(fontStyle.regularText)?('white'):('#818A8D')} border={(fontStyle.regularText)?('transparent'):('#818A8D')} backgroundColor={(fontStyle.regularText)?('#F77D48'):('transparent')}
+                                     txt='Aa' clicked={() => {changeStyleDescription('regularText')}}/>
+                            <IconBtn color={(fontStyle.underlinedText)?('white'):('#818A8D')} border={(fontStyle.underlinedText)?('transparent'):('#818A8D')} backgroundColor={(fontStyle.underlinedText)?('#F77D48'):('transparent')}
+                                     txt='Aa' clicked={() => {changeStyleDescription('underlinedText')}}/>
+                            <IconBtn color={(fontStyle.boldText)?('white'):('#818A8D')} border={(fontStyle.boldText)?('transparent'):('#818A8D')} backgroundColor={(fontStyle.boldText)?('#F77D48'):('transparent')}
+                                     txt='Aa' clicked={() => {changeStyleDescription('boldText')}}/>
                         </div>
                         <BorderBtn color='#009DB3' title='Add'/>
                     </div>

@@ -5,7 +5,8 @@ import {Form} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import {OrangeBtn} from "../../Components/Button/OrangeBtn/OrangeBtn";
 
-import axios from "axios"; // an asynchronous method for working with requests returns a promise
+import axios from "axios";
+import {BorderBtn} from "../../Components/Button/BorderBtn/BorderBtn"; // an asynchronous method for working with requests returns a promise
 
 const SignIn = () => {
 
@@ -52,8 +53,9 @@ const SignIn = () => {
                        {/* <Link to={linkPath()} className={styles.subBtn} type={`submit`}>Submit</Link>*/}
 
                       {/* alina change btn */}
-                       <div style={{width: '100%', display: 'flex', justifyContent: 'center'}}>
+                       <div style={{width: '100%', display: 'flex', justifyContent: 'space-between'}}>
                            <Link to='/teacher/1t' ><OrangeBtn type='submit' title='Submit'/></Link>{/*clicked={getData}*/}
+                           <Link to='/login' ><BorderBtn type='submit' color='#009db3' title='Log in'/></Link>{/*clicked={getData}*/}
                        </div>
 
                     </div>

@@ -8,6 +8,10 @@ import PreviousLessons from "../PreviousLessons/PreviousLessons";
 import {useSelector} from "react-redux";
 import AnsweringQuestionsPage from "../AnsweringQuestionsPage/AnsweringQuestionsPage";
 
+import QuestionCard from "../../../Global/Components/QuestionCard/QuestionCard";
+import {questions, teacherQuestions} from "../../../Utils/constants";
+import QuestionAnswersPage from "../QuestionAnswersPage/QuestionAnswersPage";
+
 
 const StudentPage = () => {
 
@@ -36,8 +40,8 @@ const StudentPage = () => {
 
             <div className={global.Wrapper}>
                 <div className={global.RowBlock}>
-                    <PreviousLessons/>
-                    <AnsweringQuestionsPage/>
+                  {/*  <PreviousLessons/>
+                    <AnsweringQuestionsPage/>*/}
                 </div>
             </div>
         </Container>

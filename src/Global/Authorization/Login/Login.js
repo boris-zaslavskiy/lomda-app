@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import styles from './Login.module.css';
 import RInput from "../RInput/RInput";
-import {Form, NavLink} from "react-bootstrap";
+import {Form} from "react-bootstrap";
 import {Link} from "react-router-dom";
+import {GreenBtn} from "../../Components/Button/GreenBtn/GreenBtn";
 
 
 const Login = (props) => {
@@ -73,9 +74,18 @@ const Login = (props) => {
                <Link className={styles.FYPLink}>Forgot your password?</Link> {/*You forgot to='url'*/}
            </div>
            <div className={'w-100 d-flex flex-column align-items-center justify-content-between mt-3'}>
-           <button className={`mb-5 ${styles.loginBtn}`} type='submit'>Login</button>
+
+               {/* alina change btn */}
+               <div style={{width: '100%', display: 'flex', justifyContent: 'center'}}>
+                   <Link to='/teacher/1t'><GreenBtn type='submit' title='Login'/></Link>
+               </div>
+
+           {/*<button className={`mb-5 ${styles.loginBtn}`} type='submit'>Login</button>*/}
                <p className={`mb-0`}>Don't have an account yet?</p>
-               <div onClick={()=>{props.setPage('sign-in')}} className={`${styles.SILink}`}>Sign in</div>
+               <div style={{width: '100%', display: 'flex', justifyContent: 'center'}}>
+                   <Link to='/sign-in'><GreenBtn type='submit' title='Sign in'/></Link>
+               </div>
+               {/*<div onClick={()=>{props.setPage('sign-in')}} className={`${styles.SILink}`}>Sign in</div>*/}
            </div>
        </Form>
     );
