@@ -38,7 +38,7 @@ const Tr_table_class_desktop = (props) => {
                         <div>
                             <LineBar currentCount={props.studentsCount} maxCount={props.studentsMaxCount}/>
                             <TextBar flag='DescriptionCard' currentCount={props.studentsCount}
-                                     text={`${props.studentsCount} of ${props.studentsMaxCount} students completed the task`}/>
+                                     text={`${props.studentsCount} of ${props.studentsMaxCount} students completed all tasks`}/>
                         </div>
                     )
                 }

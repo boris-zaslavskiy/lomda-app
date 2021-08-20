@@ -26,6 +26,7 @@ const TeachPageBlock = (props) => {
     const userName = `${props.data.firstName} ${props.data.surName}`;
     const [currentTeacher, setCurrentTeacher] = useState({});
 
+
     const [lessonsNumber, setLessonsNumber] = useState({
         allLes: 0,
         savedLes: 0,
@@ -95,7 +96,7 @@ const TeachPageBlock = (props) => {
                         </div>
 
                         <div className={styles.tableBlock}>
-                            <Link to={'/createLesson'} className={global.Link}>
+                            <Link to={'/createLesson/1t'} className={global.Link}>
                                 <Header title='+ Create new lesson' color='#F77D48' weight='700' radius='0.25rem'/>
                             </Link>
                             <TableRowWithBtn title={`Initial (${lessonsNumber.savedLes})`}/>

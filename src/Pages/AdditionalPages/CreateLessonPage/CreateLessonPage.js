@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import global from '../../../Global/Modules/Global.module.css';
 import styles from './CreateLessonPage.module.css';
 import {Container} from "react-bootstrap";
@@ -12,8 +12,65 @@ import {GreenBtn} from "../../../Global/Components/Button/GreenBtn/GreenBtn";
 import {BorderBtn} from "../../../Global/Components/Button/BorderBtn/BorderBtn";
 import {OrangeBtn} from "../../../Global/Components/Button/OrangeBtn/OrangeBtn";
 
+import {useDispatch, useSelector} from "react-redux";
+import {setLesson} from "../../../Store/Reducers/lessonReducer";
+
 
 const CreateLessonPage = () => {
+
+    const dispatch = useDispatch();
+    const currentLesson = useSelector(state => state.lessonStates.lesson);
+
+    const createLesson = (status) => {
+        let data = [];
+        if(status === 'active'){
+            currentLesson.article.map((item) => {
+                if(item.text !== ''){
+                    data.push(item)
+                }
+            });
+            for (const key in currentLesson) {
+                if(key === ('theme' || 'coverImage' || 'classes' || 'start' || 'end')){
+                    console.log(key)
+                }else {
+                    dispatch(setLesson({...currentLesson, article: data,  status: 'active'}));
+                }
+            }
+        }else{
+            dispatch(setLesson({...currentLesson,  status: 'save'}));
+        }
+    }
+
+    const deleteData = () => {
+        dispatch(setLesson(/*{
+            id: '',
+            theme: '',
+            coverImage: '',
+            article: [],
+            classes: [],
+            questions: [],
+            start: '',
+            end: '',
+            status: ''
+        }*/
+            {
+                id: '',
+                required: [
+                    {theme: ''},
+                    {coverImage: ''},
+                    {classes: []},
+                    {questions1: {id: '1Q',text: ''}},
+                    {questions2: {id: '2Q',text: ''}},
+                    {questions3: {id: '3Q',text: ''}},
+                    {start: ''},
+                    {end: ''}
+                ],
+                article: [],
+                status: 'save'
+            }));
+    }
+
+
     return (
         <Container fluid className={global.ContainerFluid}>
             <div className={global.Wrapper}>
@@ -48,10 +105,10 @@ const CreateLessonPage = () => {
 
                                 <div className={styles.block}>
                                     <div className={styles.block}>
-                                        <GreenBtn type='button' title='Active'/>
-                                        <BorderBtn type='button' color='#009DB3' title='Save'/>
+                                        <GreenBtn type='button' title='Active' clicked={() => {createLesson('active')}}/>
+                                        <BorderBtn type='button' color='#009DB3' title='Save' clicked={() => {createLesson('save')}}/>
                                     </div>
-                                    <OrangeBtn type='button' title='Delete'/>
+                                    <OrangeBtn type='button' title='Delete' clicked={deleteData}/>
                                 </div>
                             </div>
                         </div>

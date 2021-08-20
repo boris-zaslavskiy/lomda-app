@@ -1,10 +1,13 @@
 import images from '../Assets/background/main.png';
 import avatar from '../Assets/users/student.svg';
-import store from "../Store/store";
+
+
 export const subjects = ['The Catcher in the Rye',
     'Hamlet',
     'One hundred years of solitude',
     'Romeo and Juliet', 'Odyssey of Homer'];
+
+
 export const arrayLessons = [
     {
         image: images,
@@ -48,6 +51,8 @@ export const user = [
         avatar: avatar,
         answers:['first answer', 'second answer', 'third answer']
     }];
+
+
 export const questions = [
     {
         id:'2s',
@@ -77,6 +82,8 @@ export const questions = [
         answers: []
     }
 ];
+
+
 export const teacherQuestions = [
     {
         id: '1q',

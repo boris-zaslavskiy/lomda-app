@@ -14,7 +14,6 @@ import {TitleH6} from "../../../Global/Components/Texts/Headers/TitleH6/TitleH6"
 
 const StudentsListPage = () => {
 
-    const dispatch = useDispatch(); //not remember remove
     const arrayClasses = useSelector(state => state.classStates.classes);
     const [classes, setClasses] = useState(arrayClasses);
     const [currentClass, setCurrentClass] = useState({});
