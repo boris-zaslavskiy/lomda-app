@@ -11,7 +11,6 @@ import {TitleH6} from "../../Texts/Headers/TitleH6/TitleH6";
 let newArr = [];
 const Table5Column = (props) => {
 
-    const dispatch = useDispatch(); //not remember remove
     const currentClasses = useSelector(state => state.classStates.classes);
     const [studentsList, setStudentsList] = useState(props.students);
     const [studentsListEmpty, setStudentsListEmpty] = useState(false);

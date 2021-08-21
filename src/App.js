@@ -69,7 +69,7 @@ function App() {
                     <Route path={'/teacher/:id'} component={TeacherPage}/>
                     <Route path={'/studentsList'} component={StudentsListPage}/>
                     <Route path={'/createLesson'} component={CreateLessonPage}/>
-                    <Route path={'/currentLesson'} component={CurrentLessonPage}/>
+                    <Route path={'/currentLesson'} component={AddStudentsPage}/>
                     <Route path={'/questionAnswers'} component={QuestionAnswersPage}/>
                     <Route path={'/generalInfo/:classId'} component={GeneralInformationPage}/>
                     <Route path={'/catalog'} component={CatalogLessonPage}/>

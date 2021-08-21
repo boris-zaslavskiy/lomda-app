@@ -4,6 +4,7 @@ import {LineBar} from "../ProgressBar/LineBar/LineBar";
 import {TextBar} from "../ProgressBar/TextBar/TextBar";
 import {TitleH6} from "../Texts/Headers/TitleH6/TitleH6";
 import {BorderBtn} from "../Button/BorderBtn/BorderBtn";
+import {Link} from "react-router-dom";
 
 
 const CourseCard = (props) => {
@@ -20,7 +21,9 @@ const CourseCard = (props) => {
                 <div className={styles.imgWrapper}>
                     <img src={props.img} alt="Norway" className={styles.images}/>
                     <div className={styles.imgBlock}>
-                        <BorderBtn title='12.34.50' color='white'/>
+                        <Link to={'/currentLesson/1s'}>
+                            <BorderBtn title='view' color='white'/>
+                        </Link>
                     </div>
                 </div>
                 <div>

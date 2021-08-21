@@ -42,17 +42,7 @@ const CreateLessonPage = () => {
     }
 
     const deleteData = () => {
-        dispatch(setLesson(/*{
-            id: '',
-            theme: '',
-            coverImage: '',
-            article: [],
-            classes: [],
-            questions: [],
-            start: '',
-            end: '',
-            status: ''
-        }*/
+        dispatch(setLesson(
             {
                 id: '',
                 required: [

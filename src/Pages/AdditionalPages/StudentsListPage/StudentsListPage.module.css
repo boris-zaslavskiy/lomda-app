@@ -5,10 +5,20 @@
     flex-wrap: wrap;
 }
 
+.addBlock{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
 /*-------------- Tablet Pro--------------*/
 @media only screen and (max-width: 1030px) {
-    .col{
+    .col:nth-of-type(1){
         width: 60%;
+    }
+    .col:nth-of-type(2){
+        width: 35%;
     }
 }
 

@@ -71,7 +71,7 @@ const HeaderCardItem = (props) => {
                             <div className={styles.card}>
                                 <div className={styles.header}>
                                     <TitleH3 title={props.title}/>
-                                    <TxtAdditionalGrey txt={props.txt}/>
+                                    <TxtAdditionalGrey txt={`Subject: ${props.txt}`}/>
                                 </div>
                                 <Link to={`/${props.url}`}>
                                     <BorderBtn type='button' title='Back to profile' color='#009DB3' />

@@ -4,6 +4,7 @@ import {TitleH5} from "../../../../Texts/Headers/TitleH5/TitleH5";
 import {BorderBtn} from "../../../../Button/BorderBtn/BorderBtn";
 import {LineBar} from "../../../../ProgressBar/LineBar/LineBar";
 import {TextBar} from "../../../../ProgressBar/TextBar/TextBar";
+import {Link} from "react-router-dom";
 
 
 const Tr_table_class_desktop = (props) => {
@@ -19,7 +20,7 @@ const Tr_table_class_desktop = (props) => {
         <div className={styles.wrapper}>
             <div className={styles.col}>
                 <div className={styles.row}>
-                    <TitleH5 title={props.className} color='black' weight='900'/>
+                    <TitleH5 title={`Class ${props.className} :`} color='black' weight='900'/>
                     {(props.studentsListEmpty) ? null : (
                         (accordionStatus) ?
                             (<BorderBtn title='Hide' color='#009DB3' clicked={props.clicked}/>) :
@@ -48,11 +49,17 @@ const Tr_table_class_desktop = (props) => {
             <div className={styles.col}>
                 {(props.studentsListEmpty) ?
                     (
-                        <TextBar flag='DescriptionCard' currentCount={props.studentsCount}
-                                 text={'Please add students.'}/>
+                        <Link to={`/addStudents/${'10A'}`}>
+                            <BorderBtn title='Add students' color='#009db3' clicked={props.deleteChosenStudents}/>
+                        </Link>
                     ) :
                     (
-                        <BorderBtn title='Delete students' color='#F77D48' clicked={props.deleteChosenStudents}/>
+                       <div className={styles.block}>
+                           <Link to={`/addStudents/${'10A'}`}>
+                               <BorderBtn title='Add students' color='#009db3' clicked={props.deleteChosenStudents}/>
+                           </Link>
+                           <BorderBtn title='Delete students' color='#F77D48' clicked={props.deleteChosenStudents}/>
+                       </div>
                     )
                 }
 

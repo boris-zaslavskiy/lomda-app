@@ -11,6 +11,7 @@ import CreateLessonPage from "../Pages/AdditionalPages/CreateLessonPage/CreateLe
 import CurrentLessonPage from "../Pages/AdditionalPages/CurrentLessonPage/CurrentLessonPage";
 import QuestionAnswersPage from "../Pages/AdditionalPages/QuestionAnswersPage/QuestionAnswersPage";
 import GeneralInformationPage from "../Pages/AdditionalPages/GeneralInformationPage/GeneralInformationPage";
+import AddStudentsPage from "../Pages/AdditionalPages/AddStudentsPage/AddStudentsPage";
 
 
 export const PrivateRoutes = [
@@ -21,6 +22,7 @@ export const PrivateRoutes = [
     {path: '/currentLesson/:id', component: CurrentLessonPage},
     {path: '/questionAnswers/:studentId', component: QuestionAnswersPage},
     {path: '/generalInfo/:classId', component: GeneralInformationPage},
+    {path: '/addStudents/:classId', component: AddStudentsPage},
     {path: '/about-us', component: AboutUs},
     {path: '/contacts', component: Contacts},
     {path: '/login', component: Main, exact: true},
