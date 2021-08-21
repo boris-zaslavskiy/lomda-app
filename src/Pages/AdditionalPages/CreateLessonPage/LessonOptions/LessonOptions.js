@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import global from '../../../../Global/Modules/Global.module.css';
 import styles from './LessonOptions.module.css';
 import {Container} from "react-bootstrap";
@@ -8,38 +8,65 @@ import SearchInput from "../../../../Global/Components/SearchInput/SearchInput";
 import {BorderBtn} from "../../../../Global/Components/Button/BorderBtn/BorderBtn";
 import {IconBtn} from "../../../../Global/Components/Button/IconBtn/IconBtn";
 
+import {useDispatch, useSelector} from "react-redux";
+import {setLesson} from "../../../../Store/Reducers/lessonReducer";
+
 
 const LessonOptions = () => {
 
-    const [coverIsHover, setCoverIsHover] = useState();
+    const [textStyle, setTextStyle] = useState('');
     const [fontStyle, setFontStyle] = useState({
-        regularText: true,
-        underlinedText: false,
-        boldText: false
+        regular: true,
+        underline: false,
+        bold: false
     });
+    const dispatch = useDispatch();
+    const currentLesson = useSelector(state => state.lessonStates.lesson);
 
 
     const changeStyleDescription = (value) => {
         if(value === 'regularText'){
+            setTextStyle('regular');
             setFontStyle({
-                regularText: true,
-                underlinedText: false,
-                boldText: false
+                regular: true,
+                underline: false,
+                bold: false
             });
         }else if(value === 'boldText'){
+            setTextStyle('bold');
             setFontStyle({
-                regularText: false,
-                underlinedText: false,
-                boldText: true
+                regular: false,
+                underline: false,
+                bold: true
             });
         }else{
+            setTextStyle('underline');
             setFontStyle({
-                regularText: false,
-                underlinedText: true,
-                boldText: false
+                regular: false,
+                underline: true,
+                bold: false
             });
         }
     };
+
+
+    const addData = (type) => {
+        let newItem = {};
+        let index;
+        if (currentLesson !== {}){
+            index = currentLesson.article.length + 1 + '';
+        }
+        if(type === 'subTitle'){
+            newItem = {id: index, type: 'subTitle', text: ''};
+        }else if(type === 'description'){
+            newItem = {id: index, type: 'description', text: '', style: textStyle};
+        }else{
+            newItem =  {id: index, type: 'image', path: '/static/media/illiada.1ccb6289.jpg', alt: 'illiada'};
+        }
+
+        currentLesson.article.push(newItem);
+        dispatch(setLesson({currentLesson, article: currentLesson.article}));
+    }
 
 
     return (
@@ -106,7 +133,7 @@ const LessonOptions = () => {
                         <TitleH6 color='black' weight='900' title='Add subtitle:'/>
                         <div className={styles.block}>
                             <TitleH6 color='black' weight='900' title='Subtitle'/>
-                            <BorderBtn color='#009DB3' title='Add'/>
+                            <BorderBtn color='#009DB3' title='Add' clicked={() => {addData('subTitle')}}/>
                         </div>
                     </div>
 
@@ -114,7 +141,7 @@ const LessonOptions = () => {
                         <TitleH6 color='black' weight='900' title='Add image:'/>
                         <div className={styles.block}>
                             <p>image ( .jpg, .png )</p>
-                            <BorderBtn color='#009DB3' title='Add'/>
+                            <BorderBtn color='#009DB3' title='Add' clicked={() => {addData('image')}}/>
                         </div>
                     </div>
                 </div>
@@ -124,14 +151,14 @@ const LessonOptions = () => {
                     <div className={styles.block}>
                         <p>description</p>
                         <div className={styles.blockBtn}>
-                            <IconBtn color={(fontStyle.regularText)?('white'):('#818A8D')} border={(fontStyle.regularText)?('transparent'):('#818A8D')} backgroundColor={(fontStyle.regularText)?('#F77D48'):('transparent')}
+                            <IconBtn color={(fontStyle.regular)?('white'):('#818A8D')} border={(fontStyle.regular)?('transparent'):('#818A8D')} backgroundColor={(fontStyle.regular)?('#F77D48'):('transparent')}
                                      txt='Aa' clicked={() => {changeStyleDescription('regularText')}}/>
-                            <IconBtn color={(fontStyle.underlinedText)?('white'):('#818A8D')} border={(fontStyle.underlinedText)?('transparent'):('#818A8D')} backgroundColor={(fontStyle.underlinedText)?('#F77D48'):('transparent')}
+                            <IconBtn color={(fontStyle.underline)?('white'):('#818A8D')} border={(fontStyle.underline)?('transparent'):('#818A8D')} backgroundColor={(fontStyle.underline)?('#F77D48'):('transparent')}
                                      txt='Aa' clicked={() => {changeStyleDescription('underlinedText')}}/>
-                            <IconBtn color={(fontStyle.boldText)?('white'):('#818A8D')} border={(fontStyle.boldText)?('transparent'):('#818A8D')} backgroundColor={(fontStyle.boldText)?('#F77D48'):('transparent')}
+                            <IconBtn color={(fontStyle.bold)?('white'):('#818A8D')} border={(fontStyle.bold)?('transparent'):('#818A8D')} backgroundColor={(fontStyle.bold)?('#F77D48'):('transparent')}
                                      txt='Aa' clicked={() => {changeStyleDescription('boldText')}}/>
                         </div>
-                        <BorderBtn color='#009DB3' title='Add'/>
+                        <BorderBtn color='#009DB3' title='Add' clicked={() => {addData('description')}}/>
                     </div>
                 </div>
 

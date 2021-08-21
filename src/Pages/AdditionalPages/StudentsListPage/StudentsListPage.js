@@ -9,16 +9,18 @@ import {Table5Column} from "../../../Global/Components/Tables/Table5Column/Table
 import {useDispatch, useSelector} from "react-redux";
 import {Th_table} from "../../../Global/Components/Tables/Table5Column/Th_table/Th_table";
 import {TitleH6} from "../../../Global/Components/Texts/Headers/TitleH6/TitleH6";
+import {OrangeBtn} from "../../../Global/Components/Button/OrangeBtn/OrangeBtn";
+import {PopUp} from "../../../Global/Components/PopUp/PopUp";
 
 
 
 const StudentsListPage = () => {
 
-    const dispatch = useDispatch(); //not remember remove
     const arrayClasses = useSelector(state => state.classStates.classes);
     const [classes, setClasses] = useState(arrayClasses);
     const [currentClass, setCurrentClass] = useState({});
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [statusPopUp, setStatusPopUp] = useState(false);
 
 
     const handleResize = () => {
@@ -67,19 +69,31 @@ const StudentsListPage = () => {
     }
 
 
+    const openPopUp = () => {
+        setStatusPopUp(true);
+    }
 
+    const closePopUp = () => {
+        setStatusPopUp(false);
+    }
 
     return (
         <Container fluid className={global.ContainerFluid}>
+            {(statusPopUp)?(<PopUp closePopUp={closePopUp}/>):null}
             <div className={global.Wrapper}>
                 <TitleH2 titleType='h2' title='Students list'/>
                 <div className={global.RowBlock}>
                     <div className={styles.col}>
-                        <DescriptionCard type='user' title='Teacher' txt='Subject: World Literature' url='teacher'/>
+                        <DescriptionCard type='user' title='Teacher' txt='Literature' url='teacher'/>
                     </div>
 
                     <div className={styles.col}>
                         {/*btn add new class */}
+                        <div className={styles.addBlock}>
+                            <div className={global.WhiteShadowBlock}>
+                                <OrangeBtn type='button' title='Add a new class' clicked={openPopUp}/>
+                            </div>
+                        </div>
                     </div>
 
                 </div>

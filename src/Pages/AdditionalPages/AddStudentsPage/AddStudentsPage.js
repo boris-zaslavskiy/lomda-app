@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './CurrentLessonPage.module.css';
+import styles from './AddStudentsPage.module.css';
 import global from '../../../Global/Modules/Global.module.css';
 import {Container} from "react-bootstrap";
 
@@ -7,7 +7,7 @@ import {DescriptionCard} from "../../../Global/Components/DescriptionCard/Descri
 
 
 
-const CurrentLessonPage = () => {
+const AddStudentsPage = () => {
 
 
     return (
@@ -16,21 +16,21 @@ const CurrentLessonPage = () => {
                 <div className={global.RowBlock}>
 
                     <div className={styles.col}>
-                        <DescriptionCard type='lesson' title='Odyssey of Homer' teacher='John Smith' time='02:13:59'/>
-                        {/*Current lesson*/}
+                        <DescriptionCard type='user' title='John Smith' txt='Literature' url=''/>
                     </div>
-                    <div className={styles.col}>
-                        {/*Progress bar*/}
-
-                        <div>
-                            {/*exercises*/}
+                    <div>
+                        <div className={styles.col}>
+                            {/*col 1*/}
                         </div>
-
+                        <div className={styles.col}>
+                            {/*col 2*/}
+                        </div>
                     </div>
+
                 </div>
             </div>
         </Container>
     );
 };
 
-export default CurrentLessonPage;
+export default AddStudentsPage;

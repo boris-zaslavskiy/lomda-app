@@ -40,8 +40,8 @@ const StudentPage = () => {
 
             <div className={global.Wrapper}>
                 <div className={global.RowBlock}>
-                  {/*  <PreviousLessons/>
-                    <AnsweringQuestionsPage/>*/}
+                    <PreviousLessons/>
+                    <AnsweringQuestionsPage/>
                 </div>
             </div>
         </Container>
