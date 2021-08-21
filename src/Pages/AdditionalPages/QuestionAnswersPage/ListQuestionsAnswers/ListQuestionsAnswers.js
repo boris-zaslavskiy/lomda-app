@@ -4,7 +4,7 @@ import styles from '../ListQuestionsAnswers/ListQuestionsAnswers.module.css';
 import CurrentStudentAnswers from "../CurrentStudentAnswers/CurrentStudentAnswers";
 
 const ListQuestionsAnswers = (props) => {
-    const [down, setDown] = useState(false);
+    const [down, setDown] = useState(false);//state for animation ---Lera
     const handleUpDown = () => {
         setDown(!down);
     }
@@ -12,6 +12,7 @@ const ListQuestionsAnswers = (props) => {
         <div className={` w-100 d-flex flex-column`}>
             <div className={`${styles.outerShadow} ${styles.whiteField} mb-3`}>
                 <div className='d-flex flex-row h-100'>
+
                     <div className='d-flex align-items-center w-75 ms-3'>
                         <span style={{color: 'orange', fontWeight: 800}}>{props.number}</span>
                         <p className={`mb-0 ms-1 ${styles.text} `}>{props.title}</p>

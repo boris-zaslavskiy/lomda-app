@@ -4,7 +4,8 @@
     display: inline-block;
 }
 .rating::before{
-    content:'☆☆☆☆☆' ;
+    content: '★★★★★';
+    /*content:'☆☆☆☆☆' ;*/
     display: block;
 }
 .rating__items{
@@ -32,7 +33,6 @@
     cursor: pointer;
     opacity: 0.7;
     color: #ffffff;
-    /*font-size: 18px;*/
 }
 .rating__label::before{
     content:'★';
@@ -44,40 +44,58 @@
     color: #F77D48;
     opacity: 1;
 }
+.ratingQuestion::before
+{
+    content:'★';
+    display: block;
+    transition: color 0.3s ease 0s;
+}
+.ratingQuestion,
+.ratingQuestion ~ .rating__item
+{
+    flex: 0 0 20px;
+    height: 100%;
+    cursor: pointer;
+    color: #F77D48;
+}
+.ratingAnswer::before
+{
+    content:'★';
+    display: block;
+    transition: color 0.3s ease 0s;
+}
+.ratingAnswer,
+.ratingAnswer ~ .rating__item
+{
+    flex: 0 0 20px;
+    height: 100%;
+    cursor: pointer;
+    color: #009DB3;
+}
+
+
+
+
 /*=========PopUp (Show And Hide Message)================*/
 .popup {
     position: relative;
     display: inline-block;
     cursor: pointer;
-    /*-webkit-user-select: none;*/
-    /*-moz-user-select: none;*/
-    /*-ms-user-select: none;*/
-    /*user-select: none;*/
 }
-.popuptext {
+.popupText {
     visibility: hidden;
-    width: 160px;
-    background-color: #555;
-    color: #fff;
+    width: 140px;
+    background-color: #fff;
+    color: #868A8B;
     text-align: center;
-    border-radius: 6px;
+    border-radius: 5px;
     padding: 8px 0;
     position: absolute;
     z-index: 1;
     bottom: 125%;
-    left: 50%;
+    left: 0;
     margin-left: -80px;
-}
-/* Popup arrow */
-.popuptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
+    box-shadow: 3px 1px 6px 5px rgba(221, 221, 221, 0.7);
 }
 .show {
     visibility: visible;

@@ -6,10 +6,10 @@ import avatar from '../../../../Assets/users/student.svg';
 import StarsRating from "../../../../Global/Components/StarsRating/StarsRating";
 
 const Steps = (props) => {
-    const [question, setQuestion] = useState('');
+    const [question, setQuestion] = useState('');//state for saving question from step 1
+
     const saveQuestion = (value)=>{
         setQuestion(value);
-        console.log(question);
         props.getDisabled(true);
 
     }
@@ -35,7 +35,7 @@ const Steps = (props) => {
                               onChange={(event) => {
                                   saveQuestion(event.target.value);
                               }}
-                              className={`${styles.outerShadow} ${styles.greyField} p-1 mt-2 w-100`}/>
+                              className={`${styles.outerShadow} ${styles.greyField} p-3 mt-2 w-100`}/>
                 </div>
                 : null
             }
@@ -56,7 +56,11 @@ const Steps = (props) => {
                         <QuestionCard
                             questions={questions.length?questions:teacherQuestions}
                             allInfo={questions.length?false:true} //attribute responsible for displaying information ---Lera
-                            getDisabled={props.getDisabled}
+                            getDisabled={props.getDisabled}//????
+                            leaveMark={props.leaveMark}
+                            popUp={props.popUp}
+                            setPopUp={props.setPopUp}//????
+                            marks={props.marks}//????
                         />
                 </div>
                 :null
@@ -64,13 +68,16 @@ const Steps = (props) => {
 
             {/*Step 3*/}
             {props.step===3?
+
                 <div>
+
                     <div className='d-flex flex-row align-items-end my-4'>
                         <div className={`d-inline-block me-1 ${styles.space}`}>
                             <span className={`${styles.textGrey}`}>Step 3:</span>
                         </div>
                         <span className={`${styles.textBlack}`}>Evaluate the questions and answers</span>
                     </div>
+
                     <div className={`${styles.outerShadow}`}>
                         <div className={`d-flex flex-row align-items-center  my-3 ${styles.field}`}>
                             <img src={avatar} width='50px' height='50px' className='mx-3' alt='avatar'/>
@@ -85,6 +92,7 @@ const Steps = (props) => {
                     </div>
 
                     {/*array user is array from file constans.js. just to check the displaying --- Lera*/}
+                    {/*depends on the availability of answers to the question*/}
                     {user[0].answers.map((item,index)=>
                             <form className={`${styles.outerShadow} my-3`}>
                                 <div className='container px-2'>
@@ -93,7 +101,12 @@ const Steps = (props) => {
                                             <p className='m-0'>Answer</p>
                                         </div>
                                         <div className={`col-4 ${styles.greyField} d-flex align-items-center justify-content-center`}>
-                                            <StarsRating index={index}/>
+                                            <StarsRating
+                                                index={index}//should be different on all pages--- Lera
+                                                getDisabled={props.getDisabled}
+                                                leaveMark={props.leaveMark}
+                                                popUp={props.popUp}
+                                            />
                                         </div>
                                     </div>
                                 </div>
