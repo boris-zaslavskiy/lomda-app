@@ -16,6 +16,7 @@ import {BorderBtn} from "../../../../Global/Components/Button/BorderBtn/BorderBt
 
 import images from "../../../../Assets/background/main.png";
 import {Link} from "react-router-dom";
+import {OrangeBtn} from "../../../../Global/Components/Button/OrangeBtn/OrangeBtn";
 
 
 
@@ -89,8 +90,14 @@ const TeachPageBlock = (props) => {
                         </div>
 
                         <div className={styles.tableBlock}>
-                            <div style={{margin: '20px 0'}}>
+                           {/* <div style={{margin: '20px 0'}}>
                                 <TitleH5 title='Personal info & progress :' color='black' weight='900'/>
+                            </div>*/}
+                            <div className={styles.btnBlock}>
+                                <div>
+                                    <TitleH5 title='Personal info & progress :' color='black' weight='900'/>
+                                </div>
+                                <OrangeBtn title='Delete account' color='#F77D48'/>
                             </div>
                             <Table2Column first='Lessons' second= {`${lessonsNumber.allLes} lessons`}/> {/* props.data.lessons.length - doesn't work .... */}
                         </div>
@@ -145,10 +152,9 @@ const TeachPageBlock = (props) => {
                         </div>
 
                         <div className={styles.tableBlock}>
-                            {listClasses}
-                                {/*<Table2ColProgress class='5A' currentCount='10' maxCount='36'/>
-                                <Table2ColProgress class='5A' currentCount='15' maxCount='30'/>
-                                <Table2ColProgress class='5A' currentCount='10' maxCount='36'/>*/}
+                            <div className={styles.scrollBlock}>
+                                {listClasses}
+                            </div>
                         </div>
 
                         <div className={styles.tableBlock}>

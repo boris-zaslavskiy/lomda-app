@@ -14,11 +14,7 @@ const defaultState = {
                 { id: '7s', firstName: 'Isabelle', surName: 'Belle', rating: 17, chosen: false},
                 { id: '8s', firstName: 'Leo', surName: 'Belle', rating: 25, chosen: false}
             ],
-            subjects: [
-                { id: '100L', title: 'literature', idTeacher: '1t', nameTeacher: 'Ned Stark', idCurrentLesson: '1000L' },
-                { id: '101B', title: 'biology', idTeacher: '2t', nameTeacher: 'Jon Snow', idCurrentLesson: '1000B' },
-                { id: '102H', title: 'history', idTeacher: '3t', nameTeacher: 'Oscar Stark', idCurrentLesson: '1000H' }
-            ],
+            subjects: { id: '102H', title: 'history', idTeacher: '3t', nameTeacher: 'Oscar Stark', idCurrentLesson: '1000H' }
         },
         {
             id: '10B',
@@ -29,10 +25,7 @@ const defaultState = {
                 { id: '10s', firstName: 'Archie', surName: 'Archie', rating: 17, chosen: false},
                 { id: '11s', firstName: 'Noah', surName: 'Noah', rating: 17, chosen: false}
             ],
-            subjects: [
-                { id: '100L', title: 'literature', idTeacher: '1t', nameTeacher: 'Ned Stark', idCurrentLesson: '1000L' },
-                { id: '101B', title: 'biology', idTeacher: '2t', nameTeacher: 'Jon Snow', idCurrentLesson: '1000B' }
-            ],
+            subjects: { id: '100L', title: 'literature', idTeacher: '1t', nameTeacher: 'Ned Stark', idCurrentLesson: '1000L' },
         },
         {
             id: '20A',
@@ -44,10 +37,7 @@ const defaultState = {
                 { id: '15s', firstName: 'Heidi', surName: 'Heidi', rating: 23, chosen: false},
                 { id: '16s', firstName: 'Scarlett', surName: 'Scarlett', rating: 15 , chosen: false}
             ],
-            subjects: [
-                { id: '101B', title: 'biology', idTeacher: '2t', nameTeacher: 'Jon Snow', idCurrentLesson: '1000B' },
-                { id: '102H', title: 'history', idTeacher: '3t', nameTeacher: 'Oscar Stark', idCurrentLesson: '1000H' }
-            ],
+            subjects: { id: '101B', title: 'biology', idTeacher: '2t', nameTeacher: 'Jon Snow', idCurrentLesson: '1000B' },
         }
     ]
 };

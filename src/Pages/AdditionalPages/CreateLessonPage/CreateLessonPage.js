@@ -14,6 +14,7 @@ import {OrangeBtn} from "../../../Global/Components/Button/OrangeBtn/OrangeBtn";
 
 import {useDispatch, useSelector} from "react-redux";
 import {setLesson} from "../../../Store/Reducers/lessonReducer";
+import {SET_LESSON} from "../../../Store/types";
 
 
 const CreateLessonPage = () => {
@@ -29,15 +30,22 @@ const CreateLessonPage = () => {
                     data.push(item)
                 }
             });
-            for (const key in currentLesson) {
-                if(key === ('theme' || 'coverImage' || 'classes' || 'start' || 'end')){
-                    console.log(key)
+                if(currentLesson.required.theme === ''
+                   /* ||currentLesson.required.coverImage === ''
+                    || currentLesson.required.classes === []
+                    ||currentLesson.required.questions1.text === ''
+                    ||currentLesson.required.questions2.text === ''
+                    ||currentLesson.required.questions3.text === ''
+                    ||currentLesson.required.start === ''
+                    ||currentLesson.required.end === ''*/){
                 }else {
-                    dispatch(setLesson({...currentLesson, article: data,  status: 'active'}));
+                    console.log('currentLesson.required.theme')
+                    dispatch(setLesson({...currentLesson, status: 'active'}));
                 }
-            }
+
         }else{
             dispatch(setLesson({...currentLesson,  status: 'save'}));
+
         }
     }
 
@@ -45,18 +53,22 @@ const CreateLessonPage = () => {
         dispatch(setLesson(
             {
                 id: '',
-                required: [
-                    {theme: ''},
-                    {coverImage: ''},
-                    {classes: []},
-                    {questions1: {id: '1Q',text: ''}},
-                    {questions2: {id: '2Q',text: ''}},
-                    {questions3: {id: '3Q',text: ''}},
-                    {start: ''},
-                    {end: ''}
-                ],
+                required: {
+                    theme: '',
+                    coverImage: '',
+                    classes: [],
+                    questions1: {id: '1Q',text: ''},
+                    questions2: {id: '2Q',text: ''},
+                    questions3: {id: '3Q',text: ''},
+                    start: '',
+                    end: ''
+                },
                 article: [],
-                status: 'save'
+                task: {
+                    questions: [],
+                    answer: []
+                },
+                status: 'delete'
             }));
     }
 

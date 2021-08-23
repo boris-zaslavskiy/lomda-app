@@ -5,23 +5,26 @@ import {TextBar} from "../ProgressBar/TextBar/TextBar";
 import {TitleH6} from "../Texts/Headers/TitleH6/TitleH6";
 import {BorderBtn} from "../Button/BorderBtn/BorderBtn";
 import {Link} from "react-router-dom";
+import useHover from "../../../Hooks/useHover";
 
 
 const CourseCard = (props) => {
 
-//LineBar, TextBar, TitleH6, IconBtn, img srs - they need to be changed using data from the database. - Alina
+    const [coverIsHover, setCoverIsHover] = useHover();
+
     const ref = useRef(null);
     // useEffect(() => {
     //     console.log(ref.current.offsetHeight);
     //     // props.itemHeight(ref.current.offsetHeight);//doesn't work
     // },[]);
+
     return (
         <div className={`${styles.wrapper}`} ref={ref} >
             <div className={styles.card}>
-                <div className={styles.imgWrapper}>
+                <div className={styles.imgWrapper} ref={coverIsHover}>
                     <img src={props.img} alt="Norway" className={styles.images}/>
-                    <div className={styles.imgBlock}>
-                        <Link to={'/currentLesson/1s'}>
+                    <div className={styles.imgBlock} style={{backgroundColor: (setCoverIsHover)?('rgba(0,0,0,0.7)'):null}}>
+                        <Link to={'/currentLesson/1s'} style={{display: (setCoverIsHover)?('block'):('none')}}>
                             <BorderBtn title='view' color='white'/>
                         </Link>
                     </div>

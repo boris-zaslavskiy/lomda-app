@@ -65,7 +65,7 @@ const LessonOptions = () => {
         }
 
         currentLesson.article.push(newItem);
-        dispatch(setLesson({currentLesson, article: currentLesson.article}));
+        dispatch(setLesson({...currentLesson, article: currentLesson.article}));
     }
 
 
