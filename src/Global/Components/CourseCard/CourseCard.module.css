@@ -28,10 +28,10 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    background-color: rgba(0,0,0,0.7);
     border-radius: 0.25rem;
     top: 0;
     left: 0;
+    transition: background-color 0.5s;
 }
 
 .header{

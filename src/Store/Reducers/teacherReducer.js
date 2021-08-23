@@ -1,7 +1,8 @@
-import {SET_TEACHERS} from '../types'
+import {SET_TEACHERS, GET_TEACHER_BY_ID, GET_ALL_TEACHERS} from '../types'
 
 
 const defaultState = {
+   currentTeacher: {},
    teachers: [
        {
            id: '1t',
@@ -71,8 +72,22 @@ const defaultState = {
 };
 
 
+//Test ---------------------------------------
 export const setTeacher = (teachers) => ({
     type: SET_TEACHERS,
+    payload: teachers
+});
+//--------------------------------------------
+
+
+export const getTeacherById = (teacher) => ({
+    type: GET_TEACHER_BY_ID,
+    payload: teacher
+});
+
+
+export const getAllTeachers = (teachers) => ({
+    type: GET_ALL_TEACHERS,
     payload: teachers
 });
 
@@ -83,6 +98,16 @@ export default function teacherReducer(state = defaultState, action) {
             return {
                 ...state,
                 teachers: action.payload
+            }
+        case GET_TEACHER_BY_ID:
+            return {
+                ...state,
+                currentTeacher: action.payload
+            }
+        case GET_ALL_TEACHERS:
+            return {
+                ...state,
+                teachers: [...state.teachers, ...action.payload]
             }
         default:
             return state

@@ -17,31 +17,24 @@ const LessonTemplate = () => {
 
     const activeLesson = useSelector(state => state.lessonStates.lesson);
     const [coverIsHover, setCoverIsHover] = useHover();
-    const [currentLesson, setCurrentLesson] = useState(/*{
-        id: '',
-        theme: '',
-        coverImage: '',
-        article: [],
-        classes: [],
-        questions: [],
-        start: '',
-        end: '',
-        status: 'save'
-    }*/
-
+    const [currentLesson, setCurrentLesson] = useState(
         {
             id: '',
-            required: [
-                {theme: ''},
-                {coverImage: ''},
-                {classes: []},
-                {questions1: {id: '1Q',text: ''}},
-                {questions2: {id: '2Q',text: ''}},
-                {questions3: {id: '3Q',text: ''}},
-                {start: ''},
-                {end: ''}
-            ],
+            required: {
+                theme: '',
+                coverImage: '',
+                classes: [],
+                questions1: {id: '1Q',text: ''},
+                questions2: {id: '2Q',text: ''},
+                questions3: {id: '3Q',text: ''},
+                start: '',
+                end: ''
+        },
             article: [],
+            task: {
+                questions: [],
+                answer: []
+            },
             status: 'save'
         });
 
@@ -80,7 +73,6 @@ const LessonTemplate = () => {
         }
     });
 
-    console.log(currentLesson.required)
 
     return (
         <Container fluid className={global.ContainerFluid}>
@@ -88,8 +80,8 @@ const LessonTemplate = () => {
                 <div className={styles.wrapper}>
 
                     <div className={styles.coverBlock} ref={coverIsHover}
-                         style={{background: `${(currentLesson.required[1].coverImage === '') ? '#E0E3EF': (`url("${currentLesson.required[1].coverImage}") no-repeat`)}`,
-                             backgroundSize: `${(currentLesson.required[1].coverImage === '') ? '': ('100%')}`
+                         style={{background: `${(currentLesson.required.coverImage === '') ? '#E0E3EF': (`url("${currentLesson.required.coverImage}") no-repeat`)}`,
+                             backgroundSize: `${(currentLesson.required.coverImage === '') ? '': ('100%')}`
                          }}>
                         <div className={styles.cover}>
                             <div style={{opacity: `${(setCoverIsHover) ? '0': '1'}`}}>
@@ -108,7 +100,7 @@ const LessonTemplate = () => {
                     <div className={styles.block}>
                         <TitleH6 color='black' weight='900' title='2. *Add lesson Theme:'/>
                         <div className={styles.txt}>
-                            <InputTxt placeholder='New Theme' type='header' value={currentLesson.required[0].theme} data={currentLesson}/>
+                            <InputTxt placeholder='New Theme' type='header' value={currentLesson.required.theme} data={currentLesson}/>
                         </div>
 
                         {article}

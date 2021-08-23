@@ -21,6 +21,12 @@
     flex-wrap: wrap;
 }
 
+.scrollBlock{
+    width: 100%;
+    height: 450px;
+    padding-right: 10px;
+    overflow: auto;
+}
 
 /*-------------- Card Lesson--------------*/
 .currentLesson {
@@ -44,6 +50,7 @@
 }
 
 .btnBlock {
+    width: 100%;
     margin: 30px 0 0;
     display: flex;
     justify-content: space-between;
@@ -65,6 +72,9 @@
 
     .col:nth-child(3){
         width: 50%;
+    }
+    .scrollBlock{
+        height: 250px;
     }
 }
 

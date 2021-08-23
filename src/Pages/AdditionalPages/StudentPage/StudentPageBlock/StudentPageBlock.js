@@ -10,11 +10,12 @@ import {TitleH6} from "../../../../Global/Components/Texts/Headers/TitleH6/Title
 import {TxtAdditionalGrey} from "../../../../Global/Components/Texts/TextDescription/TxtAdditionalGrey/TxtAdditionalGrey";
 import {CourseCard} from "../../../../Global/Components/CourseCard/CourseCard";
 import {Table2Column} from "../../../../Global/Components/Tables/Table2Column/Table2Column";
+import {OrangeBtn} from "../../../../Global/Components/Button/OrangeBtn/OrangeBtn";
 
 import images from '../../../../Assets/background/main.png'
-import SearchInput from "../../../../Global/Components/SearchInput/SearchInput";
+
 import {useSelector} from "react-redux";
-//import {subjects} from "../../../../Utils/constants";
+
 
 
 const StudentPageBlock = (props) => {
@@ -31,9 +32,9 @@ const StudentPageBlock = (props) => {
         title: ''
     });
 
+
     const userName = `${props.data.firstName} ${props.data.surName}`;
     const [averageNumber, setAverageNumber] = useState(0);
-
 
 
     let sum = 0;
@@ -83,13 +84,15 @@ const StudentPageBlock = (props) => {
 
                         <div className={styles.tableBlock}>
                             <div className={styles.tableBlock}>
-                              {/*  <Header title='Personal info & progress' color='#009DB3' weight='700' radius='0.25rem'/>*/}
 
-                                <div style={{width: '100%'}}>
-                                    <SearchInput data={[1,2,3]} title='Choose a Subject'/>
+                                <div className={styles.info} style={{margin: '20px 0'}}>
+                                    <div>
+                                        <TitleH5 title='Personal info & progress :' color='black' weight='900'/>
+                                    </div>
+                                    <OrangeBtn title='Delete account' color='#F77D48'/>
                                 </div>
 
-                                <Table2Column first='Teacher' second={subject.nameTeacher}/>
+                                <Table2Column first='class' second={props.data.class.title}/>
                                 <Table2Column first='Points' second={props.data.rating}/>
                                 <Table2Column first='Avg points at class' second={averageNumber}/>
                             </div>

@@ -5,14 +5,28 @@ import {Container} from "react-bootstrap";
 
 import {WelcomeSection} from "../../../Global/Components/Sections/WelcomeSection/WelcomeSection";
 import TeachPageBlock from "./TeachPageBlock/TeachPageBlock";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {getDataById} from "../../../Store/API/API";
 
 
 
 const TeacherPage = () => {
 
+    const dispatch = useDispatch();
     const teachers = useSelector(state => state.teacherStates.teachers);
     const [currentTeacher, setCurrentTeacher] = useState({});
+
+
+
+//test------------------------- from Api redux
+    useEffect(() => {
+        const type = 'teacher';
+        const url = 'https://jsonplaceholder.typicode.com/users';
+        const userId = 2;
+        dispatch(getDataById(type,url,userId));
+    }, []);
+//-----------------------------
+
 
 
     useEffect(() => {
@@ -25,29 +39,6 @@ const TeacherPage = () => {
             }
         });
     }, []);
-
-
-
-//test ------------------------------------------------------------
-    /*"proxy": "http://18.133.237.151:8000",*/
-
-    useEffect(() => {
-        axios.get('http://18.133.237.151:8000/api/courses/current',{crossdomain: true}
-
-        /*{headers: {
-                'Authorization': 'Token c54a830fbac13d286949ac69f554951382e8ce1d'
-            }}*/
-        )
-            .then(res => {
-                console.log(res)
-            })
-            .catch(err => {
-                console.log(err)
-            });
-    },[]);
-
-//--------------------------------------------------------------------
-
 //console.log(currentTeacher)
 
     return (
