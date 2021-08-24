@@ -5,12 +5,9 @@ import {Container} from "react-bootstrap";
 import {WelcomeSection} from "../../../Global/Components/Sections/WelcomeSection/WelcomeSection";
 import StudentPageBlock from "./StudentPageBlock/StudentPageBlock";
 import PreviousLessons from "../PreviousLessons/PreviousLessons";
-import {useSelector} from "react-redux";
-import AnsweringQuestionsPage from "../AnsweringQuestionsPage/AnsweringQuestionsPage";
 
-import QuestionCard from "../../../Global/Components/QuestionCard/QuestionCard";
-import {questions, teacherQuestions} from "../../../Utils/constants";
-import QuestionAnswersPage from "../QuestionAnswersPage/QuestionAnswersPage";
+import {useSelector} from "react-redux";
+
 
 
 const StudentPage = () => {
@@ -40,8 +37,7 @@ const StudentPage = () => {
 
             <div className={global.Wrapper}>
                 <div className={global.RowBlock}>
-                   {/* <PreviousLessons/>
-                    <AnsweringQuestionsPage/>*/}
+                   {/* <PreviousLessons/> */}
                 </div>
             </div>
         </Container>

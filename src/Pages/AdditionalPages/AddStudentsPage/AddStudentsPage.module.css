@@ -1,13 +1,24 @@
 
 .col{
-    width: 48%;
+    width: 49%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.block{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 15px;
 }
 
 
 /*-------------- Tablet Pro--------------*/
 @media only screen and (max-width: 1030px) {
-    .col{
-        width: 60%;
+    .block:nth-of-type(3){
+        width: 35%;
     }
 }
 
@@ -15,6 +26,12 @@
 @media only screen and (max-width: 770px) {
     .col{
         width: 100%;
+    }
+    .block{
+        margin: 0;
+    }
+    .block:nth-of-type(3){
+        width: 65%;
     }
 }
 

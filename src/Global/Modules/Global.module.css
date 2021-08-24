@@ -4,6 +4,7 @@
     padding: 0;
 }
 
+
 .Wrapper{ /*--- a container that defines 80% of the screen width ---*/
     width: 80%;
     margin: 0 auto;
@@ -11,12 +12,14 @@
 
 }
 
+
 .GreyWrapper{ /*--- a gray container without indents should be placed in it (.Wrapper) ---*/
     width: 100%;
     margin: 100px auto 0;
     padding: 100px 0;
     background-color: #EBEDF5;
 }
+
 
 .RowBlock{/*--- row block to additional pages (TeachPageMobile, CreateLesson...) ---*/
     width: 100%;
@@ -50,6 +53,7 @@
     background-color: white;
     border-radius: 0.25rem;
 }
+
 
 .Link{
     width: 100%;

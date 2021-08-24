@@ -21,9 +21,9 @@ const TeacherPage = () => {
 //test------------------------- from Api redux
     useEffect(() => {
         const type = 'teacher';
-        const url = 'https://jsonplaceholder.typicode.com/users';
+       /* const url = 'https://jsonplaceholder.typicode.com/users';*/
         const userId = 2;
-        dispatch(getDataById(type,url,userId));
+        dispatch(getDataById(type,'url',userId));
     }, []);
 //-----------------------------
 

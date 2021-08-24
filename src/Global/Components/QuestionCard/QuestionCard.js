@@ -13,7 +13,7 @@ const QuestionCard = (props) => {
         let newAnswer = [...studentAnswers];
         newAnswer[index].answer = valueAnswer;
         setStudentAnswers(newAnswer);
-        //condition to show message PopUp
+        //condition to show message ModalWindow
         if(studentAnswers[2].answer && props.marks.mark.length<3){
             props.setPopUp(true);
         }

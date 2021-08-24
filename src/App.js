@@ -2,21 +2,10 @@ import React, {useState} from "react";
 import './App.css';
 import {Redirect, Route, Switch} from "react-router";
 
-import Main from "./Pages/Main/Main";
-import AboutUs from "./Pages/AboutUs/AboutUs";
-import Contacts from "./Pages/Contacts/Contacts";
 
 import Header from "./Global/Navigation/Header/Header";
 import Footer from "./Global/Navigation/Footer/Footer";
 
-import TeacherPage from "./Pages/AdditionalPages/TeacherPage/TeacherPage";
-import StudentPage from "./Pages/AdditionalPages/StudentPage/StudentPage";
-import StudentsListPage from "./Pages/AdditionalPages/StudentsListPage/StudentsListPage";
-import CreateLessonPage from "./Pages/AdditionalPages/CreateLessonPage/CreateLessonPage";
-import CurrentLessonPage from "./Pages/AdditionalPages/CurrentLessonPage/CurrentLessonPage";
-import QuestionAnswersPage from "./Pages/AdditionalPages/QuestionAnswersPage/QuestionAnswersPage";
-import GeneralInformationPage from "./Pages/AdditionalPages/GeneralInformationPage/GeneralInformationPage";
-import CatalogLessonPage from "./Pages/AdditionalPages/CatalogLessonPage/CatalogLessonPage";
 
 import {PrivateRoutes, PublicRoutes} from "./Routers/Routes";
 
@@ -72,7 +61,7 @@ function App() {
                     <Route path={'/currentLesson'} component={AddStudentsPage}/>
                     <Route path={'/questionAnswers'} component={QuestionAnswersPage}/>
                     <Route path={'/generalInfo/:classId'} component={GeneralInformationPage}/>
-                    <Route path={'/catalog'} component={CatalogLessonPage}/>
+                    <Route path={'/catalog'} component={AddForm}/>
                     <Redirect exact from='/' to='/login' />
                     <Route path={'/'} component={Main}/>*/}
                 </Switch>

@@ -5,8 +5,10 @@ import {Tr_table_student_desktop} from "./Tr_table_student/desktop/Tr_table_stud
 import {Tr_table_class_mobile} from "./Tr_table_class/mobile/Tr_table_class_mobile";
 import {Tr_table_student_mobile} from "./Tr_table_student/mobile/Tr_table_student_mobile";
 import {useDispatch, useSelector} from "react-redux";
-import {setClasses} from "../../../../Store/Reducers/classReducer";
+
 import {TitleH6} from "../../Texts/Headers/TitleH6/TitleH6";
+import useWidth from "../../../../Hooks/useWidth";
+
 
 let newArr = [];
 const Table5Column = (props) => {
@@ -16,24 +18,17 @@ const Table5Column = (props) => {
     const [studentsListEmpty, setStudentsListEmpty] = useState(false);
     const [averageNumber, setAverageNumber] = useState(0);
 
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const windowWidth = useWidth();
     const [accordionStatus, setAccordionStatus] = useState(false);
     const [panelHeight, setPanelHeight] = useState(0);
 
 
-    const handleResize = () => {
-        setWindowWidth(window.innerWidth);
-    };
-
     useEffect(() => {
-        window.addEventListener("resize", handleResize);
-
         let sum = 0;
         studentsList.map((item) => {
             sum += item.rating;
         });
         setAverageNumber(Math.round(sum/props.students.length));
-
     }, []);
 
 
@@ -90,6 +85,7 @@ const Table5Column = (props) => {
             setStudentsListEmpty(true);
         }
     };
+
 
 
     const listStudentsDesktop = studentsList.map((item) => {

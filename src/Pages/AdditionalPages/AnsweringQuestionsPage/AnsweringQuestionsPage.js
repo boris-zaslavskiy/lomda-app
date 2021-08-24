@@ -14,14 +14,14 @@ const AnsweringQuestionsPage = () => {
     const [count, setCount] = useState(1);//counter for checking  numbers of step ---Lera
     const [hide, setHide] = useState(false);//state for disabling button ---Lera
     const [marks, setMars] = useState({mark: []});//array for rates on step 2 and step 3  ----Lera 14.08
-    const [popUp, setPopUp] = useState(false);//state for showing PopUp message ----Lera  14.08
+    const [popUp, setPopUp] = useState(false);//state for showing ModalWindow message ----Lera  14.08
 
     //14.08 edited function for recording the rating ----Lera
     const leaveMark = (valueMark)=>{
         let newMarkQ = marks;
         newMarkQ.mark.push(valueMark);
         setMars(newMarkQ);
-        //condition for step 2  to hide PopUp message
+        //condition for step 2  to hide ModalWindow message
         if(marks.mark.length===3){
             setPopUp(false);
             setHide(true);
@@ -39,7 +39,7 @@ const AnsweringQuestionsPage = () => {
                 setCount((prevCount) => prevCount + 1);
                 setStep(count);
 
-                //condition for step 3 to show PopUp message
+                //condition for step 3 to show ModalWindow message
                 if(count===3 && marks.mark.length===0){
                     setPopUp(true);
                 }
