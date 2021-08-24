@@ -2,9 +2,10 @@ import React, {useEffect, useState} from 'react';
 import {context} from '../../../Utils/Context';
 import Menu from '../Header/Menu/Menu';
 import MenuBurger from '../Header/MenuBurger/MenuBurger';
+import useWidth from "../../../Hooks/useWidth";
 
 const Header = () => {
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);//current size of the browser window -- Lera
+    const windowWidth = useWidth();//current size of the browser window -- Lera
     const [openBurger, setOpenBurger] = useState(false);
 
     const burgerMenu = () => {
@@ -22,18 +23,7 @@ const Header = () => {
             document.body.style.overflow = "hidden";
         }
     }
-    //set the current window width
-    const handleResize = () => {
-        setWindowWidth(window.innerWidth);
-    };
-    useEffect(() => {
-        //add an event to the global Window object to track window size changes --Lera
-        window.addEventListener("resize", handleResize)
 
-        return () => {
-            window.removeEventListener("resize", handleResize)
-        }
-    }, [])
 
     return (
         <context.Provider value={

@@ -23,6 +23,8 @@
 
 /* star component */
 .star{
+     font-size: 20px;
+     margin: 0 2px;
      color: #818A8D;
      cursor: pointer;
  }

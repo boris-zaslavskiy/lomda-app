@@ -10,29 +10,23 @@ import {useDispatch, useSelector} from "react-redux";
 import {Th_table} from "../../../Global/Components/Tables/Table5Column/Th_table/Th_table";
 import {TitleH6} from "../../../Global/Components/Texts/Headers/TitleH6/TitleH6";
 import {OrangeBtn} from "../../../Global/Components/Button/OrangeBtn/OrangeBtn";
-import {PopUp} from "../../../Global/Components/PopUp/PopUp";
+import {ModalWindow} from "../../../Global/Components/ModalWindow/ModalWindow";
 
+import useWidth from "../../../Hooks/useWidth";
 
 
 const StudentsListPage = () => {
 
     const arrayClasses = useSelector(state => state.classStates.classes);
     const [classes, setClasses] = useState(arrayClasses);
-    const [currentClass, setCurrentClass] = useState({});
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    const windowWidth = useWidth();
     const [statusPopUp, setStatusPopUp] = useState(false);
-
-
-    const handleResize = () => {
-        setWindowWidth(window.innerWidth);
-    };
-
-    useEffect(() => {
-        window.addEventListener("resize", handleResize);
-    }, []);
-
-
-
+    const [modalWindowData, setModalWindowData] = useState({
+        title: '',
+        text: '',
+        type: ''
+    });
 
 
     const deleteClass = (id) => {
@@ -69,17 +63,25 @@ const StudentsListPage = () => {
     }
 
 
-    const openPopUp = () => {
-        setStatusPopUp(true);
+    const changeStatusPopUp = (value, title, text, type) => {
+        setStatusPopUp(value);
+        setModalWindowData({
+            title: title,
+            text: text,
+            type: type
+        })
     }
 
-    const closePopUp = () => {
+    const confirmData = () => {
+        console.log('confirmData')
         setStatusPopUp(false);
     }
 
     return (
         <Container fluid className={global.ContainerFluid}>
-            {(statusPopUp)?(<PopUp closePopUp={closePopUp}/>):null}
+
+            {(statusPopUp)?(<ModalWindow show={statusPopUp} hide={() => {changeStatusPopUp(false)}} confirmData={confirmData} data={modalWindowData}/>):null}
+
             <div className={global.Wrapper}>
                 <TitleH2 titleType='h2' title='Students list'/>
                 <div className={global.RowBlock}>
@@ -88,12 +90,19 @@ const StudentsListPage = () => {
                     </div>
 
                     <div className={styles.col}>
-                        {/*btn add new class */}
-                        <div className={styles.addBlock}>
-                            <div className={global.WhiteShadowBlock}>
-                                <OrangeBtn type='button' title='Add a new class' clicked={openPopUp}/>
+                        {(windowWidth < 770 )?(
+                            <div className={styles.addBlock}>
+                                <OrangeBtn type='button' title='Add a new class'
+                                    clicked={() => {changeStatusPopUp(true,'Add new Class:',`Subject: ${'World Literature'}`,'form')}}/>
                             </div>
-                        </div>
+                        ):(
+                            <div className={styles.addBlock}>
+                                <div className={global.WhiteShadowBlock}>
+                                    <OrangeBtn type='button' title='Add a new class'
+                                        clicked={() => {changeStatusPopUp(true,'Add new Class:',`Subject: ${'World Literature'}`,'form')}}/>
+                                </div>
+                            </div>
+                        )}
                     </div>
 
                 </div>

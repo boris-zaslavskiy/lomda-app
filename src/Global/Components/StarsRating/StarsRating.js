@@ -106,7 +106,7 @@ const StarsRating = (props) => {
                 />
             </div>
 
-            {/*PopUp message*/}
+            {/*ModalWindow message*/}
             <span className={`${styles.popupText} ${props.popUp?styles.show:null}`}>Take a mark</span>
         </div>
     );
