@@ -8,6 +8,8 @@ import {useDispatch, useSelector} from "react-redux";
 
 import {TitleH6} from "../../Texts/Headers/TitleH6/TitleH6";
 import useWidth from "../../../../Hooks/useWidth";
+import {ModalWindow} from "../../ModalWindow/ModalWindow";
+import {Container} from "react-bootstrap";
 
 
 let newArr = [];
@@ -22,6 +24,13 @@ const Table5Column = (props) => {
     const [accordionStatus, setAccordionStatus] = useState(false);
     const [panelHeight, setPanelHeight] = useState(0);
 
+    const [statusPopUp, setStatusPopUp] = useState(false);
+    const [modalWindowData, setModalWindowData] = useState({
+        title: '',
+        text: '',
+        type: ''
+    });
+
 
     useEffect(() => {
         let sum = 0;
@@ -33,7 +42,7 @@ const Table5Column = (props) => {
 
 
     const getHeight = (height) => {
-        let maxHeight = props.students.length * (height + 50);
+        let maxHeight = props.students.length * height;
         setPanelHeight(maxHeight);
     };
 
@@ -41,6 +50,25 @@ const Table5Column = (props) => {
     const statusChanges = () => {
         setAccordionStatus(!accordionStatus);
     };
+
+
+    const changeStatusPopUp = (value, title, text, type) => {
+        setStatusPopUp(value);
+        setModalWindowData({
+            title: title,
+            text: text,
+            type: type
+        })
+    }
+
+
+    const confirmData = () => {
+        console.log('confirmData')
+        deleteChosenStudents();
+        setStatusPopUp(false);
+    }
+
+
 
 
     const deleteChosenStudents = () => {
@@ -89,7 +117,6 @@ const Table5Column = (props) => {
 
 
     const listStudentsDesktop = studentsList.map((item) => {
-
         const studentName = `${item.firstName} ${item.surName}`;
         return(
             <Tr_table_student_desktop
@@ -128,13 +155,15 @@ const Table5Column = (props) => {
     });
 
 
+
     return (
         <div className={styles.wrapper}>
+            {(statusPopUp)?(<ModalWindow show={statusPopUp} hide={() => {changeStatusPopUp(false)}} confirmData={confirmData} data={modalWindowData}/>):null}
             {
                 (windowWidth > 650)?(
                     <div>
                         <Tr_table_class_desktop clicked={statusChanges}
-                                                deleteChosenStudents={deleteChosenStudents}
+                                                deleteChosenStudents={() => {changeStatusPopUp(true,'Removing students:',`Confirm the removal students from the ${props.className} class`,'user')}}
                                                 deleteClass={props.deleteClass}
                                                 status={accordionStatus}
                                                 studentsListEmpty={studentsListEmpty}

@@ -7,15 +7,15 @@ import {IconBtn} from "../../../../Button/IconBtn/IconBtn";
 import avatar from '../../../../../../Assets/users/avatar.png';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faStar, faTrashAlt} from '@fortawesome/free-solid-svg-icons'
+import useHeight from "../../../../../../Hooks/useHeight";
 
 
 const Tr_table_student_mobile = (props) => {
 
     const ref = useRef(null);
 
-    useEffect(() => {
-        props.itemHeight(ref.current.offsetHeight);
-    },[]);
+    const height = useHeight(ref);
+    props.itemHeight(height);
 
 
     return (

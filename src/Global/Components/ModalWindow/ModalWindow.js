@@ -8,7 +8,7 @@ import {TxtAdditionalGrey} from "../Texts/TextDescription/TxtAdditionalGrey/TxtA
 
 
 const ModalWindow = (props) => {
-    console.log(props.data)
+
     return (
         <Modal style={{backgroundColor: 'rgba( 0,0,0, 0.5)',backdropFilter: 'blur(10px)'}}
                show={props.show}

@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useRef, useState} from 'react';
 import styles from './Tr_table_student_desktop.module.css';
 import {TitleH6} from "../../../../Texts/Headers/TitleH6/TitleH6";
 
@@ -12,6 +12,8 @@ import {useDispatch, useSelector} from "react-redux";
 import {setClasses} from "../../../../../../Store/Reducers/classReducer";
 import {Link} from "react-router-dom";
 
+import useHeight from "../../../../../../Hooks/useHeight";
+
 
 const Tr_table_student_desktop = (props) => {
 
@@ -20,9 +22,8 @@ const Tr_table_student_desktop = (props) => {
     const [studentStatus, setStudentStatus] = useState(props.chosen);
     const ref = useRef(null);
 
-    useEffect(() => {
-        props.itemHeight(ref.current.offsetHeight);
-    },[]);
+    const height = useHeight(ref);
+    props.itemHeight(height);
 
 
     const changeStudentStatus = (id,classId) => {

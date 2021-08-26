@@ -1,39 +1,58 @@
 import React, {useState} from 'react';
-import { FaChevronDown, FaChevronUp} from "react-icons/fa";
+import global from '../../../../Global/Modules/Global.module.css';
 import styles from '../ListQuestionsAnswers/ListQuestionsAnswers.module.css';
+
 import CurrentStudentAnswers from "../CurrentStudentAnswers/CurrentStudentAnswers";
+import {TitleH5} from "../../../../Global/Components/Texts/Headers/TitleH5/TitleH5";
+import {IconBtn} from "../../../../Global/Components/Button/IconBtn/IconBtn";
+import {faChevronDown, faChevronUp} from "@fortawesome/free-solid-svg-icons";
 
 const ListQuestionsAnswers = (props) => {
+
     const [down, setDown] = useState(false);//state for animation ---Lera
+
     const handleUpDown = () => {
         setDown(!down);
     }
+
+
     return (
         <div className={` w-100 d-flex flex-column`}>
-            <div className={`${styles.outerShadow} ${styles.whiteField} mb-3`}>
-                <div className='d-flex flex-row h-100'>
-
-                    <div className='d-flex align-items-center w-75 ms-3'>
-                        <span style={{color: 'orange', fontWeight: 800}}>{props.number}</span>
-                        <p className={`mb-0 ms-1 ${styles.text} `}>{props.title}</p>
+            <div className={global.WhiteShadowBlock}>
+                <div className={styles.block}>
+                    <div className={styles.row}>
+                        <span style={{
+                            color: '#F77D48',
+                            fontWeight: '900',
+                            fontSize: '24px',
+                            marginRight: '20px'
+                        }}>{props.number}</span>
+                        <TitleH5 color='black' weight='900' title={props.title}/>
                     </div>
 
-                    <div className='d-flex justify-content-center align-items-center w-25'>
-                        {!down?
-                            <FaChevronDown style={{color: '#F77D48', border: '1px solid #F77D48', fontSize: 20}}
-                                           onClick={()=>{handleUpDown();}}
+                    <div className='d-flex justify-content-end align-items-center w-25'>
+                        {!down ?
+                            <IconBtn icon={faChevronDown}
+                                     color='#009db3'
+                                     border='2px solid #009db3'
+                                     backgroundColor='transparent'
+                                     clicked={handleUpDown}
                             />
-                            :<FaChevronUp style={{color: '#F77D48', border: '1px solid #F77D48', fontSize: 20}}
-                                          onClick={()=>{handleUpDown();}}
+                            :
+                            <IconBtn icon={faChevronUp}
+                                     color='#F77D48'
+                                     border='2px solid #F77D48'
+                                     backgroundColor='transparent'
+                                     clicked={handleUpDown}
                             />}
                     </div>
                 </div>
             </div>
 
-            <div className={`mt-3 ${styles.slowDown} px-2`} style={{maxHeight: `${down?(`${props.height}px`):('0')}`}}>
-                    {props.componentToRender}
+            <div className={`mt-3 ${styles.slowDown} px-2`}
+                 style={{maxHeight: `${down ? (`${props.height}px`) : ('0')}`}}>
+                {props.componentToRender}
             </div>
-
         </div>
     );
 };

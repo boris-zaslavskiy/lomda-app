@@ -43,7 +43,7 @@ function App() {
                     {(isAuth)?(
                         <div>
                             {privateRoutes}
-                            <Redirect exact from='/' to='/login'/>
+                           {/* <Redirect exact from='/' to='/login'/>*/}
                         </div>):(
                         <div>
                             {publicRoutes}
