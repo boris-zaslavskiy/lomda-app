@@ -23,6 +23,7 @@
 .info{
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -46,10 +47,11 @@
 /*-------------- Phone --------------*/
 @media only screen and (max-width: 420px) {
     .container:nth-child(1){
-        width: 70%;
+        width: 100%;
     }
 
     .container:nth-child(2){
-        width: 25%;
+        width: 100%;
+        margin: 20px 0 0;
     }
 }

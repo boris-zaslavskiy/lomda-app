@@ -1,18 +1,21 @@
-.outerShadow{
-    border-radius: 5px;
-    box-shadow: 3px 1px 6px 5px rgba(221, 221, 221, 0.7);
-}
-.whiteField{
-    background-color: white;
-    min-height: 50px;
-}
-.text{
-    color: black;
-    font-size: 15px;
-    font-weight: 800;
-}
+
 .slowDown{
     width: 100%;
     transition: max-height 0.6s ease-in;
     overflow: hidden;
+}
+
+.block{
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

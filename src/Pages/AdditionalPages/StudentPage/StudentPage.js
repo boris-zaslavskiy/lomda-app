@@ -37,7 +37,7 @@ const StudentPage = () => {
 
             <div className={global.Wrapper}>
                 <div className={global.RowBlock}>
-                   {/* <PreviousLessons/> */}
+                   {/* <PreviousLessons/>*/}
                 </div>
             </div>
         </Container>

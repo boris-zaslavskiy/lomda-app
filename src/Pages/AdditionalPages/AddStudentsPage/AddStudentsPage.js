@@ -15,9 +15,10 @@ import {GreenBtn} from "../../../Global/Components/Button/GreenBtn/GreenBtn";
 const AddStudentsPage = () => {
 
     const [arrStudent, setArrStudent] = useState([]);
-    const [statusPopUp, setStatusPopUp] = useState(false);
     const [studentsCount, setStudentsCount] = useState(0);
     const [currentClass, setCurrentClass] = useState('');
+
+    const [statusPopUp, setStatusPopUp] = useState(false);
     const [modalWindowData, setModalWindowData] = useState({
         title: '',
         text: '',
@@ -106,7 +107,7 @@ const AddStudentsPage = () => {
                     {newStudents}
 
                     <div style={{margin: '20px 0 0'}}>
-                        <GreenBtn type='button' title='Save' clicked={() => {changeStatusPopUp(true,'Added a new student:',`You have added ${studentsCount} new students to class ${currentClass}`,'student')}}/>
+                        <GreenBtn type='button' title='Save' clicked={() => {changeStatusPopUp(true,'Added a new student:',`You have added ${studentsCount} new students to class ${currentClass}`,'user')}}/>
                     </div>
 
                 </div>
